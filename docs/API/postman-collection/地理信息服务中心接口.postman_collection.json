@@ -1,0 +1,4341 @@
+{
+	"info": {
+		"_postman_id": "d15e96a0-a46f-45e5-b7e2-7ac868002bd8",
+		"name": "地理信息服务中心接口",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "通用适配服务comonly-used-svc",
+			"description": "",
+			"item": [
+				{
+					"name": "OGC规范-网络地图瓦片服务（WMTS）",
+					"description": null,
+					"item": [
+						{
+							"name": "cetc15",
+							"description": "",
+							"item": [
+								{
+									"name": "GetCapabilities操作",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": ""
+										},
+										"url": {
+											"raw": "http://localhost:9000/gis-service-core/cus/wmts/cetc15/maps/wmts?service=WMTS&version=1.0.0&request=GetCapabilities",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "9000",
+											"path": [
+												"gis-service-core",
+												"cus",
+												"wmts",
+												"cetc15",
+												"maps",
+												"wmts"
+											],
+											"query": [
+												{
+													"key": "service",
+													"value": "WMTS"
+												},
+												{
+													"key": "version",
+													"value": "1.0.0"
+												},
+												{
+													"key": "request",
+													"value": "GetCapabilities"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "GetTile操作",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": ""
+										},
+										"url": {
+											"raw": "http://localhost:9000/gis-service-core/cus/wmts/cetc15/maps/wmts?service=WMTS&request=GetTile&version=1.0.0&layer=vec__1000__vec_1000__top-all&style=default&format=image/png&tilematrixset=4490&tilematrix=6&tilerow=82&tilecol=105",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "9000",
+											"path": [
+												"gis-service-core",
+												"cus",
+												"wmts",
+												"cetc15",
+												"maps",
+												"wmts"
+											],
+											"query": [
+												{
+													"key": "service",
+													"value": "WMTS"
+												},
+												{
+													"key": "request",
+													"value": "GetTile"
+												},
+												{
+													"key": "version",
+													"value": "1.0.0"
+												},
+												{
+													"key": "layer",
+													"value": "vec__1000__vec_1000__top-all"
+												},
+												{
+													"key": "style",
+													"value": "default"
+												},
+												{
+													"key": "format",
+													"value": "image/png"
+												},
+												{
+													"key": "tilematrixset",
+													"value": "4490"
+												},
+												{
+													"key": "tilematrix",
+													"value": "6"
+												},
+												{
+													"key": "tilerow",
+													"value": "82"
+												},
+												{
+													"key": "tilecol",
+													"value": "105"
+												}
+											]
+										}
+									},
+									"response": []
+								}
+							],
+							"_postman_isSubFolder": true
+						},
+						{
+							"name": "sm",
+							"description": "",
+							"item": [
+								{
+									"name": "GetCapabilities",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": ""
+										},
+										"url": {
+											"raw": "http://localhost:9000/gis-service-core/cus/wmts/sm/services/map-world/wmts100",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "9000",
+											"path": [
+												"gis-service-core",
+												"cus",
+												"wmts",
+												"sm",
+												"services",
+												"map-world",
+												"wmts100"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "GetTile",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": ""
+										},
+										"url": {
+											"raw": "http://localhost:9000/gis-service-core/cus/wmts/sm/services/map-world/wmts100?SERVICE=WMTS&REQUEST=GetTile&VERSION=1.0.0&LAYER=World&STYLE=default&TILEMATRIXSET=GlobalCRS84Scale_World&TILEMATRIX=2&TILEROW=0&TILECOL=3&FORMAT=image/png",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "9000",
+											"path": [
+												"gis-service-core",
+												"cus",
+												"wmts",
+												"sm",
+												"services",
+												"map-world",
+												"wmts100"
+											],
+											"query": [
+												{
+													"key": "SERVICE",
+													"value": "WMTS"
+												},
+												{
+													"key": "REQUEST",
+													"value": "GetTile"
+												},
+												{
+													"key": "VERSION",
+													"value": "1.0.0"
+												},
+												{
+													"key": "LAYER",
+													"value": "World"
+												},
+												{
+													"key": "STYLE",
+													"value": "default"
+												},
+												{
+													"key": "TILEMATRIXSET",
+													"value": "GlobalCRS84Scale_World"
+												},
+												{
+													"key": "TILEMATRIX",
+													"value": "2"
+												},
+												{
+													"key": "TILEROW",
+													"value": "0"
+												},
+												{
+													"key": "TILECOL",
+													"value": "3"
+												},
+												{
+													"key": "FORMAT",
+													"value": "image/png"
+												}
+											]
+										}
+									},
+									"response": []
+								}
+							],
+							"_postman_isSubFolder": true
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "OGC规范-网络地图服务（WMS）",
+					"description": null,
+					"item": [
+						{
+							"name": "cetc15",
+							"description": "",
+							"item": [
+								{
+									"name": "GetCapabilities操作",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": ""
+										},
+										"url": {
+											"raw": "http://localhost:9000/gis-service-core/cus/wms/cetc15/maps/wms?service=wms&version=1.3.0&request=GetCapabilities",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "9000",
+											"path": [
+												"gis-service-core",
+												"cus",
+												"wms",
+												"cetc15",
+												"maps",
+												"wms"
+											],
+											"query": [
+												{
+													"key": "service",
+													"value": "wms"
+												},
+												{
+													"key": "version",
+													"value": "1.3.0"
+												},
+												{
+													"key": "request",
+													"value": "GetCapabilities"
+												}
+											]
+										},
+										"description": "GetCapabilities操作"
+									},
+									"response": []
+								},
+								{
+									"name": "GetMap操作",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": ""
+										},
+										"url": {
+											"raw": "http://localhost:9000/gis-service-core/cus/wms/cetc15/maps/wms?service=wms&request=getmap&version=1.3.0&layers=vec_1000:top-all&bbox=115,36,120,40&srs=MGIS:4490&format=image/png&width=1024&height=512",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "9000",
+											"path": [
+												"gis-service-core",
+												"cus",
+												"wms",
+												"cetc15",
+												"maps",
+												"wms"
+											],
+											"query": [
+												{
+													"key": "service",
+													"value": "wms"
+												},
+												{
+													"key": "request",
+													"value": "getmap"
+												},
+												{
+													"key": "version",
+													"value": "1.3.0"
+												},
+												{
+													"key": "layers",
+													"value": "vec_1000:top-all"
+												},
+												{
+													"key": "bbox",
+													"value": "115,36,120,40"
+												},
+												{
+													"key": "srs",
+													"value": "MGIS:4490"
+												},
+												{
+													"key": "format",
+													"value": "image/png"
+												},
+												{
+													"key": "width",
+													"value": "1024"
+												},
+												{
+													"key": "height",
+													"value": "512"
+												}
+											]
+										}
+									},
+									"response": []
+								}
+							],
+							"_postman_isSubFolder": true
+						},
+						{
+							"name": "sm",
+							"description": "",
+							"item": [
+								{
+									"name": "GetCapabilities",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": ""
+										},
+										"url": {
+											"raw": "http://localhost:9000/gis-service-core/cus/wms/sm/services/map-china400/wms130/China",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "9000",
+											"path": [
+												"gis-service-core",
+												"cus",
+												"wms",
+												"sm",
+												"services",
+												"map-china400",
+												"wms130",
+												"China"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "GetMap",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": ""
+										},
+										"url": {
+											"raw": "http://localhost:9000/gis-service-core/cus/wms/sm/services/map-china400/wms130/China?LAYERS=China&VERSION=1.3.0&EXCEPTIONS=INIMAGE&SERVICE=WMS&REQUEST=GetMap&STYLES=&FORMAT=image/png&CRS=EPSG%3A3857&BBOX=10018754.17,9.3132257461548e-10,15028131.255,5009377.085&WIDTH=256&HEIGHT=256",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "9000",
+											"path": [
+												"gis-service-core",
+												"cus",
+												"wms",
+												"sm",
+												"services",
+												"map-china400",
+												"wms130",
+												"China"
+											],
+											"query": [
+												{
+													"key": "LAYERS",
+													"value": "China"
+												},
+												{
+													"key": "VERSION",
+													"value": "1.3.0"
+												},
+												{
+													"key": "EXCEPTIONS",
+													"value": "INIMAGE"
+												},
+												{
+													"key": "SERVICE",
+													"value": "WMS"
+												},
+												{
+													"key": "REQUEST",
+													"value": "GetMap"
+												},
+												{
+													"key": "STYLES",
+													"value": ""
+												},
+												{
+													"key": "FORMAT",
+													"value": "image/png"
+												},
+												{
+													"key": "CRS",
+													"value": "EPSG%3A3857"
+												},
+												{
+													"key": "BBOX",
+													"value": "10018754.17,9.3132257461548e-10,15028131.255,5009377.085"
+												},
+												{
+													"key": "WIDTH",
+													"value": "256"
+												},
+												{
+													"key": "HEIGHT",
+													"value": "256"
+												}
+											]
+										}
+									},
+									"response": []
+								}
+							],
+							"_postman_isSubFolder": true
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "地名检索服务",
+					"description": null,
+					"item": [
+						{
+							"name": "地名检索服务",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://localhost:9000/gis-service-core/cus/gsplacename/cetc15/maps/standardsvcs/gsplacename?format=json&searchInfo=工商&featureNum=100",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9000",
+									"path": [
+										"gis-service-core",
+										"cus",
+										"gsplacename",
+										"cetc15",
+										"maps",
+										"standardsvcs",
+										"gsplacename"
+									],
+									"query": [
+										{
+											"key": "format",
+											"value": "json"
+										},
+										{
+											"key": "searchInfo",
+											"value": "工商"
+										},
+										{
+											"key": "featureNum",
+											"value": "100"
+										},
+										{
+											"key": "auxParams",
+											"value": "",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "网络分析服务",
+					"description": null,
+					"item": [
+						{
+							"name": "网络分析服务",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://localhost:9000/gis-service-core/cus/gsnetworkanalyze/cetc15/maps/standardsvcs/gsnetworkanalyze?format=json&alias=navi_china&version=1000&points=418920970_143951000,418924520_143661860&srs=MGIS:4490",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9000",
+									"path": [
+										"gis-service-core",
+										"cus",
+										"gsnetworkanalyze",
+										"cetc15",
+										"maps",
+										"standardsvcs",
+										"gsnetworkanalyze"
+									],
+									"query": [
+										{
+											"key": "format",
+											"value": "json"
+										},
+										{
+											"key": "alias",
+											"value": "navi_china"
+										},
+										{
+											"key": "version",
+											"value": "1000"
+										},
+										{
+											"key": "points",
+											"value": "418920970_143951000,418924520_143661860"
+										},
+										{
+											"key": "srs",
+											"value": "MGIS:4490"
+										},
+										{
+											"key": "auxParams",
+											"value": "",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "几何计算服务",
+					"description": null,
+					"item": [
+						{
+							"name": "距离量算getLength操作",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://localhost:9000/gis-service-core/cus/gsgeometry/cetc15/maps/services/gsgeometry/GeometrySvc/1000/length?format=json&points=400000000,110000000,410000000,110000000,410000000,90000000&srs=MGIS:4490",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9000",
+									"path": [
+										"gis-service-core",
+										"cus",
+										"gsgeometry",
+										"cetc15",
+										"maps",
+										"services",
+										"gsgeometry",
+										"GeometrySvc",
+										"1000",
+										"length"
+									],
+									"query": [
+										{
+											"key": "format",
+											"value": "json"
+										},
+										{
+											"key": "points",
+											"value": "400000000,110000000,410000000,110000000,410000000,90000000"
+										},
+										{
+											"key": "srs",
+											"value": "MGIS:4490"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "面积量算getArea操作",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://localhost:9000/gis-service-core/cus/gsgeometry/cetc15/maps/services/gsgeometry/GeometrySvc/1000/area?format=json&geo=4&points=400000000,90000000,420000000,90000000,400000000,120000000,420000000,120000000&srs=MGIS:4490",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9000",
+									"path": [
+										"gis-service-core",
+										"cus",
+										"gsgeometry",
+										"cetc15",
+										"maps",
+										"services",
+										"gsgeometry",
+										"GeometrySvc",
+										"1000",
+										"area"
+									],
+									"query": [
+										{
+											"key": "format",
+											"value": "json"
+										},
+										{
+											"key": "geo",
+											"value": "4"
+										},
+										{
+											"key": "points",
+											"value": "400000000,90000000,420000000,90000000,400000000,120000000,420000000,120000000"
+										},
+										{
+											"key": "srs",
+											"value": "MGIS:4490"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "方位角量算getAzimuth操作",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://localhost:9000/gis-service-core/cus/gsgeometry/cetc15/maps/services/gsgeometry/GeometrySvc/1000/azimuth?format=json&pointBegin=400000000,110000000&pointEnd=420000000,90000000&srs=MGIS:4490",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9000",
+									"path": [
+										"gis-service-core",
+										"cus",
+										"gsgeometry",
+										"cetc15",
+										"maps",
+										"services",
+										"gsgeometry",
+										"GeometrySvc",
+										"1000",
+										"azimuth"
+									],
+									"query": [
+										{
+											"key": "format",
+											"value": "json"
+										},
+										{
+											"key": "pointBegin",
+											"value": "400000000,110000000"
+										},
+										{
+											"key": "pointEnd",
+											"value": "420000000,90000000"
+										},
+										{
+											"key": "srs",
+											"value": "MGIS:4490"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "缓冲区分析（点）createBuffer操作",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://localhost:9000/gis-service-core/cus/gsgeometry/cetc15/maps/services/gsgeometry/GeometrySvc/1000/buffer?format=json&distances=2000&smooth=12&geo=1&points=420000000,90000000&srs=MGIS:4490",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9000",
+									"path": [
+										"gis-service-core",
+										"cus",
+										"gsgeometry",
+										"cetc15",
+										"maps",
+										"services",
+										"gsgeometry",
+										"GeometrySvc",
+										"1000",
+										"buffer"
+									],
+									"query": [
+										{
+											"key": "format",
+											"value": "json"
+										},
+										{
+											"key": "distances",
+											"value": "2000"
+										},
+										{
+											"key": "smooth",
+											"value": "12"
+										},
+										{
+											"key": "geo",
+											"value": "1"
+										},
+										{
+											"key": "points",
+											"value": "420000000,90000000"
+										},
+										{
+											"key": "srs",
+											"value": "MGIS:4490"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "缓冲区分析（线）createBuffer操作",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://localhost:9000/gis-service-core/cus/gsgeometry/cetc15/maps/services/gsgeometry/GeometrySvc/1000/buffer?format=json&distances=2000&smooth=12&geo=2&points=420000000,90000000,400000000,120000000&srs=MGIS:4490",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9000",
+									"path": [
+										"gis-service-core",
+										"cus",
+										"gsgeometry",
+										"cetc15",
+										"maps",
+										"services",
+										"gsgeometry",
+										"GeometrySvc",
+										"1000",
+										"buffer"
+									],
+									"query": [
+										{
+											"key": "format",
+											"value": "json"
+										},
+										{
+											"key": "distances",
+											"value": "2000"
+										},
+										{
+											"key": "smooth",
+											"value": "12"
+										},
+										{
+											"key": "geo",
+											"value": "2"
+										},
+										{
+											"key": "points",
+											"value": "420000000,90000000,400000000,120000000"
+										},
+										{
+											"key": "srs",
+											"value": "MGIS:4490"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "缓冲区分析（面）createBuffer操作",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://localhost:9000/gis-service-core/cus/gsgeometry/cetc15/maps/services/gsgeometry/GeometrySvc/1000/buffer?format=json&distances=2000&smooth=12&geo=4&points=400000000,90000000,420000000,90000000,400000000,120000000,420000000,120000000&srs=MGIS:4490",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9000",
+									"path": [
+										"gis-service-core",
+										"cus",
+										"gsgeometry",
+										"cetc15",
+										"maps",
+										"services",
+										"gsgeometry",
+										"GeometrySvc",
+										"1000",
+										"buffer"
+									],
+									"query": [
+										{
+											"key": "format",
+											"value": "json"
+										},
+										{
+											"key": "distances",
+											"value": "2000"
+										},
+										{
+											"key": "smooth",
+											"value": "12"
+										},
+										{
+											"key": "geo",
+											"value": "4"
+										},
+										{
+											"key": "points",
+											"value": "400000000,90000000,420000000,90000000,400000000,120000000,420000000,120000000"
+										},
+										{
+											"key": "srs",
+											"value": "MGIS:4490"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "空间参考转换srsConvert操作",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://localhost:9000/gis-service-core/cus/gsgeometry/cetc15/maps/services/gsgeometry/GeometrySvc/1000/srsConversion?format=json&geo=2&points=400000000,90000000,420000000,90000000,400000000,120000000,420000000,120000000&srs=MGIS:4490&toSrs=MGIS:4214",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9000",
+									"path": [
+										"gis-service-core",
+										"cus",
+										"gsgeometry",
+										"cetc15",
+										"maps",
+										"services",
+										"gsgeometry",
+										"GeometrySvc",
+										"1000",
+										"srsConversion"
+									],
+									"query": [
+										{
+											"key": "format",
+											"value": "json"
+										},
+										{
+											"key": "geo",
+											"value": "2"
+										},
+										{
+											"key": "points",
+											"value": "400000000,90000000,420000000,90000000,400000000,120000000,420000000,120000000"
+										},
+										{
+											"key": "srs",
+											"value": "MGIS:4490"
+										},
+										{
+											"key": "toSrs",
+											"value": "MGIS:4214"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "地形分析服务",
+					"description": null,
+					"item": [
+						{
+							"name": "地表距离量算Distance资源",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://localhost:9000/gis-service-core/cus/gstopanalyze/cetc15/maps/services/gstopanalyze/DEMAnalys/1000/distance?format=json&geo=2&points=400000000,90000000,420000000,120000000&srs=MGIS:4490",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9000",
+									"path": [
+										"gis-service-core",
+										"cus",
+										"gstopanalyze",
+										"cetc15",
+										"maps",
+										"services",
+										"gstopanalyze",
+										"DEMAnalys",
+										"1000",
+										"distance"
+									],
+									"query": [
+										{
+											"key": "format",
+											"value": "json"
+										},
+										{
+											"key": "geo",
+											"value": "2"
+										},
+										{
+											"key": "points",
+											"value": "400000000,90000000,420000000,120000000"
+										},
+										{
+											"key": "srs",
+											"value": "MGIS:4490"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "多边形地表面积量算Area资源",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://localhost:9000/gis-service-core/cus/gstopanalyze/cetc15/maps/services/gstopanalyze/DEMAnalys/1000/area?format=json&geo=4&points=400000000,90000000,420000000,90000000,400000000,120000000,420000000,120000000&srs=MGIS:4490",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9000",
+									"path": [
+										"gis-service-core",
+										"cus",
+										"gstopanalyze",
+										"cetc15",
+										"maps",
+										"services",
+										"gstopanalyze",
+										"DEMAnalys",
+										"1000",
+										"area"
+									],
+									"query": [
+										{
+											"key": "format",
+											"value": "json"
+										},
+										{
+											"key": "geo",
+											"value": "4"
+										},
+										{
+											"key": "points",
+											"value": "400000000,90000000,420000000,90000000,400000000,120000000,420000000,120000000"
+										},
+										{
+											"key": "srs",
+											"value": "MGIS:4490"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "圆形地表面积量算AreaOfRing资源",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://localhost:9000/gis-service-core/cus/gstopanalyze/cetc15/maps/services/gstopanalyze/DEMAnalys/1000/areaofring?format=json&point=400000000,90000000&radius=200000.0&srs=MGIS:4490",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9000",
+									"path": [
+										"gis-service-core",
+										"cus",
+										"gstopanalyze",
+										"cetc15",
+										"maps",
+										"services",
+										"gstopanalyze",
+										"DEMAnalys",
+										"1000",
+										"areaofring"
+									],
+									"query": [
+										{
+											"key": "format",
+											"value": "json"
+										},
+										{
+											"key": "point",
+											"value": "400000000,90000000"
+										},
+										{
+											"key": "radius",
+											"value": "200000.0"
+										},
+										{
+											"key": "srs",
+											"value": "MGIS:4490"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "点高程量算PointElevation资源",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://localhost:9000/gis-service-core/cus/gstopanalyze/cetc15/maps/services/gstopanalyze/DEMAnalys/1000/pointelevation? format=json&point=400000000,90000000&srs=MGIS:4490",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9000",
+									"path": [
+										"gis-service-core",
+										"cus",
+										"gstopanalyze",
+										"cetc15",
+										"maps",
+										"services",
+										"gstopanalyze",
+										"DEMAnalys",
+										"1000",
+										"pointelevation"
+									],
+									"query": [
+										{
+											"key": " format",
+											"value": "json"
+										},
+										{
+											"key": "point",
+											"value": "400000000,90000000"
+										},
+										{
+											"key": "srs",
+											"value": "MGIS:4490"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "区域高程量算Elevation资源",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://localhost:9000/gis-service-core/cus/gstopanalyze/cetc15/maps/services/gstopanalyze/DEMAnalys/1000/elevation? format=json&geo=4&points=411932075.69237,150796439.93263,439459419.44237,150796439.93263,439459419.44237,131179252.43263,411932075.69237,131179252.43263&srs=MGIS:4490&dResolutionH=4891.9691&dResolutionW=4891.9691",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9000",
+									"path": [
+										"gis-service-core",
+										"cus",
+										"gstopanalyze",
+										"cetc15",
+										"maps",
+										"services",
+										"gstopanalyze",
+										"DEMAnalys",
+										"1000",
+										"elevation"
+									],
+									"query": [
+										{
+											"key": " format",
+											"value": "json"
+										},
+										{
+											"key": "geo",
+											"value": "4"
+										},
+										{
+											"key": "points",
+											"value": "411932075.69237,150796439.93263,439459419.44237,150796439.93263,439459419.44237,131179252.43263,411932075.69237,131179252.43263"
+										},
+										{
+											"key": "srs",
+											"value": "MGIS:4490"
+										},
+										{
+											"key": "dResolutionH",
+											"value": "4891.9691"
+										},
+										{
+											"key": "dResolutionW",
+											"value": "4891.9691"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "挖方填方Volume资源",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://localhost:9000/gis-service-core/cus/gstopanalyze/cetc15/maps/services/gstopanalyze/DEMAnalys/1000/volume?format=json&geo=4&points=400000000,90000000,420000000,90000000,400000000,120000000,420000000,120000000&srs=MGIS:4490&refHeight=1000.0",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9000",
+									"path": [
+										"gis-service-core",
+										"cus",
+										"gstopanalyze",
+										"cetc15",
+										"maps",
+										"services",
+										"gstopanalyze",
+										"DEMAnalys",
+										"1000",
+										"volume"
+									],
+									"query": [
+										{
+											"key": "format",
+											"value": "json"
+										},
+										{
+											"key": "geo",
+											"value": "4"
+										},
+										{
+											"key": "points",
+											"value": "400000000,90000000,420000000,90000000,400000000,120000000,420000000,120000000"
+										},
+										{
+											"key": "srs",
+											"value": "MGIS:4490"
+										},
+										{
+											"key": "refHeight",
+											"value": "1000.0"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "两点通视分析P2PSight资源",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://localhost:9000/gis-service-core/cus/gstopanalyze/cetc15/maps/services/gstopanalyze/DEMAnalys/1000/p2psight?format=json&drawPic=true&picWidth=256&picHeight=256&geo=2&points=400000000,90000000,420000000,90000000&srs=MGIS:4490&obserHeight=1000&tarHeight=1000",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9000",
+									"path": [
+										"gis-service-core",
+										"cus",
+										"gstopanalyze",
+										"cetc15",
+										"maps",
+										"services",
+										"gstopanalyze",
+										"DEMAnalys",
+										"1000",
+										"p2psight"
+									],
+									"query": [
+										{
+											"key": "format",
+											"value": "json"
+										},
+										{
+											"key": "drawPic",
+											"value": "true"
+										},
+										{
+											"key": "picWidth",
+											"value": "256"
+										},
+										{
+											"key": "picHeight",
+											"value": "256"
+										},
+										{
+											"key": "geo",
+											"value": "2"
+										},
+										{
+											"key": "points",
+											"value": "400000000,90000000,420000000,90000000"
+										},
+										{
+											"key": "srs",
+											"value": "MGIS:4490"
+										},
+										{
+											"key": "obserHeight",
+											"value": "1000"
+										},
+										{
+											"key": "tarHeight",
+											"value": "1000"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "区域通视分析ViewSight资源",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://localhost:9000/gis-service-core/cus/gstopanalyze/cetc15/maps/services/gstopanalyze/DEMAnalys/1000/viewsight?format=json&drawPic=true&picWidth=256&picHeight=256&point=400000000,90000000&radius=200000.0&srs=MGIS:4490&obserHeight=1000",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9000",
+									"path": [
+										"gis-service-core",
+										"cus",
+										"gstopanalyze",
+										"cetc15",
+										"maps",
+										"services",
+										"gstopanalyze",
+										"DEMAnalys",
+										"1000",
+										"viewsight"
+									],
+									"query": [
+										{
+											"key": "format",
+											"value": "json"
+										},
+										{
+											"key": "drawPic",
+											"value": "true"
+										},
+										{
+											"key": "picWidth",
+											"value": "256"
+										},
+										{
+											"key": "picHeight",
+											"value": "256"
+										},
+										{
+											"key": "point",
+											"value": "400000000,90000000"
+										},
+										{
+											"key": "radius",
+											"value": "200000.0"
+										},
+										{
+											"key": "srs",
+											"value": "MGIS:4490"
+										},
+										{
+											"key": "obserHeight",
+											"value": "1000"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "坡度分析Slope资源",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://localhost:9000/gis-service-core/cus/gstopanalyze/cetc15/maps/services/gstopanalyze/DEMAnalys/1000/slope?format=json&geo=4&points=400000000,110000000,410000000,110000000,410000000,90000000&srs=MGIS:4490&drawPic=true&picWidth=256&picHeight=256",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9000",
+									"path": [
+										"gis-service-core",
+										"cus",
+										"gstopanalyze",
+										"cetc15",
+										"maps",
+										"services",
+										"gstopanalyze",
+										"DEMAnalys",
+										"1000",
+										"slope"
+									],
+									"query": [
+										{
+											"key": "format",
+											"value": "json"
+										},
+										{
+											"key": "geo",
+											"value": "4"
+										},
+										{
+											"key": "points",
+											"value": "400000000,110000000,410000000,110000000,410000000,90000000"
+										},
+										{
+											"key": "srs",
+											"value": "MGIS:4490"
+										},
+										{
+											"key": "drawPic",
+											"value": "true"
+										},
+										{
+											"key": "picWidth",
+											"value": "256"
+										},
+										{
+											"key": "picHeight",
+											"value": "256"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "坡向分析Aspect资源",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://localhost:9000/gis-service-core/cus/gstopanalyze/cetc15/maps/services/gstopanalyze/DEMAnalys/1000/aspect?format=json&drawPic=true&picWidth=256&picHeight=256&geo=4&points=400000000,110000000,410000000,110000000,410000000,90000000&srs=MGIS:4490",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9000",
+									"path": [
+										"gis-service-core",
+										"cus",
+										"gstopanalyze",
+										"cetc15",
+										"maps",
+										"services",
+										"gstopanalyze",
+										"DEMAnalys",
+										"1000",
+										"aspect"
+									],
+									"query": [
+										{
+											"key": "format",
+											"value": "json"
+										},
+										{
+											"key": "drawPic",
+											"value": "true"
+										},
+										{
+											"key": "picWidth",
+											"value": "256"
+										},
+										{
+											"key": "picHeight",
+											"value": "256"
+										},
+										{
+											"key": "geo",
+											"value": "4"
+										},
+										{
+											"key": "points",
+											"value": "400000000,110000000,410000000,110000000,410000000,90000000"
+										},
+										{
+											"key": "srs",
+											"value": "MGIS:4490"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "断面分析Profile资源",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://localhost:9000/gis-service-core/cus/gstopanalyze/cetc15/maps/services/gstopanalyze/DEMAnalys/1000/profile?format=json&drawPic=true&picWidth=256&picHeight=256&geo=2&points=400000000,120000000,420000000,120000000&srs=MGIS:4490",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9000",
+									"path": [
+										"gis-service-core",
+										"cus",
+										"gstopanalyze",
+										"cetc15",
+										"maps",
+										"services",
+										"gstopanalyze",
+										"DEMAnalys",
+										"1000",
+										"profile"
+									],
+									"query": [
+										{
+											"key": "format",
+											"value": "json"
+										},
+										{
+											"key": "drawPic",
+											"value": "true"
+										},
+										{
+											"key": "picWidth",
+											"value": "256"
+										},
+										{
+											"key": "picHeight",
+											"value": "256"
+										},
+										{
+											"key": "geo",
+											"value": "2"
+										},
+										{
+											"key": "points",
+											"value": "400000000,120000000,420000000,120000000"
+										},
+										{
+											"key": "srs",
+											"value": "MGIS:4490"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "地图瓦片服务(xyz)",
+					"description": null,
+					"item": [
+						{
+							"name": "地图瓦片服务（Tile资源）-cetc15",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://localhost:9000/gis-service-core/cus/gsmaptile/cetc15/maps/services/gsmaptile/vec/1000/vec_1000/top-all?format=image/png&imageType=jpg&level=6&row=45&col=105",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9000",
+									"path": [
+										"gis-service-core",
+										"cus",
+										"gsmaptile",
+										"cetc15",
+										"maps",
+										"services",
+										"gsmaptile",
+										"vec",
+										"1000",
+										"vec_1000",
+										"top-all"
+									],
+									"query": [
+										{
+											"key": "format",
+											"value": "image/png"
+										},
+										{
+											"key": "imageType",
+											"value": "jpg"
+										},
+										{
+											"key": "level",
+											"value": "6"
+										},
+										{
+											"key": "row",
+											"value": "45"
+										},
+										{
+											"key": "col",
+											"value": "105"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "xyz服务-mc",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://localhost:9000/gis-service-core/cus/gsmaptile/mc/gm?l=6&x=51&y=24",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9000",
+									"path": [
+										"gis-service-core",
+										"cus",
+										"gsmaptile",
+										"mc",
+										"gm"
+									],
+									"query": [
+										{
+											"key": "l",
+											"value": "6"
+										},
+										{
+											"key": "x",
+											"value": "51"
+										},
+										{
+											"key": "y",
+											"value": "24"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "地图显示服务",
+					"description": null,
+					"item": [
+						{
+							"name": "地图显示服务（Map资源）",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://localhost:9000/gis-service-core/cus/gsmap/cetc15/maps/services/gsmap/vec/1000?format=image/png&bound=144001000,410400000,129600000,432000000,MGIS:4490&layers=top-all&width=256&height=256&imageType=1&transparent=false&bgcolor=16777215",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9000",
+									"path": [
+										"gis-service-core",
+										"cus",
+										"gsmap",
+										"cetc15",
+										"maps",
+										"services",
+										"gsmap",
+										"vec",
+										"1000"
+									],
+									"query": [
+										{
+											"key": "format",
+											"value": "image/png"
+										},
+										{
+											"key": "bound",
+											"value": "144001000,410400000,129600000,432000000,MGIS:4490"
+										},
+										{
+											"key": "layers",
+											"value": "top-all"
+										},
+										{
+											"key": "width",
+											"value": "256"
+										},
+										{
+											"key": "height",
+											"value": "256"
+										},
+										{
+											"key": "imageType",
+											"value": "1"
+										},
+										{
+											"key": "transparent",
+											"value": "false"
+										},
+										{
+											"key": "bgcolor",
+											"value": "16777215"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				}
+			]
+		},
+		{
+			"name": "810标准适配服务",
+			"description": "",
+			"item": [
+				{
+					"name": "地名检索服务",
+					"description": null,
+					"item": [
+						{
+							"name": "地名检索服务",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://localhost:9000/gis-service-core/gsplacename/cetc15?format=json&searchInfo=工商&featureNum=100",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9000",
+									"path": [
+										"gis-service-core",
+										"gsplacename",
+										"cetc15"
+									],
+									"query": [
+										{
+											"key": "format",
+											"value": "json"
+										},
+										{
+											"key": "searchInfo",
+											"value": "工商"
+										},
+										{
+											"key": "featureNum",
+											"value": "100"
+										},
+										{
+											"key": "auxParams",
+											"value": "",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "网络分析服务",
+					"description": null,
+					"item": [
+						{
+							"name": "网络分析服务",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://localhost:9000/gis-service-core/gsnetworkanalyze/cetc15?format=json&alias=navi_china&version=1000&points=418920970_143951000,418924520_143661860&srs=MGIS:4490&naviMode=1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9000",
+									"path": [
+										"gis-service-core",
+										"gsnetworkanalyze",
+										"cetc15"
+									],
+									"query": [
+										{
+											"key": "format",
+											"value": "json"
+										},
+										{
+											"key": "alias",
+											"value": "navi_china"
+										},
+										{
+											"key": "version",
+											"value": "1000"
+										},
+										{
+											"key": "points",
+											"value": "418920970_143951000,418924520_143661860"
+										},
+										{
+											"key": "srs",
+											"value": "MGIS:4490"
+										},
+										{
+											"key": "naviMode",
+											"value": "1"
+										},
+										{
+											"key": "auxParams",
+											"value": "",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "几何计算服务",
+					"description": null,
+					"item": [
+						{
+							"name": "距离量算getLength操作",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://localhost:9000/gis-service-core/gsgeometry/length/cetc15?format=json&points=400000000,110000000,410000000,110000000,410000000,90000000&srs=MGIS:4490",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9000",
+									"path": [
+										"gis-service-core",
+										"gsgeometry",
+										"length",
+										"cetc15"
+									],
+									"query": [
+										{
+											"key": "format",
+											"value": "json"
+										},
+										{
+											"key": "points",
+											"value": "400000000,110000000,410000000,110000000,410000000,90000000"
+										},
+										{
+											"key": "srs",
+											"value": "MGIS:4490"
+										},
+										{
+											"key": "auxParams",
+											"value": "",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "面积量算getArea操作",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://localhost:9000/gis-service-core/gsgeometry/area/cetc15?format=json&geo=4&points=400000000,90000000,420000000,90000000,400000000,120000000,420000000,120000000&srs=MGIS:4490",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9000",
+									"path": [
+										"gis-service-core",
+										"gsgeometry",
+										"area",
+										"cetc15"
+									],
+									"query": [
+										{
+											"key": "format",
+											"value": "json"
+										},
+										{
+											"key": "geo",
+											"value": "4"
+										},
+										{
+											"key": "points",
+											"value": "400000000,90000000,420000000,90000000,400000000,120000000,420000000,120000000"
+										},
+										{
+											"key": "srs",
+											"value": "MGIS:4490"
+										},
+										{
+											"key": "auxParams",
+											"value": "",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "方位角量算getAzimuth操作",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://localhost:9000/gis-service-core/gsgeometry/azimuth/cetc15?format=json&pointBegin=400000000,110000000&pointEnd=420000000,90000000&srs=MGIS:4490",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9000",
+									"path": [
+										"gis-service-core",
+										"gsgeometry",
+										"azimuth",
+										"cetc15"
+									],
+									"query": [
+										{
+											"key": "format",
+											"value": "json"
+										},
+										{
+											"key": "pointBegin",
+											"value": "400000000,110000000"
+										},
+										{
+											"key": "pointEnd",
+											"value": "420000000,90000000"
+										},
+										{
+											"key": "srs",
+											"value": "MGIS:4490"
+										},
+										{
+											"key": "auxParams",
+											"value": "",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "缓冲区分析（点）createBuffer操作",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://localhost:9000/gis-service-core/gsgeometry/buffer/cetc15?format=json&distances=2000&smooth=12&geo=1&points=420000000,90000000&srs=MGIS:4490",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9000",
+									"path": [
+										"gis-service-core",
+										"gsgeometry",
+										"buffer",
+										"cetc15"
+									],
+									"query": [
+										{
+											"key": "format",
+											"value": "json"
+										},
+										{
+											"key": "distances",
+											"value": "2000"
+										},
+										{
+											"key": "smooth",
+											"value": "12"
+										},
+										{
+											"key": "geo",
+											"value": "1"
+										},
+										{
+											"key": "points",
+											"value": "420000000,90000000"
+										},
+										{
+											"key": "srs",
+											"value": "MGIS:4490"
+										},
+										{
+											"key": "auxParams",
+											"value": "",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "缓冲区分析（线）createBuffer操作",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://localhost:9000/gis-service-core/gsgeometry/buffer/cetc15?format=json&distances=2000&smooth=12&geo=2&points=420000000,90000000,400000000,120000000&srs=MGIS:4490",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9000",
+									"path": [
+										"gis-service-core",
+										"gsgeometry",
+										"buffer",
+										"cetc15"
+									],
+									"query": [
+										{
+											"key": "format",
+											"value": "json"
+										},
+										{
+											"key": "distances",
+											"value": "2000"
+										},
+										{
+											"key": "smooth",
+											"value": "12"
+										},
+										{
+											"key": "geo",
+											"value": "2"
+										},
+										{
+											"key": "points",
+											"value": "420000000,90000000,400000000,120000000"
+										},
+										{
+											"key": "srs",
+											"value": "MGIS:4490"
+										},
+										{
+											"key": "auxParams",
+											"value": "",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "缓冲区分析（面）createBuffer操作",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://localhost:9000/gis-service-core/gsgeometry/buffer/cetc15?format=json&distances=2000&smooth=12&geo=4&points=400000000,90000000,420000000,90000000,400000000,120000000,420000000,120000000&srs=MGIS:4490",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9000",
+									"path": [
+										"gis-service-core",
+										"gsgeometry",
+										"buffer",
+										"cetc15"
+									],
+									"query": [
+										{
+											"key": "format",
+											"value": "json"
+										},
+										{
+											"key": "distances",
+											"value": "2000"
+										},
+										{
+											"key": "smooth",
+											"value": "12"
+										},
+										{
+											"key": "geo",
+											"value": "4"
+										},
+										{
+											"key": "points",
+											"value": "400000000,90000000,420000000,90000000,400000000,120000000,420000000,120000000"
+										},
+										{
+											"key": "srs",
+											"value": "MGIS:4490"
+										},
+										{
+											"key": "auxParams",
+											"value": "",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "空间参考转换srsConvert操作",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://localhost:9000/gis-service-core/gsgeometry/srsConversion/cetc15?format=json&geo=1&points=400000000,90000000,420000000,90000000,400000000,120000000,420000000,120000000&srs=MGIS:4490&toSrs=MGIS:4214",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9000",
+									"path": [
+										"gis-service-core",
+										"gsgeometry",
+										"srsConversion",
+										"cetc15"
+									],
+									"query": [
+										{
+											"key": "format",
+											"value": "json"
+										},
+										{
+											"key": "geo",
+											"value": "1"
+										},
+										{
+											"key": "points",
+											"value": "400000000,90000000,420000000,90000000,400000000,120000000,420000000,120000000"
+										},
+										{
+											"key": "srs",
+											"value": "MGIS:4490"
+										},
+										{
+											"key": "toSrs",
+											"value": "MGIS:4214"
+										},
+										{
+											"key": "auxParams",
+											"value": "",
+											"disabled": true
+										}
+									]
+								},
+								"description": "空间参考转换srsConvert操作"
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "地形分析服务",
+					"description": null,
+					"item": [
+						{
+							"name": "地表距离量算Distance",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://localhost:9000/gis-service-core/gstopanalyze/distance/cetc15?format=json&alias=DEMAnalys&version=1000&geo=2&points=400000000_90000000,420000000_120000000&srs=MGIS:4490",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9000",
+									"path": [
+										"gis-service-core",
+										"gstopanalyze",
+										"distance",
+										"cetc15"
+									],
+									"query": [
+										{
+											"key": "format",
+											"value": "json"
+										},
+										{
+											"key": "alias",
+											"value": "DEMAnalys"
+										},
+										{
+											"key": "version",
+											"value": "1000"
+										},
+										{
+											"key": "geo",
+											"value": "2"
+										},
+										{
+											"key": "points",
+											"value": "400000000_90000000,420000000_120000000"
+										},
+										{
+											"key": "srs",
+											"value": "MGIS:4490"
+										},
+										{
+											"key": "auxParams",
+											"value": "",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "多边形地表面积量算Area资源",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://localhost:9000/gis-service-core/gstopanalyze/area/cetc15?format=json&alias=DEMAnalys&version=1000&geo=4&points=400000000_90000000,420000000_90000000,400000000_120000000,420000000_120000000&srs=MGIS:4490",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9000",
+									"path": [
+										"gis-service-core",
+										"gstopanalyze",
+										"area",
+										"cetc15"
+									],
+									"query": [
+										{
+											"key": "format",
+											"value": "json"
+										},
+										{
+											"key": "alias",
+											"value": "DEMAnalys"
+										},
+										{
+											"key": "version",
+											"value": "1000"
+										},
+										{
+											"key": "geo",
+											"value": "4"
+										},
+										{
+											"key": "points",
+											"value": "400000000_90000000,420000000_90000000,400000000_120000000,420000000_120000000"
+										},
+										{
+											"key": "srs",
+											"value": "MGIS:4490"
+										},
+										{
+											"key": "auxParams",
+											"value": "",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "圆形地表面积量算AreaOfRing资源",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://localhost:9000/gis-service-core/gstopanalyze/areaofring/cetc15?format=json&alias=DEMAnalys&version=1000&radius=200000.0&points=400000000_90000000&srs=MGIS:4490",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9000",
+									"path": [
+										"gis-service-core",
+										"gstopanalyze",
+										"areaofring",
+										"cetc15"
+									],
+									"query": [
+										{
+											"key": "format",
+											"value": "json"
+										},
+										{
+											"key": "alias",
+											"value": "DEMAnalys"
+										},
+										{
+											"key": "version",
+											"value": "1000"
+										},
+										{
+											"key": "radius",
+											"value": "200000.0"
+										},
+										{
+											"key": "points",
+											"value": "400000000_90000000"
+										},
+										{
+											"key": "srs",
+											"value": "MGIS:4490"
+										},
+										{
+											"key": "auxParams",
+											"value": "",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "点高程量算PointElevation资源",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://localhost:9000/gis-service-core/gstopanalyze/pointelevation/cetc15?format=json&alias=DEMAnalys&version=1000&points=400000000_90000000&srs=MGIS:4490",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9000",
+									"path": [
+										"gis-service-core",
+										"gstopanalyze",
+										"pointelevation",
+										"cetc15"
+									],
+									"query": [
+										{
+											"key": "format",
+											"value": "json"
+										},
+										{
+											"key": "alias",
+											"value": "DEMAnalys"
+										},
+										{
+											"key": "version",
+											"value": "1000"
+										},
+										{
+											"key": "points",
+											"value": "400000000_90000000"
+										},
+										{
+											"key": "srs",
+											"value": "MGIS:4490"
+										},
+										{
+											"key": "auxParams",
+											"value": "",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "区域高程量算Elevation资源",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://localhost:9000/gis-service-core/gstopanalyze/elevation/cetc15?format=json&alias=DEMAnalys&version=1000&geo=4&points=411932075.69237_150796439.93263,439459419.44237_150796439.93263,439459419.44237_131179252.43263,411932075.69237_131179252.43263&srs=MGIS:4490&dResolutionH=4891.9691&dResolutionW=4891.9691\n",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9000",
+									"path": [
+										"gis-service-core",
+										"gstopanalyze",
+										"elevation",
+										"cetc15"
+									],
+									"query": [
+										{
+											"key": "format",
+											"value": "json"
+										},
+										{
+											"key": "alias",
+											"value": "DEMAnalys"
+										},
+										{
+											"key": "version",
+											"value": "1000"
+										},
+										{
+											"key": "geo",
+											"value": "4"
+										},
+										{
+											"key": "points",
+											"value": "411932075.69237_150796439.93263,439459419.44237_150796439.93263,439459419.44237_131179252.43263,411932075.69237_131179252.43263"
+										},
+										{
+											"key": "srs",
+											"value": "MGIS:4490"
+										},
+										{
+											"key": "dResolutionH",
+											"value": "4891.9691"
+										},
+										{
+											"key": "dResolutionW",
+											"value": "4891.9691\n"
+										},
+										{
+											"key": "auxParams",
+											"value": "",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "挖方填方Volume资源",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://localhost:9000/gis-service-core/gstopanalyze/volume/cetc15?format=json&alias=DEMAnalys&version=1000&geo=4&points=400000000_90000000,420000000_90000000,400000000_120000000,420000000_120000000&srs=MGIS:4490&dResolutionH=4891.9691&dResolutionW=4891.9691&refHeight=1000",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9000",
+									"path": [
+										"gis-service-core",
+										"gstopanalyze",
+										"volume",
+										"cetc15"
+									],
+									"query": [
+										{
+											"key": "format",
+											"value": "json"
+										},
+										{
+											"key": "alias",
+											"value": "DEMAnalys"
+										},
+										{
+											"key": "version",
+											"value": "1000"
+										},
+										{
+											"key": "geo",
+											"value": "4"
+										},
+										{
+											"key": "points",
+											"value": "400000000_90000000,420000000_90000000,400000000_120000000,420000000_120000000"
+										},
+										{
+											"key": "srs",
+											"value": "MGIS:4490"
+										},
+										{
+											"key": "dResolutionH",
+											"value": "4891.9691"
+										},
+										{
+											"key": "dResolutionW",
+											"value": "4891.9691"
+										},
+										{
+											"key": "refHeight",
+											"value": "1000"
+										},
+										{
+											"key": "auxParams",
+											"value": "",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "两点通视分析P2PSight资源",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://localhost:9000/gis-service-core/gstopanalyze/p2pSight/cetc15?format=json&alias=DEMAnalys&version=1000&geo=2&points=400000000_90000000,420000000_90000000&srs=MGIS:4490&dResolutionH=4891.9691&dResolutionW=4891.9691&drawPic=true&observheight=1000&targetHeight=1000&picWidth=256&picHeight=256",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9000",
+									"path": [
+										"gis-service-core",
+										"gstopanalyze",
+										"p2pSight",
+										"cetc15"
+									],
+									"query": [
+										{
+											"key": "format",
+											"value": "json"
+										},
+										{
+											"key": "alias",
+											"value": "DEMAnalys"
+										},
+										{
+											"key": "version",
+											"value": "1000"
+										},
+										{
+											"key": "geo",
+											"value": "2"
+										},
+										{
+											"key": "points",
+											"value": "400000000_90000000,420000000_90000000"
+										},
+										{
+											"key": "srs",
+											"value": "MGIS:4490"
+										},
+										{
+											"key": "dResolutionH",
+											"value": "4891.9691"
+										},
+										{
+											"key": "dResolutionW",
+											"value": "4891.9691"
+										},
+										{
+											"key": "drawPic",
+											"value": "true"
+										},
+										{
+											"key": "observheight",
+											"value": "1000"
+										},
+										{
+											"key": "targetHeight",
+											"value": "1000"
+										},
+										{
+											"key": "picWidth",
+											"value": "256"
+										},
+										{
+											"key": "picHeight",
+											"value": "256"
+										},
+										{
+											"key": "auxParams",
+											"value": "",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "区域通视分析ViewSight资源",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://localhost:9000/gis-service-core/gstopanalyze/viewsight/cetc15?format=json&alias=DEMAnalys&version=1000&points=400000000_90000000&radius=200000.0&srs=MGIS:4490&dResolutionH=4891.9691&dResolutionW=4891.9691&drawPic=true&observheight=1000&picWidth=256&picHeight=256",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9000",
+									"path": [
+										"gis-service-core",
+										"gstopanalyze",
+										"viewsight",
+										"cetc15"
+									],
+									"query": [
+										{
+											"key": "format",
+											"value": "json"
+										},
+										{
+											"key": "alias",
+											"value": "DEMAnalys"
+										},
+										{
+											"key": "version",
+											"value": "1000"
+										},
+										{
+											"key": "points",
+											"value": "400000000_90000000"
+										},
+										{
+											"key": "radius",
+											"value": "200000.0"
+										},
+										{
+											"key": "srs",
+											"value": "MGIS:4490"
+										},
+										{
+											"key": "dResolutionH",
+											"value": "4891.9691"
+										},
+										{
+											"key": "dResolutionW",
+											"value": "4891.9691"
+										},
+										{
+											"key": "drawPic",
+											"value": "true"
+										},
+										{
+											"key": "observheight",
+											"value": "1000"
+										},
+										{
+											"key": "picWidth",
+											"value": "256"
+										},
+										{
+											"key": "picHeight",
+											"value": "256"
+										},
+										{
+											"key": "auxParams",
+											"value": "",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "坡度分析Slope资源",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://localhost:9000/gis-service-core/gstopanalyze/slope/cetc15?format=json&alias=DEMAnalys&version=1000&geo=4&points=400000000_110000000,410000000_110000000,410000000_90000000&srs=MGIS:4490&drawPic=true&picWidth=256&picHeight=256&dResolutionH=4891.9691&dResolutionW=4891.9691&slopeLevel=12",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9000",
+									"path": [
+										"gis-service-core",
+										"gstopanalyze",
+										"slope",
+										"cetc15"
+									],
+									"query": [
+										{
+											"key": "format",
+											"value": "json"
+										},
+										{
+											"key": "alias",
+											"value": "DEMAnalys"
+										},
+										{
+											"key": "version",
+											"value": "1000"
+										},
+										{
+											"key": "geo",
+											"value": "4"
+										},
+										{
+											"key": "points",
+											"value": "400000000_110000000,410000000_110000000,410000000_90000000"
+										},
+										{
+											"key": "srs",
+											"value": "MGIS:4490"
+										},
+										{
+											"key": "drawPic",
+											"value": "true"
+										},
+										{
+											"key": "picWidth",
+											"value": "256"
+										},
+										{
+											"key": "picHeight",
+											"value": "256"
+										},
+										{
+											"key": "dResolutionH",
+											"value": "4891.9691"
+										},
+										{
+											"key": "dResolutionW",
+											"value": "4891.9691"
+										},
+										{
+											"key": "slopeLevel",
+											"value": "12"
+										},
+										{
+											"key": "auxParams",
+											"value": "",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "坡向分析Aspect资源",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://localhost:9000/gis-service-core/gstopanalyze/aspect/cetc15?format=json&alias=DEMAnalys&version=1000&geo=4&points=400000000_110000000,410000000_110000000,410000000_90000000&srs=MGIS:4490&drawPic=true&picWidth=256&picHeight=256&dResolutionH=4891.9691&dResolutionW=4891.9691",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9000",
+									"path": [
+										"gis-service-core",
+										"gstopanalyze",
+										"aspect",
+										"cetc15"
+									],
+									"query": [
+										{
+											"key": "format",
+											"value": "json"
+										},
+										{
+											"key": "alias",
+											"value": "DEMAnalys"
+										},
+										{
+											"key": "version",
+											"value": "1000"
+										},
+										{
+											"key": "geo",
+											"value": "4"
+										},
+										{
+											"key": "points",
+											"value": "400000000_110000000,410000000_110000000,410000000_90000000"
+										},
+										{
+											"key": "srs",
+											"value": "MGIS:4490"
+										},
+										{
+											"key": "drawPic",
+											"value": "true"
+										},
+										{
+											"key": "picWidth",
+											"value": "256"
+										},
+										{
+											"key": "picHeight",
+											"value": "256"
+										},
+										{
+											"key": "dResolutionH",
+											"value": "4891.9691"
+										},
+										{
+											"key": "dResolutionW",
+											"value": "4891.9691"
+										},
+										{
+											"key": "auxParams",
+											"value": "",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "断面分析Profile资源",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://localhost:9000/gis-service-core/gstopanalyze/profile/cetc15?format=json&alias=DEMAnalys&version=1000&geo=2&points=400000000_120000000,420000000_120000000&srs=MGIS:4490&drawPic=true&picWidth=256&picHeight=256&dResolutionH=4891.9691&dResolutionW=4891.9691",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9000",
+									"path": [
+										"gis-service-core",
+										"gstopanalyze",
+										"profile",
+										"cetc15"
+									],
+									"query": [
+										{
+											"key": "format",
+											"value": "json"
+										},
+										{
+											"key": "alias",
+											"value": "DEMAnalys"
+										},
+										{
+											"key": "version",
+											"value": "1000"
+										},
+										{
+											"key": "geo",
+											"value": "2"
+										},
+										{
+											"key": "points",
+											"value": "400000000_120000000,420000000_120000000"
+										},
+										{
+											"key": "srs",
+											"value": "MGIS:4490"
+										},
+										{
+											"key": "drawPic",
+											"value": "true"
+										},
+										{
+											"key": "picWidth",
+											"value": "256"
+										},
+										{
+											"key": "picHeight",
+											"value": "256"
+										},
+										{
+											"key": "dResolutionH",
+											"value": "4891.9691"
+										},
+										{
+											"key": "dResolutionW",
+											"value": "4891.9691"
+										},
+										{
+											"key": "auxParams",
+											"value": "",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "地图瓦片服务",
+					"description": null,
+					"item": [
+						{
+							"name": "OGC规范-网络地图瓦片服务（WMTS）",
+							"description": null,
+							"item": [
+								{
+									"name": "cetc15",
+									"description": null,
+									"item": [
+										{
+											"name": "GetCapabilities操作",
+											"request": {
+												"method": "GET",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": ""
+												},
+												"url": {
+													"raw": "http://localhost:9000/gis-service-core/wmts/cetc15?service=wmts&request=GetCapabilities&version=1.0.0",
+													"protocol": "http",
+													"host": [
+														"localhost"
+													],
+													"port": "9000",
+													"path": [
+														"gis-service-core",
+														"wmts",
+														"cetc15"
+													],
+													"query": [
+														{
+															"key": "service",
+															"value": "wmts"
+														},
+														{
+															"key": "request",
+															"value": "GetCapabilities"
+														},
+														{
+															"key": "version",
+															"value": "1.0.0"
+														},
+														{
+															"key": "auxParams",
+															"value": "",
+															"disabled": true
+														}
+													]
+												}
+											},
+											"response": []
+										},
+										{
+											"name": "GetTile操作",
+											"request": {
+												"method": "GET",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": ""
+												},
+												"url": {
+													"raw": "http://localhost:9000/gis-service-core/wmts/cetc15?service=wmts&request=GetTile&version=1.0.0&format=image/png&layer=vec__1000__vec_1000__top-all&style=default&tilematrixset=4490&tilematrix=6&tilerow=82&tilecol=105",
+													"protocol": "http",
+													"host": [
+														"localhost"
+													],
+													"port": "9000",
+													"path": [
+														"gis-service-core",
+														"wmts",
+														"cetc15"
+													],
+													"query": [
+														{
+															"key": "service",
+															"value": "wmts"
+														},
+														{
+															"key": "request",
+															"value": "GetTile"
+														},
+														{
+															"key": "version",
+															"value": "1.0.0"
+														},
+														{
+															"key": "format",
+															"value": "image/png"
+														},
+														{
+															"key": "layer",
+															"value": "vec__1000__vec_1000__top-all"
+														},
+														{
+															"key": "style",
+															"value": "default"
+														},
+														{
+															"key": "tilematrixset",
+															"value": "4490"
+														},
+														{
+															"key": "tilematrix",
+															"value": "6"
+														},
+														{
+															"key": "tilerow",
+															"value": "82"
+														},
+														{
+															"key": "tilecol",
+															"value": "105"
+														},
+														{
+															"key": "auxParams",
+															"value": "",
+															"disabled": true
+														}
+													]
+												}
+											},
+											"response": []
+										}
+									],
+									"_postman_isSubFolder": true
+								},
+								{
+									"name": "sm",
+									"description": null,
+									"item": [
+										{
+											"name": "GetCapabilities操作",
+											"request": {
+												"method": "GET",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": ""
+												},
+												"url": {
+													"raw": "http://localhost:9000/gis-service-core/wmts/sm?service=wmts&request=GetCapabilities&version=1.0.0&auxParams={\n\t\"a\":\"map-world\",\n\t\"b\":\"wmts100\"\n}",
+													"protocol": "http",
+													"host": [
+														"localhost"
+													],
+													"port": "9000",
+													"path": [
+														"gis-service-core",
+														"wmts",
+														"sm"
+													],
+													"query": [
+														{
+															"key": "service",
+															"value": "wmts"
+														},
+														{
+															"key": "request",
+															"value": "GetCapabilities"
+														},
+														{
+															"key": "version",
+															"value": "1.0.0"
+														},
+														{
+															"key": "auxParams",
+															"value": "{\n\t\"a\":\"map-world\",\n\t\"b\":\"wmts100\"\n}"
+														}
+													]
+												}
+											},
+											"response": []
+										},
+										{
+											"name": "GetTile操作",
+											"request": {
+												"method": "GET",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": ""
+												},
+												"url": {
+													"raw": "http://localhost:9000/gis-service-core/wmts/sm?service=wmts&request=GetTile&version=1.0.0&format=image/png&layer=World&style=default&tilematrixset=GlobalCRS84Scale_World&tilematrix=2&tilerow=0&tilecol=3&auxParams={\n\t\"a\":\"map-world\",\n\t\"b\":\"wmts100\"\n}",
+													"protocol": "http",
+													"host": [
+														"localhost"
+													],
+													"port": "9000",
+													"path": [
+														"gis-service-core",
+														"wmts",
+														"sm"
+													],
+													"query": [
+														{
+															"key": "service",
+															"value": "wmts"
+														},
+														{
+															"key": "request",
+															"value": "GetTile"
+														},
+														{
+															"key": "version",
+															"value": "1.0.0"
+														},
+														{
+															"key": "format",
+															"value": "image/png"
+														},
+														{
+															"key": "layer",
+															"value": "World"
+														},
+														{
+															"key": "style",
+															"value": "default"
+														},
+														{
+															"key": "tilematrixset",
+															"value": "GlobalCRS84Scale_World"
+														},
+														{
+															"key": "tilematrix",
+															"value": "2"
+														},
+														{
+															"key": "tilerow",
+															"value": "0"
+														},
+														{
+															"key": "tilecol",
+															"value": "3"
+														},
+														{
+															"key": "auxParams",
+															"value": "{\n\t\"a\":\"map-world\",\n\t\"b\":\"wmts100\"\n}"
+														}
+													]
+												}
+											},
+											"response": []
+										}
+									],
+									"_postman_isSubFolder": true
+								},
+								{
+									"name": "cetc15-New",
+									"description": null,
+									"item": [
+										{
+											"name": "GetCapabilities操作",
+											"request": {
+												"method": "GET",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": ""
+												},
+												"url": {
+													"raw": "http://localhost:9000/gis-service-core/wmts/cetc15/maps/wmts?service=wmts&request=GetCapabilities&version=1.0.0",
+													"protocol": "http",
+													"host": [
+														"localhost"
+													],
+													"port": "9000",
+													"path": [
+														"gis-service-core",
+														"wmts",
+														"cetc15",
+														"maps",
+														"wmts"
+													],
+													"query": [
+														{
+															"key": "service",
+															"value": "wmts"
+														},
+														{
+															"key": "request",
+															"value": "GetCapabilities"
+														},
+														{
+															"key": "version",
+															"value": "1.0.0"
+														},
+														{
+															"key": "auxParams",
+															"value": "",
+															"disabled": true
+														}
+													]
+												}
+											},
+											"response": []
+										},
+										{
+											"name": "GetTile操作",
+											"request": {
+												"method": "GET",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": ""
+												},
+												"url": {
+													"raw": "http://localhost:9000/gis-service-core/wmts/cetc15/maps/wmts?service=wmts&request=GetTile&version=1.0.0&format=image/png&layer=vec__1000__vec_1000__top-all&style=default&tilematrixset=4490&tilematrix=6&tilerow=82&tilecol=105",
+													"protocol": "http",
+													"host": [
+														"localhost"
+													],
+													"port": "9000",
+													"path": [
+														"gis-service-core",
+														"wmts",
+														"cetc15",
+														"maps",
+														"wmts"
+													],
+													"query": [
+														{
+															"key": "service",
+															"value": "wmts"
+														},
+														{
+															"key": "request",
+															"value": "GetTile"
+														},
+														{
+															"key": "version",
+															"value": "1.0.0"
+														},
+														{
+															"key": "format",
+															"value": "image/png"
+														},
+														{
+															"key": "layer",
+															"value": "vec__1000__vec_1000__top-all"
+														},
+														{
+															"key": "style",
+															"value": "default"
+														},
+														{
+															"key": "tilematrixset",
+															"value": "4490"
+														},
+														{
+															"key": "tilematrix",
+															"value": "6"
+														},
+														{
+															"key": "tilerow",
+															"value": "82"
+														},
+														{
+															"key": "tilecol",
+															"value": "105"
+														},
+														{
+															"key": "auxParams",
+															"value": "",
+															"disabled": true
+														}
+													]
+												}
+											},
+											"response": []
+										}
+									],
+									"_postman_isSubFolder": true
+								},
+								{
+									"name": "sm-New",
+									"description": null,
+									"item": [
+										{
+											"name": "GetCapabilities操作",
+											"request": {
+												"method": "GET",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": ""
+												},
+												"url": {
+													"raw": "http://localhost:9000/gis-service-core/wmts/sm/services/map-world/wmts100?service=wmts&request=GetCapabilities&version=1.0.0",
+													"protocol": "http",
+													"host": [
+														"localhost"
+													],
+													"port": "9000",
+													"path": [
+														"gis-service-core",
+														"wmts",
+														"sm",
+														"services",
+														"map-world",
+														"wmts100"
+													],
+													"query": [
+														{
+															"key": "service",
+															"value": "wmts"
+														},
+														{
+															"key": "request",
+															"value": "GetCapabilities"
+														},
+														{
+															"key": "version",
+															"value": "1.0.0"
+														},
+														{
+															"key": "auxParams",
+															"value": "",
+															"disabled": true
+														}
+													]
+												}
+											},
+											"response": []
+										},
+										{
+											"name": "GetTile操作",
+											"request": {
+												"method": "GET",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": ""
+												},
+												"url": {
+													"raw": "http://localhost:9000/gis-service-core/wmts/sm/services/map-world/wmts100?service=wmts&request=GetTile&version=1.0.0&format=image/png&layer=World&style=default&tilematrixset=GlobalCRS84Scale_World&tilematrix=2&tilerow=0&tilecol=3",
+													"protocol": "http",
+													"host": [
+														"localhost"
+													],
+													"port": "9000",
+													"path": [
+														"gis-service-core",
+														"wmts",
+														"sm",
+														"services",
+														"map-world",
+														"wmts100"
+													],
+													"query": [
+														{
+															"key": "service",
+															"value": "wmts"
+														},
+														{
+															"key": "request",
+															"value": "GetTile"
+														},
+														{
+															"key": "version",
+															"value": "1.0.0"
+														},
+														{
+															"key": "format",
+															"value": "image/png"
+														},
+														{
+															"key": "layer",
+															"value": "World"
+														},
+														{
+															"key": "style",
+															"value": "default"
+														},
+														{
+															"key": "tilematrixset",
+															"value": "GlobalCRS84Scale_World"
+														},
+														{
+															"key": "tilematrix",
+															"value": "2"
+														},
+														{
+															"key": "tilerow",
+															"value": "0"
+														},
+														{
+															"key": "tilecol",
+															"value": "3"
+														},
+														{
+															"key": "auxParams",
+															"value": "",
+															"disabled": true
+														}
+													]
+												}
+											},
+											"response": []
+										}
+									],
+									"_postman_isSubFolder": true
+								}
+							],
+							"_postman_isSubFolder": true
+						},
+						{
+							"name": "地图瓦片服务（Tile资源）-cetc15",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://localhost:9000/gis-service-core/gsmaptile/cetc15?format=image&alias=vec&version=1000&namespace=vec_1000&layerAlias=top-all&level=6&row=45&col=105&imageType=png&dataType=3&dataFormat=1&appType=1&dataVersion=new",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9000",
+									"path": [
+										"gis-service-core",
+										"gsmaptile",
+										"cetc15"
+									],
+									"query": [
+										{
+											"key": "format",
+											"value": "image"
+										},
+										{
+											"key": "alias",
+											"value": "vec"
+										},
+										{
+											"key": "version",
+											"value": "1000"
+										},
+										{
+											"key": "namespace",
+											"value": "vec_1000"
+										},
+										{
+											"key": "layerAlias",
+											"value": "top-all"
+										},
+										{
+											"key": "level",
+											"value": "6"
+										},
+										{
+											"key": "row",
+											"value": "45"
+										},
+										{
+											"key": "col",
+											"value": "105"
+										},
+										{
+											"key": "imageType",
+											"value": "png"
+										},
+										{
+											"key": "dataType",
+											"value": "3"
+										},
+										{
+											"key": "dataFormat",
+											"value": "1"
+										},
+										{
+											"key": "appType",
+											"value": "1"
+										},
+										{
+											"key": "dataVersion",
+											"value": "new"
+										},
+										{
+											"key": "auxParams",
+											"value": null,
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "地图瓦片服务（Tile资源）-mc",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://localhost:9000/gis-service-core/gsmaptile/mc?format=image&alias=gm&version=1000&namespace=vec_1000&layerAlias=top-all&level=6&row=51&col=24&imageType=png&dataType=3&dataFormat=1&appType=1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9000",
+									"path": [
+										"gis-service-core",
+										"gsmaptile",
+										"mc"
+									],
+									"query": [
+										{
+											"key": "format",
+											"value": "image"
+										},
+										{
+											"key": "alias",
+											"value": "gm"
+										},
+										{
+											"key": "version",
+											"value": "1000",
+											"description": "对于mc，该必填用不到，填数字即可"
+										},
+										{
+											"key": "namespace",
+											"value": "vec_1000",
+											"description": "对于mc，该必填用不到，填非空常规英文字符或数字即可"
+										},
+										{
+											"key": "layerAlias",
+											"value": "top-all",
+											"description": "对于mc，该必填用不到，填非空常规英文字符或数字即可"
+										},
+										{
+											"key": "level",
+											"value": "6"
+										},
+										{
+											"key": "row",
+											"value": "51"
+										},
+										{
+											"key": "col",
+											"value": "24"
+										},
+										{
+											"key": "imageType",
+											"value": "png"
+										},
+										{
+											"key": "dataType",
+											"value": "3",
+											"description": "对于mc，该必填用不到，填非空数字即可"
+										},
+										{
+											"key": "dataFormat",
+											"value": "1",
+											"description": "对于mc，该必填用不到，填非空数字即可"
+										},
+										{
+											"key": "appType",
+											"value": "1",
+											"description": "对于mc，该必填用不到，填非空数字即可"
+										},
+										{
+											"key": "dataVersion",
+											"value": "v1.0",
+											"description": "对于mc，填写其瓦片数据版本如v1.0，不填不加版本",
+											"disabled": true
+										},
+										{
+											"key": "auxParams",
+											"value": "",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "地图显示服务",
+					"description": null,
+					"item": [
+						{
+							"name": "OGC规范-网络地图服务（WMS）",
+							"description": null,
+							"item": [
+								{
+									"name": "cetc15",
+									"description": null,
+									"item": [
+										{
+											"name": "GetCapabilities操作-cetc15",
+											"request": {
+												"method": "GET",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": ""
+												},
+												"url": {
+													"raw": "http://localhost:9000/gis-service-core/wms/cetc15/maps/wms?service=wms&request=GetCapabilities&version=1.3.0",
+													"protocol": "http",
+													"host": [
+														"localhost"
+													],
+													"port": "9000",
+													"path": [
+														"gis-service-core",
+														"wms",
+														"cetc15",
+														"maps",
+														"wms"
+													],
+													"query": [
+														{
+															"key": "service",
+															"value": "wms"
+														},
+														{
+															"key": "request",
+															"value": "GetCapabilities"
+														},
+														{
+															"key": "version",
+															"value": "1.3.0"
+														},
+														{
+															"key": "auxParams",
+															"value": "",
+															"disabled": true
+														}
+													]
+												}
+											},
+											"response": []
+										},
+										{
+											"name": "GetMap操作-cetc15",
+											"request": {
+												"method": "GET",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": ""
+												},
+												"url": {
+													"raw": "http://localhost:9000/gis-service-core/wms/cetc15?service=wms&request=GetMap&version=1.3.0&layers=vec_1000:top-all&bbox=115,36,120,40&crs=MGIS:4490&styles=population&format=image/png&width=512&height=512",
+													"protocol": "http",
+													"host": [
+														"localhost"
+													],
+													"port": "9000",
+													"path": [
+														"gis-service-core",
+														"wms",
+														"cetc15"
+													],
+													"query": [
+														{
+															"key": "service",
+															"value": "wms"
+														},
+														{
+															"key": "request",
+															"value": "GetMap"
+														},
+														{
+															"key": "version",
+															"value": "1.3.0"
+														},
+														{
+															"key": "layers",
+															"value": "vec_1000:top-all"
+														},
+														{
+															"key": "bbox",
+															"value": "115,36,120,40"
+														},
+														{
+															"key": "crs",
+															"value": "MGIS:4490"
+														},
+														{
+															"key": "styles",
+															"value": "population"
+														},
+														{
+															"key": "format",
+															"value": "image/png"
+														},
+														{
+															"key": "width",
+															"value": "512"
+														},
+														{
+															"key": "height",
+															"value": "512"
+														},
+														{
+															"key": "auxParams",
+															"value": null,
+															"disabled": true
+														}
+													]
+												}
+											},
+											"response": []
+										}
+									],
+									"_postman_isSubFolder": true
+								},
+								{
+									"name": "sm",
+									"description": null,
+									"item": [
+										{
+											"name": "GetMap操作-sm",
+											"request": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": ""
+												},
+												"url": {
+													"raw": "http://localhost:9000/gis-service-core/wms/sm?service=wms&request=GetMap&version=1.3.0&layers=China&bbox=10018754.17,9.3132257461548e-10,15028131.255,5009377.085&crs=EPSG:3857&styles=population&format=image/png&width=512&height=512&auxParams={\n\t\"a\":\"map-china400\",\n\t\"b\":\"wms130\",\n\t\"c\":\"China\"\n}",
+													"protocol": "http",
+													"host": [
+														"localhost"
+													],
+													"port": "9000",
+													"path": [
+														"gis-service-core",
+														"wms",
+														"sm"
+													],
+													"query": [
+														{
+															"key": "service",
+															"value": "wms"
+														},
+														{
+															"key": "request",
+															"value": "GetMap"
+														},
+														{
+															"key": "version",
+															"value": "1.3.0"
+														},
+														{
+															"key": "layers",
+															"value": "China"
+														},
+														{
+															"key": "bbox",
+															"value": "10018754.17,9.3132257461548e-10,15028131.255,5009377.085"
+														},
+														{
+															"key": "crs",
+															"value": "EPSG:3857"
+														},
+														{
+															"key": "styles",
+															"value": "population"
+														},
+														{
+															"key": "format",
+															"value": "image/png"
+														},
+														{
+															"key": "width",
+															"value": "512"
+														},
+														{
+															"key": "height",
+															"value": "512"
+														},
+														{
+															"key": "auxParams",
+															"value": "{\n\t\"a\":\"map-china400\",\n\t\"b\":\"wms130\",\n\t\"c\":\"China\"\n}"
+														}
+													]
+												}
+											},
+											"response": []
+										},
+										{
+											"name": "GetCapabilities操作-sm",
+											"request": {
+												"method": "GET",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": ""
+												},
+												"url": {
+													"raw": "http://localhost:9000/gis-service-core/wms/sm?service=wms&request=GetCapabilities&version=1.3.0&auxParams={\n\t\"a\":\"map-china400\",\n\t\"b\":\"wms130\",\n\t\"c\":\"China\"\n}",
+													"protocol": "http",
+													"host": [
+														"localhost"
+													],
+													"port": "9000",
+													"path": [
+														"gis-service-core",
+														"wms",
+														"sm"
+													],
+													"query": [
+														{
+															"key": "service",
+															"value": "wms"
+														},
+														{
+															"key": "request",
+															"value": "GetCapabilities"
+														},
+														{
+															"key": "version",
+															"value": "1.3.0"
+														},
+														{
+															"key": "auxParams",
+															"value": "{\n\t\"a\":\"map-china400\",\n\t\"b\":\"wms130\",\n\t\"c\":\"China\"\n}"
+														}
+													]
+												}
+											},
+											"response": []
+										}
+									],
+									"_postman_isSubFolder": true
+								},
+								{
+									"name": "sm-New",
+									"description": null,
+									"item": [
+										{
+											"name": "GetMap操作-sm",
+											"request": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": ""
+												},
+												"url": {
+													"raw": "http://localhost:9000/gis-service-core/wms/sm/services/map-china400/wms130/China?service=wms&request=GetMap&version=1.3.0&layers=China&bbox=10018754.17,9.3132257461548e-10,15028131.255,5009377.085&crs=EPSG:3857&styles=population&format=image/png&width=512&height=512",
+													"protocol": "http",
+													"host": [
+														"localhost"
+													],
+													"port": "9000",
+													"path": [
+														"gis-service-core",
+														"wms",
+														"sm",
+														"services",
+														"map-china400",
+														"wms130",
+														"China"
+													],
+													"query": [
+														{
+															"key": "service",
+															"value": "wms"
+														},
+														{
+															"key": "request",
+															"value": "GetMap"
+														},
+														{
+															"key": "version",
+															"value": "1.3.0"
+														},
+														{
+															"key": "layers",
+															"value": "China"
+														},
+														{
+															"key": "bbox",
+															"value": "10018754.17,9.3132257461548e-10,15028131.255,5009377.085"
+														},
+														{
+															"key": "crs",
+															"value": "EPSG:3857"
+														},
+														{
+															"key": "styles",
+															"value": "population"
+														},
+														{
+															"key": "format",
+															"value": "image/png"
+														},
+														{
+															"key": "width",
+															"value": "512"
+														},
+														{
+															"key": "height",
+															"value": "512"
+														},
+														{
+															"key": "auxParams",
+															"value": "",
+															"disabled": true
+														}
+													]
+												}
+											},
+											"response": []
+										},
+										{
+											"name": "GetCapabilities操作-sm",
+											"request": {
+												"method": "GET",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": ""
+												},
+												"url": {
+													"raw": "http://localhost:9000/gis-service-core/wms/sm/services/map-china400/wms130/China?service=wms&request=GetCapabilities&version=1.3.0",
+													"protocol": "http",
+													"host": [
+														"localhost"
+													],
+													"port": "9000",
+													"path": [
+														"gis-service-core",
+														"wms",
+														"sm",
+														"services",
+														"map-china400",
+														"wms130",
+														"China"
+													],
+													"query": [
+														{
+															"key": "service",
+															"value": "wms"
+														},
+														{
+															"key": "request",
+															"value": "GetCapabilities"
+														},
+														{
+															"key": "version",
+															"value": "1.3.0"
+														}
+													]
+												}
+											},
+											"response": []
+										}
+									],
+									"_postman_isSubFolder": true
+								},
+								{
+									"name": "cetc15-New",
+									"description": null,
+									"item": [
+										{
+											"name": "GetCapabilities操作-cetc15",
+											"request": {
+												"method": "GET",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": ""
+												},
+												"url": {
+													"raw": "http://localhost:9000/gis-service-core/wms/cetc15/maps/wms?service=wms&request=GetCapabilities&version=1.3.0",
+													"protocol": "http",
+													"host": [
+														"localhost"
+													],
+													"port": "9000",
+													"path": [
+														"gis-service-core",
+														"wms",
+														"cetc15",
+														"maps",
+														"wms"
+													],
+													"query": [
+														{
+															"key": "service",
+															"value": "wms"
+														},
+														{
+															"key": "request",
+															"value": "GetCapabilities"
+														},
+														{
+															"key": "version",
+															"value": "1.3.0"
+														},
+														{
+															"key": "auxParams",
+															"value": "",
+															"disabled": true
+														}
+													]
+												}
+											},
+											"response": []
+										},
+										{
+											"name": "GetMap操作-cetc15",
+											"request": {
+												"method": "GET",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": ""
+												},
+												"url": {
+													"raw": "http://localhost:9000/gis-service-core/wms/cetc15/maps/wms?service=wms&request=GetMap&version=1.3.0&layers=vec_1000:top-all&bbox=115,36,120,40&crs=MGIS:4490&styles=population&format=image/png&width=512&height=512",
+													"protocol": "http",
+													"host": [
+														"localhost"
+													],
+													"port": "9000",
+													"path": [
+														"gis-service-core",
+														"wms",
+														"cetc15",
+														"maps",
+														"wms"
+													],
+													"query": [
+														{
+															"key": "service",
+															"value": "wms"
+														},
+														{
+															"key": "request",
+															"value": "GetMap"
+														},
+														{
+															"key": "version",
+															"value": "1.3.0"
+														},
+														{
+															"key": "layers",
+															"value": "vec_1000:top-all"
+														},
+														{
+															"key": "bbox",
+															"value": "115,36,120,40"
+														},
+														{
+															"key": "crs",
+															"value": "MGIS:4490"
+														},
+														{
+															"key": "styles",
+															"value": "population"
+														},
+														{
+															"key": "format",
+															"value": "image/png"
+														},
+														{
+															"key": "width",
+															"value": "512"
+														},
+														{
+															"key": "height",
+															"value": "512"
+														},
+														{
+															"key": "auxParams",
+															"value": null,
+															"disabled": true
+														}
+													]
+												}
+											},
+											"response": []
+										}
+									],
+									"_postman_isSubFolder": true
+								}
+							],
+							"_postman_isSubFolder": true
+						},
+						{
+							"name": "地图显示服务-Map资源",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://localhost:9000/gis-service-core/gsmap/cetc15?format=image&alias=vec&version=1000&bound=144001000,410400000,129600000,432000000,MGIS:4490&layers=top-all&width=256&height=256&imageType=1&transparent=false&bgcolor=16777215",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9000",
+									"path": [
+										"gis-service-core",
+										"gsmap",
+										"cetc15"
+									],
+									"query": [
+										{
+											"key": "format",
+											"value": "image"
+										},
+										{
+											"key": "alias",
+											"value": "vec"
+										},
+										{
+											"key": "version",
+											"value": "1000"
+										},
+										{
+											"key": "bound",
+											"value": "144001000,410400000,129600000,432000000,MGIS:4490"
+										},
+										{
+											"key": "layers",
+											"value": "top-all"
+										},
+										{
+											"key": "width",
+											"value": "256"
+										},
+										{
+											"key": "height",
+											"value": "256"
+										},
+										{
+											"key": "imageType",
+											"value": "1"
+										},
+										{
+											"key": "transparent",
+											"value": "false"
+										},
+										{
+											"key": "bgcolor",
+											"value": "16777215"
+										},
+										{
+											"key": "auxParams",
+											"value": "",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				}
+			]
+		}
+	]
+}

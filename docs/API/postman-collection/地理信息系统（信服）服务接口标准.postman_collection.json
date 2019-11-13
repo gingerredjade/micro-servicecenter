@@ -1,0 +1,105 @@
+{
+	"info": {
+		"_postman_id": "1ee4880e-1f08-4bba-965e-9c3c50ef26b3",
+		"name": "地理信息系统（信服）服务接口标准",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "网络分析服务",
+			"item": [
+				{
+					"name": "网络分析服务-XF",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://192.168.56.113:8888/mswss/maps/standardsvcs/gsnetworkanalyze?format=json&alias=navi_china&version=1000&srs=MGIS:4490&points=418920970_143951000,418924520_143661860",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"56",
+								"113"
+							],
+							"port": "8888",
+							"path": [
+								"mswss",
+								"maps",
+								"standardsvcs",
+								"gsnetworkanalyze"
+							],
+							"query": [
+								{
+									"key": "format",
+									"value": "json"
+								},
+								{
+									"key": "alias",
+									"value": "navi_china"
+								},
+								{
+									"key": "version",
+									"value": "1000"
+								},
+								{
+									"key": "srs",
+									"value": "MGIS:4490"
+								},
+								{
+									"key": "points",
+									"value": "418920970_143951000,418924520_143661860"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "地名检索服务",
+			"item": [
+				{
+					"name": "地名检索服务-XF",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://192.168.56.113:8888/mswss/maps/standardsvcs/gsplacename?format=json&searchInfo=工商&featureNum=100",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"56",
+								"113"
+							],
+							"port": "8888",
+							"path": [
+								"mswss",
+								"maps",
+								"standardsvcs",
+								"gsplacename"
+							],
+							"query": [
+								{
+									"key": "format",
+									"value": "json"
+								},
+								{
+									"key": "searchInfo",
+									"value": "工商"
+								},
+								{
+									"key": "featureNum",
+									"value": "100"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

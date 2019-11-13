@@ -1,0 +1,50 @@
+{
+	"info": {
+		"_postman_id": "4b9df897-7dd5-40b9-9070-6cfd45336393",
+		"name": "星球时空",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "地图瓦片服务（xyz服务）",
+			"item": [
+				{
+					"name": "xyz服务",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://192.168.56.253:15000/gm?l=6&x=51&y=24",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"56",
+								"253"
+							],
+							"port": "15000",
+							"path": [
+								"gm"
+							],
+							"query": [
+								{
+									"key": "l",
+									"value": "6"
+								},
+								{
+									"key": "x",
+									"value": "51"
+								},
+								{
+									"key": "y",
+									"value": "24"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

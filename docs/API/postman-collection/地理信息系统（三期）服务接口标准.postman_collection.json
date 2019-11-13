@@ -1,0 +1,1364 @@
+{
+	"info": {
+		"_postman_id": "19afc4f7-cc29-4542-b9e8-190559b71cfb",
+		"name": "地理信息系统（三期）服务接口标准",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "地理信息目录服务",
+			"item": [
+				{
+					"name": "地理数据服务目录",
+					"item": [],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "地图显示服务目录",
+					"item": [],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "地图瓦片服务目录",
+					"item": [],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "地名检索服务目录",
+					"item": [],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "空间查询服务目录",
+					"item": [],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "网络分析服务目录",
+					"item": [],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "地形分析服务目录",
+					"item": [],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "几何计算服务目录",
+					"item": [],
+					"_postman_isSubFolder": true
+				}
+			]
+		},
+		{
+			"name": "地理信息数据服务",
+			"item": [
+				{
+					"name": "矢量数据服务",
+					"item": [],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "栅格数据服务",
+					"item": [],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "兵要数据服务",
+					"item": [],
+					"_postman_isSubFolder": true
+				}
+			]
+		},
+		{
+			"name": "地理信息功能服务",
+			"item": [
+				{
+					"name": "地图显示服务",
+					"item": [
+						{
+							"name": "OGC规范-网络地图服务（WMS）",
+							"item": [
+								{
+									"name": "GetCapabilities操作",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://192.168.56.113:8999/gis3wss/maps/wms?service=wms&version=1.3.0&request=GetCapabilities",
+											"protocol": "http",
+											"host": [
+												"192",
+												"168",
+												"56",
+												"113"
+											],
+											"port": "8999",
+											"path": [
+												"gis3wss",
+												"maps",
+												"wms"
+											],
+											"query": [
+												{
+													"key": "service",
+													"value": "wms"
+												},
+												{
+													"key": "version",
+													"value": "1.3.0"
+												},
+												{
+													"key": "request",
+													"value": "GetCapabilities"
+												}
+											]
+										},
+										"description": "GetCapabilities操作"
+									},
+									"response": []
+								},
+								{
+									"name": "GetMap操作",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://192.168.56.113:8999/gis3wss/maps/wms?service=wms&request=getmap&version=1.3.0&layers=vec_1000:top-all&bbox=115,36,120,40&srs=MGIS:4490&format=image/png&width=1024&height=512",
+											"protocol": "http",
+											"host": [
+												"192",
+												"168",
+												"56",
+												"113"
+											],
+											"port": "8999",
+											"path": [
+												"gis3wss",
+												"maps",
+												"wms"
+											],
+											"query": [
+												{
+													"key": "service",
+													"value": "wms"
+												},
+												{
+													"key": "request",
+													"value": "getmap"
+												},
+												{
+													"key": "version",
+													"value": "1.3.0"
+												},
+												{
+													"key": "layers",
+													"value": "vec_1000:top-all"
+												},
+												{
+													"key": "bbox",
+													"value": "115,36,120,40"
+												},
+												{
+													"key": "srs",
+													"value": "MGIS:4490"
+												},
+												{
+													"key": "format",
+													"value": "image/png"
+												},
+												{
+													"key": "width",
+													"value": "1024"
+												},
+												{
+													"key": "height",
+													"value": "512"
+												}
+											]
+										}
+									},
+									"response": []
+								}
+							],
+							"_postman_isSubFolder": true
+						},
+						{
+							"name": "地图显示服务（Map资源）",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://192.168.56.113:8999/gis3wss/maps/services/gsmap/vec/1000?format=image/png&bound=144001000,410400000,129600000,432000000,MGIS:4490&layers=top-all&width=256&height=256&imageType=1&transparent=false&bgcolor=16777215",
+									"protocol": "http",
+									"host": [
+										"192",
+										"168",
+										"56",
+										"113"
+									],
+									"port": "8999",
+									"path": [
+										"gis3wss",
+										"maps",
+										"services",
+										"gsmap",
+										"vec",
+										"1000"
+									],
+									"query": [
+										{
+											"key": "format",
+											"value": "image/png"
+										},
+										{
+											"key": "bound",
+											"value": "144001000,410400000,129600000,432000000,MGIS:4490"
+										},
+										{
+											"key": "layers",
+											"value": "top-all"
+										},
+										{
+											"key": "width",
+											"value": "256"
+										},
+										{
+											"key": "height",
+											"value": "256"
+										},
+										{
+											"key": "imageType",
+											"value": "1"
+										},
+										{
+											"key": "transparent",
+											"value": "false"
+										},
+										{
+											"key": "bgcolor",
+											"value": "16777215"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "地图瓦片服务",
+					"item": [
+						{
+							"name": "OGC规范-网络地图瓦片服务（WMTS）",
+							"item": [
+								{
+									"name": "GetCapabilities操作",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://192.168.56.113:8999/gis3wss/maps/wmts?service=WMTS&version=1.0.0&request=GetCapabilities",
+											"protocol": "http",
+											"host": [
+												"192",
+												"168",
+												"56",
+												"113"
+											],
+											"port": "8999",
+											"path": [
+												"gis3wss",
+												"maps",
+												"wmts"
+											],
+											"query": [
+												{
+													"key": "service",
+													"value": "WMTS"
+												},
+												{
+													"key": "version",
+													"value": "1.0.0"
+												},
+												{
+													"key": "request",
+													"value": "GetCapabilities"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "GetTile操作",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://192.168.56.113:8999/gis3wss/maps/wmts?service=WMTS&request=GetTile&version=1.0.0&layer=vec__1000__vec_1000__top-all&style=default&format=image/png&tilematrixset=4490&tilematrix=6&tilerow=82&tilecol=105",
+											"protocol": "http",
+											"host": [
+												"192",
+												"168",
+												"56",
+												"113"
+											],
+											"port": "8999",
+											"path": [
+												"gis3wss",
+												"maps",
+												"wmts"
+											],
+											"query": [
+												{
+													"key": "service",
+													"value": "WMTS"
+												},
+												{
+													"key": "request",
+													"value": "GetTile"
+												},
+												{
+													"key": "version",
+													"value": "1.0.0"
+												},
+												{
+													"key": "layer",
+													"value": "vec__1000__vec_1000__top-all"
+												},
+												{
+													"key": "style",
+													"value": "default"
+												},
+												{
+													"key": "format",
+													"value": "image/png"
+												},
+												{
+													"key": "tilematrixset",
+													"value": "4490"
+												},
+												{
+													"key": "tilematrix",
+													"value": "6"
+												},
+												{
+													"key": "tilerow",
+													"value": "82"
+												},
+												{
+													"key": "tilecol",
+													"value": "105"
+												}
+											]
+										}
+									},
+									"response": []
+								}
+							],
+							"_postman_isSubFolder": true
+						},
+						{
+							"name": "地图瓦片服务（Tile资源）",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://192.168.56.113:8999/gis3wss/maps/services/gsmaptile/vec/1000/vec_1000/top-all?format=image/png&imageType=jpg&level=6&row=45&col=105",
+									"protocol": "http",
+									"host": [
+										"192",
+										"168",
+										"56",
+										"113"
+									],
+									"port": "8999",
+									"path": [
+										"gis3wss",
+										"maps",
+										"services",
+										"gsmaptile",
+										"vec",
+										"1000",
+										"vec_1000",
+										"top-all"
+									],
+									"query": [
+										{
+											"key": "format",
+											"value": "image/png"
+										},
+										{
+											"key": "imageType",
+											"value": "jpg"
+										},
+										{
+											"key": "level",
+											"value": "6"
+										},
+										{
+											"key": "row",
+											"value": "45"
+										},
+										{
+											"key": "col",
+											"value": "105"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "地形分析服务",
+					"item": [
+						{
+							"name": "地表距离量算Distance资源",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://192.168.56.113:8999/gis3wss/maps/services/gstopanalyze/DEMAnalys/1000/distance?format=json&geo=2&points=400000000,90000000,420000000,120000000&srs=MGIS:4490",
+									"protocol": "http",
+									"host": [
+										"192",
+										"168",
+										"56",
+										"113"
+									],
+									"port": "8999",
+									"path": [
+										"gis3wss",
+										"maps",
+										"services",
+										"gstopanalyze",
+										"DEMAnalys",
+										"1000",
+										"distance"
+									],
+									"query": [
+										{
+											"key": "format",
+											"value": "json"
+										},
+										{
+											"key": "geo",
+											"value": "2"
+										},
+										{
+											"key": "points",
+											"value": "400000000,90000000,420000000,120000000"
+										},
+										{
+											"key": "srs",
+											"value": "MGIS:4490"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "多边形地表面积量算Area资源",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://192.168.56.113:8999/gis3wss/maps/services/gstopanalyze/DEMAnalys/1000/area?format=json&geo=4&points=400000000,90000000,420000000,90000000,400000000,120000000,420000000,120000000&srs=MGIS:4490",
+									"protocol": "http",
+									"host": [
+										"192",
+										"168",
+										"56",
+										"113"
+									],
+									"port": "8999",
+									"path": [
+										"gis3wss",
+										"maps",
+										"services",
+										"gstopanalyze",
+										"DEMAnalys",
+										"1000",
+										"area"
+									],
+									"query": [
+										{
+											"key": "format",
+											"value": "json"
+										},
+										{
+											"key": "geo",
+											"value": "4"
+										},
+										{
+											"key": "points",
+											"value": "400000000,90000000,420000000,90000000,400000000,120000000,420000000,120000000"
+										},
+										{
+											"key": "srs",
+											"value": "MGIS:4490"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "圆形地表面积量算AreaOfRing资源",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://192.168.56.113:8999/gis3wss/maps/services/gstopanalyze/DEMAnalys/1000/areaofring?format=json&point=400000000,90000000&radius=200000.0&srs=MGIS:4490",
+									"protocol": "http",
+									"host": [
+										"192",
+										"168",
+										"56",
+										"113"
+									],
+									"port": "8999",
+									"path": [
+										"gis3wss",
+										"maps",
+										"services",
+										"gstopanalyze",
+										"DEMAnalys",
+										"1000",
+										"areaofring"
+									],
+									"query": [
+										{
+											"key": "format",
+											"value": "json"
+										},
+										{
+											"key": "point",
+											"value": "400000000,90000000"
+										},
+										{
+											"key": "radius",
+											"value": "200000.0"
+										},
+										{
+											"key": "srs",
+											"value": "MGIS:4490"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "点高程量算PointElevation资源",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://192.168.56.113:8999/gis3wss/maps/services/gstopanalyze/DEMAnalys/1000/pointelevation? format=json&point=400000000,90000000&srs=MGIS:4490",
+									"protocol": "http",
+									"host": [
+										"192",
+										"168",
+										"56",
+										"113"
+									],
+									"port": "8999",
+									"path": [
+										"gis3wss",
+										"maps",
+										"services",
+										"gstopanalyze",
+										"DEMAnalys",
+										"1000",
+										"pointelevation"
+									],
+									"query": [
+										{
+											"key": " format",
+											"value": "json"
+										},
+										{
+											"key": "point",
+											"value": "400000000,90000000"
+										},
+										{
+											"key": "srs",
+											"value": "MGIS:4490"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "区域高程量算Elevation资源",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://192.168.56.113:8999/gis3wss/maps/services/gstopanalyze/DEMAnalys/1000/elevation? format=json&geo=4&points=411932075.69237,150796439.93263,439459419.44237,150796439.93263,439459419.44237,131179252.43263,411932075.69237,131179252.43263&srs=MGIS:4490&dResolutionH=4891.9691&dResolutionW=4891.9691",
+									"protocol": "http",
+									"host": [
+										"192",
+										"168",
+										"56",
+										"113"
+									],
+									"port": "8999",
+									"path": [
+										"gis3wss",
+										"maps",
+										"services",
+										"gstopanalyze",
+										"DEMAnalys",
+										"1000",
+										"elevation"
+									],
+									"query": [
+										{
+											"key": " format",
+											"value": "json"
+										},
+										{
+											"key": "geo",
+											"value": "4"
+										},
+										{
+											"key": "points",
+											"value": "411932075.69237,150796439.93263,439459419.44237,150796439.93263,439459419.44237,131179252.43263,411932075.69237,131179252.43263"
+										},
+										{
+											"key": "srs",
+											"value": "MGIS:4490"
+										},
+										{
+											"key": "dResolutionH",
+											"value": "4891.9691"
+										},
+										{
+											"key": "dResolutionW",
+											"value": "4891.9691"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "挖方填方Volume资源",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://192.168.56.113:8999/gis3wss/maps/services/gstopanalyze/DEMAnalys/1000/volume?format=json&geo=4&points=400000000,90000000,420000000,90000000,400000000,120000000,420000000,120000000&srs=MGIS:4490&refHeight=1000.0",
+									"protocol": "http",
+									"host": [
+										"192",
+										"168",
+										"56",
+										"113"
+									],
+									"port": "8999",
+									"path": [
+										"gis3wss",
+										"maps",
+										"services",
+										"gstopanalyze",
+										"DEMAnalys",
+										"1000",
+										"volume"
+									],
+									"query": [
+										{
+											"key": "format",
+											"value": "json"
+										},
+										{
+											"key": "geo",
+											"value": "4"
+										},
+										{
+											"key": "points",
+											"value": "400000000,90000000,420000000,90000000,400000000,120000000,420000000,120000000"
+										},
+										{
+											"key": "srs",
+											"value": "MGIS:4490"
+										},
+										{
+											"key": "refHeight",
+											"value": "1000.0"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "两点通视分析P2PSight资源",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://192.168.56.113:8999/gis3wss/maps/services/gstopanalyze/DEMAnalys/1000/p2psight?format=json&drawPic=true&picWidth=256&picHeight=256&geo=2&points=400000000,90000000,420000000,90000000&srs=MGIS:4490&obserHeight=1000&tarHeight=1000",
+									"protocol": "http",
+									"host": [
+										"192",
+										"168",
+										"56",
+										"113"
+									],
+									"port": "8999",
+									"path": [
+										"gis3wss",
+										"maps",
+										"services",
+										"gstopanalyze",
+										"DEMAnalys",
+										"1000",
+										"p2psight"
+									],
+									"query": [
+										{
+											"key": "format",
+											"value": "json"
+										},
+										{
+											"key": "drawPic",
+											"value": "true"
+										},
+										{
+											"key": "picWidth",
+											"value": "256"
+										},
+										{
+											"key": "picHeight",
+											"value": "256"
+										},
+										{
+											"key": "geo",
+											"value": "2"
+										},
+										{
+											"key": "points",
+											"value": "400000000,90000000,420000000,90000000"
+										},
+										{
+											"key": "srs",
+											"value": "MGIS:4490"
+										},
+										{
+											"key": "obserHeight",
+											"value": "1000"
+										},
+										{
+											"key": "tarHeight",
+											"value": "1000"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "区域通视分析ViewSight资源",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://192.168.56.113:8999/gis3wss/maps/services/gstopanalyze/DEMAnalys/1000/viewsight?format=json&drawPic=true&picWidth=256&picHeight=256&point=400000000,90000000&radius=200000.0&srs=MGIS:4490&obserHeight=1000",
+									"protocol": "http",
+									"host": [
+										"192",
+										"168",
+										"56",
+										"113"
+									],
+									"port": "8999",
+									"path": [
+										"gis3wss",
+										"maps",
+										"services",
+										"gstopanalyze",
+										"DEMAnalys",
+										"1000",
+										"viewsight"
+									],
+									"query": [
+										{
+											"key": "format",
+											"value": "json"
+										},
+										{
+											"key": "drawPic",
+											"value": "true"
+										},
+										{
+											"key": "picWidth",
+											"value": "256"
+										},
+										{
+											"key": "picHeight",
+											"value": "256"
+										},
+										{
+											"key": "point",
+											"value": "400000000,90000000"
+										},
+										{
+											"key": "radius",
+											"value": "200000.0"
+										},
+										{
+											"key": "srs",
+											"value": "MGIS:4490"
+										},
+										{
+											"key": "obserHeight",
+											"value": "1000"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "坡度分析Slope资源",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://192.168.56.113:8999/gis3wss/maps/services/gstopanalyze/DEMAnalys/1000/slope?format=json&geo=4&points=400000000,110000000,410000000,110000000,410000000,90000000&srs=MGIS:4490&drawPic=true&picWidth=256&picHeight=256",
+									"protocol": "http",
+									"host": [
+										"192",
+										"168",
+										"56",
+										"113"
+									],
+									"port": "8999",
+									"path": [
+										"gis3wss",
+										"maps",
+										"services",
+										"gstopanalyze",
+										"DEMAnalys",
+										"1000",
+										"slope"
+									],
+									"query": [
+										{
+											"key": "format",
+											"value": "json"
+										},
+										{
+											"key": "geo",
+											"value": "4"
+										},
+										{
+											"key": "points",
+											"value": "400000000,110000000,410000000,110000000,410000000,90000000"
+										},
+										{
+											"key": "srs",
+											"value": "MGIS:4490"
+										},
+										{
+											"key": "drawPic",
+											"value": "true"
+										},
+										{
+											"key": "picWidth",
+											"value": "256"
+										},
+										{
+											"key": "picHeight",
+											"value": "256"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "坡向分析Aspect资源",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://192.168.56.113:8999/gis3wss/maps/services/gstopanalyze/DEMAnalys/1000/aspect?format=json&drawPic=true&picWidth=256&picHeight=256&geo=4&points=400000000,110000000,410000000,110000000,410000000,90000000&srs=MGIS:4490",
+									"protocol": "http",
+									"host": [
+										"192",
+										"168",
+										"56",
+										"113"
+									],
+									"port": "8999",
+									"path": [
+										"gis3wss",
+										"maps",
+										"services",
+										"gstopanalyze",
+										"DEMAnalys",
+										"1000",
+										"aspect"
+									],
+									"query": [
+										{
+											"key": "format",
+											"value": "json"
+										},
+										{
+											"key": "drawPic",
+											"value": "true"
+										},
+										{
+											"key": "picWidth",
+											"value": "256"
+										},
+										{
+											"key": "picHeight",
+											"value": "256"
+										},
+										{
+											"key": "geo",
+											"value": "4"
+										},
+										{
+											"key": "points",
+											"value": "400000000,110000000,410000000,110000000,410000000,90000000"
+										},
+										{
+											"key": "srs",
+											"value": "MGIS:4490"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "断面分析Profile资源",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://192.168.56.113:8999/gis3wss/maps/services/gstopanalyze/DEMAnalys/1000/profile?format=json&drawPic=true&picWidth=256&picHeight=256&geo=2&points=400000000,120000000,420000000,120000000&srs=MGIS:4490",
+									"protocol": "http",
+									"host": [
+										"192",
+										"168",
+										"56",
+										"113"
+									],
+									"port": "8999",
+									"path": [
+										"gis3wss",
+										"maps",
+										"services",
+										"gstopanalyze",
+										"DEMAnalys",
+										"1000",
+										"profile"
+									],
+									"query": [
+										{
+											"key": "format",
+											"value": "json"
+										},
+										{
+											"key": "drawPic",
+											"value": "true"
+										},
+										{
+											"key": "picWidth",
+											"value": "256"
+										},
+										{
+											"key": "picHeight",
+											"value": "256"
+										},
+										{
+											"key": "geo",
+											"value": "2"
+										},
+										{
+											"key": "points",
+											"value": "400000000,120000000,420000000,120000000"
+										},
+										{
+											"key": "srs",
+											"value": "MGIS:4490"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "几何计算服务",
+					"item": [
+						{
+							"name": "距离量算getLength操作",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://192.168.56.113:8888/mswss/maps/services/gsgeometry/GeometrySvc/1000/length?format=json&points=400000000,110000000,410000000,110000000,410000000,90000000&srs=MGIS:4490",
+									"protocol": "http",
+									"host": [
+										"192",
+										"168",
+										"56",
+										"113"
+									],
+									"port": "8888",
+									"path": [
+										"mswss",
+										"maps",
+										"services",
+										"gsgeometry",
+										"GeometrySvc",
+										"1000",
+										"length"
+									],
+									"query": [
+										{
+											"key": "format",
+											"value": "json"
+										},
+										{
+											"key": "points",
+											"value": "400000000,110000000,410000000,110000000,410000000,90000000"
+										},
+										{
+											"key": "srs",
+											"value": "MGIS:4490"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "面积量算getArea操作",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://192.168.56.113:8888/mswss/maps/services/gsgeometry/GeometrySvc/1000/area?format=json&geo=4&points=400000000,90000000,420000000,90000000,400000000,120000000,420000000,120000000&srs=MGIS:4490",
+									"protocol": "http",
+									"host": [
+										"192",
+										"168",
+										"56",
+										"113"
+									],
+									"port": "8888",
+									"path": [
+										"mswss",
+										"maps",
+										"services",
+										"gsgeometry",
+										"GeometrySvc",
+										"1000",
+										"area"
+									],
+									"query": [
+										{
+											"key": "format",
+											"value": "json"
+										},
+										{
+											"key": "geo",
+											"value": "4"
+										},
+										{
+											"key": "points",
+											"value": "400000000,90000000,420000000,90000000,400000000,120000000,420000000,120000000"
+										},
+										{
+											"key": "srs",
+											"value": "MGIS:4490"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "方位角量算getAzimuth操作",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://192.168.56.113:8888/mswss/maps/services/gsgeometry/GeometrySvc/1000/azimuth?format=json&pointBegin=400000000,110000000&pointEnd=420000000,90000000&srs=MGIS:4490",
+									"protocol": "http",
+									"host": [
+										"192",
+										"168",
+										"56",
+										"113"
+									],
+									"port": "8888",
+									"path": [
+										"mswss",
+										"maps",
+										"services",
+										"gsgeometry",
+										"GeometrySvc",
+										"1000",
+										"azimuth"
+									],
+									"query": [
+										{
+											"key": "format",
+											"value": "json"
+										},
+										{
+											"key": "pointBegin",
+											"value": "400000000,110000000"
+										},
+										{
+											"key": "pointEnd",
+											"value": "420000000,90000000"
+										},
+										{
+											"key": "srs",
+											"value": "MGIS:4490"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "缓冲区分析（点）createBuffer操作",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://192.168.56.113:8888/mswss/maps/services/gsgeometry/GeometrySvc/1000/buffer?format=json&distances=2000&smooth=12&geo=1&points=420000000,90000000&srs=MGIS:4490",
+									"protocol": "http",
+									"host": [
+										"192",
+										"168",
+										"56",
+										"113"
+									],
+									"port": "8888",
+									"path": [
+										"mswss",
+										"maps",
+										"services",
+										"gsgeometry",
+										"GeometrySvc",
+										"1000",
+										"buffer"
+									],
+									"query": [
+										{
+											"key": "format",
+											"value": "json"
+										},
+										{
+											"key": "distances",
+											"value": "2000"
+										},
+										{
+											"key": "smooth",
+											"value": "12"
+										},
+										{
+											"key": "geo",
+											"value": "1"
+										},
+										{
+											"key": "points",
+											"value": "420000000,90000000"
+										},
+										{
+											"key": "srs",
+											"value": "MGIS:4490"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "缓冲区分析（线）createBuffer操作",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://192.168.56.113:8888/mswss/maps/services/gsgeometry/GeometrySvc/1000/buffer?format=json&distances=2000&smooth=12&geo=2&points=420000000,90000000,400000000,120000000&srs=MGIS:4490",
+									"protocol": "http",
+									"host": [
+										"192",
+										"168",
+										"56",
+										"113"
+									],
+									"port": "8888",
+									"path": [
+										"mswss",
+										"maps",
+										"services",
+										"gsgeometry",
+										"GeometrySvc",
+										"1000",
+										"buffer"
+									],
+									"query": [
+										{
+											"key": "format",
+											"value": "json"
+										},
+										{
+											"key": "distances",
+											"value": "2000"
+										},
+										{
+											"key": "smooth",
+											"value": "12"
+										},
+										{
+											"key": "geo",
+											"value": "2"
+										},
+										{
+											"key": "points",
+											"value": "420000000,90000000,400000000,120000000"
+										},
+										{
+											"key": "srs",
+											"value": "MGIS:4490"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "缓冲区分析（面）createBuffer操作",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://192.168.56.113:8888/mswss/maps/services/gsgeometry/GeometrySvc/1000/buffer?format=json&distances=2000&smooth=12&geo=4&points=400000000,90000000,420000000,90000000,400000000,120000000,420000000,120000000&srs=MGIS:4490",
+									"protocol": "http",
+									"host": [
+										"192",
+										"168",
+										"56",
+										"113"
+									],
+									"port": "8888",
+									"path": [
+										"mswss",
+										"maps",
+										"services",
+										"gsgeometry",
+										"GeometrySvc",
+										"1000",
+										"buffer"
+									],
+									"query": [
+										{
+											"key": "format",
+											"value": "json"
+										},
+										{
+											"key": "distances",
+											"value": "2000"
+										},
+										{
+											"key": "smooth",
+											"value": "12"
+										},
+										{
+											"key": "geo",
+											"value": "4"
+										},
+										{
+											"key": "points",
+											"value": "400000000,90000000,420000000,90000000,400000000,120000000,420000000,120000000"
+										},
+										{
+											"key": "srs",
+											"value": "MGIS:4490"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "空间参考转换srsConvert操作",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://192.168.56.113:8888/mswss/maps/services/gsgeometry/GeometrySvc/1000/srsConversion?format=json&geo=2&points=400000000,90000000,420000000,90000000,400000000,120000000,420000000,120000000&srs=MGIS:4490&toSrs=MGIS:4214",
+									"protocol": "http",
+									"host": [
+										"192",
+										"168",
+										"56",
+										"113"
+									],
+									"port": "8888",
+									"path": [
+										"mswss",
+										"maps",
+										"services",
+										"gsgeometry",
+										"GeometrySvc",
+										"1000",
+										"srsConversion"
+									],
+									"query": [
+										{
+											"key": "format",
+											"value": "json"
+										},
+										{
+											"key": "geo",
+											"value": "2"
+										},
+										{
+											"key": "points",
+											"value": "400000000,90000000,420000000,90000000,400000000,120000000,420000000,120000000"
+										},
+										{
+											"key": "srs",
+											"value": "MGIS:4490"
+										},
+										{
+											"key": "toSrs",
+											"value": "MGIS:4214"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				}
+			]
+		}
+	]
+}

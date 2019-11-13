@@ -1,0 +1,209 @@
+{
+	"info": {
+		"_postman_id": "fb45126b-8626-439f-9212-8f781a4f485f",
+		"name": "超图sm",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "OGC-WMS",
+			"item": [
+				{
+					"name": "GetCapabilities",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://192.168.56.179:8090/iserver/services/map-china400/wms130/China",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"56",
+								"179"
+							],
+							"port": "8090",
+							"path": [
+								"iserver",
+								"services",
+								"map-china400",
+								"wms130",
+								"China"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetMap",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://192.168.56.179:8090/iserver/services/map-china400/wms130/China?LAYERS=China&VERSION=1.3.0&EXCEPTIONS=INIMAGE&SERVICE=WMS&REQUEST=GetMap&STYLES=&FORMAT=image/png&CRS=EPSG%3A3857&BBOX=10018754.17,9.3132257461548e-10,15028131.255,5009377.085&WIDTH=256&HEIGHT=256",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"56",
+								"179"
+							],
+							"port": "8090",
+							"path": [
+								"iserver",
+								"services",
+								"map-china400",
+								"wms130",
+								"China"
+							],
+							"query": [
+								{
+									"key": "LAYERS",
+									"value": "China"
+								},
+								{
+									"key": "VERSION",
+									"value": "1.3.0"
+								},
+								{
+									"key": "EXCEPTIONS",
+									"value": "INIMAGE"
+								},
+								{
+									"key": "SERVICE",
+									"value": "WMS"
+								},
+								{
+									"key": "REQUEST",
+									"value": "GetMap"
+								},
+								{
+									"key": "STYLES",
+									"value": ""
+								},
+								{
+									"key": "FORMAT",
+									"value": "image/png"
+								},
+								{
+									"key": "CRS",
+									"value": "EPSG%3A3857"
+								},
+								{
+									"key": "BBOX",
+									"value": "10018754.17,9.3132257461548e-10,15028131.255,5009377.085"
+								},
+								{
+									"key": "WIDTH",
+									"value": "256"
+								},
+								{
+									"key": "HEIGHT",
+									"value": "256"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "OGC-WMTS",
+			"item": [
+				{
+					"name": "GetCapabilities",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://192.168.56.179:8090/iserver/services/map-world/wmts100",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"56",
+								"179"
+							],
+							"port": "8090",
+							"path": [
+								"iserver",
+								"services",
+								"map-world",
+								"wmts100"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetTile",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://192.168.56.179:8090/iserver/services/map-world/wmts100?SERVICE=WMTS&REQUEST=GetTile&VERSION=1.0.0&LAYER=World&STYLE=default&TILEMATRIXSET=GlobalCRS84Scale_World&TILEMATRIX=2&TILEROW=0&TILECOL=3&FORMAT=image/png",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"56",
+								"179"
+							],
+							"port": "8090",
+							"path": [
+								"iserver",
+								"services",
+								"map-world",
+								"wmts100"
+							],
+							"query": [
+								{
+									"key": "SERVICE",
+									"value": "WMTS"
+								},
+								{
+									"key": "REQUEST",
+									"value": "GetTile"
+								},
+								{
+									"key": "VERSION",
+									"value": "1.0.0"
+								},
+								{
+									"key": "LAYER",
+									"value": "World"
+								},
+								{
+									"key": "STYLE",
+									"value": "default"
+								},
+								{
+									"key": "TILEMATRIXSET",
+									"value": "GlobalCRS84Scale_World"
+								},
+								{
+									"key": "TILEMATRIX",
+									"value": "2"
+								},
+								{
+									"key": "TILEROW",
+									"value": "0"
+								},
+								{
+									"key": "TILECOL",
+									"value": "3"
+								},
+								{
+									"key": "FORMAT",
+									"value": "image/png"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

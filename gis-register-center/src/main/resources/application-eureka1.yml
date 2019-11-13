@@ -1,0 +1,30 @@
+server:
+  port: 8761
+
+spring:
+  application:
+    name: gis-register-center
+  profiles:
+    include: eureka1
+
+eureka:
+  instance:
+    # 配置通过主机名方式注册
+    hostname: eureka1
+    metadata-map:
+      name: gis-register-center
+      title: 地理信息服务注册中心
+      description: 地理信息服务注册中心
+      version: 1.0.0
+      contact: 中国电子科技集团公司第十五研究所
+  client:
+    service-url:
+      defaultZone: http://eureka2:8762/eureka/
+    register-with-eureka: true
+    fetch-registry: true
+  server:
+    # 关闭保护机制，默认true
+    enable-self-preservation: false
+    # 剔除失效服务间隔，默认60000
+    eviction-interval-timer-in-ms: 3000
+

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.nci.gis</groupId>
+    <artifactId>gis-servicecenter</artifactId>
+    <packaging>pom</packaging>
+    <version>1.0-SNAPSHOT</version>
+    <modules>
+        <module>gis-service-core</module>
+        <module>gis-register-center</module>
+        <module>gis-service-common</module>
+		<module>gis-api-gateway</module>
+		<module>gis-config-server</module>
+		<module>gis-service-show</module>
+		<module>third-party-supermap</module>
+		<module>third-party-mc</module>
+		<module>third-party-ev</module>
+		<module>third-party-nav</module>
+		<module>third-party-cetc15</module>
+		<module>service-commonly-used</module>
+	</modules>
+
+
+</project>
