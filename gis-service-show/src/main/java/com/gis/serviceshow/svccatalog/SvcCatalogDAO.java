@@ -14,19 +14,19 @@ import java.util.List;
  */
 public interface SvcCatalogDAO extends JpaRepository<SvcCatalog, Integer> {
 
-	@Query("select svc from SvcCatalog svc where svc.auditstate = :auditstate")
+	@Query("select svc from SvcCatalog svc where svc.auditState = :auditstate")
 	Page<SvcCatalog> findAudit(@Param("auditstate") Integer auditstate, Pageable pageable);
 
-	@Query("select svc from SvcCatalog svc where svc.auditstate = :auditstate")
+	@Query("select svc from SvcCatalog svc where svc.auditState = :auditstate")
 	List<SvcCatalog> findAudit(@Param("auditstate") Integer auditstate);
 
-	@Query("select svc from SvcCatalog svc where svc.auditstate = :auditstate and svc.organization.organizationId = :organizationId")
+	@Query("select svc from SvcCatalog svc where svc.auditState = :auditstate and svc.organization.organizationId = :organizationId")
 	Page<SvcCatalog> findAuditByOrg(@Param("auditstate") Integer auditstate, @Param("organizationId") int organizationId, Pageable pageable);
 
-	@Query("select svc from SvcCatalog svc where svc.releasestate = :releasestate and svc.auditstate = 1")
+	@Query("select svc from SvcCatalog svc where svc.releaseState = :releasestate and svc.auditState = 1")
 	Page<SvcCatalog> findRelease(@Param("releasestate") Integer releasestate, Pageable pageable);
 
-	@Query("select svc from SvcCatalog svc where svc.releasestate = :releasestate and svc.auditstate = 1")
+	@Query("select svc from SvcCatalog svc where svc.releaseState = :releasestate and svc.auditState = 1")
 	List<SvcCatalog> findRelease(@Param("releasestate") Integer releasestate);
 
 	@Query("select svc from SvcCatalog svc where svc.organization.id = :organizationId and svc.svctypename like concat('%',:svctypename,'%') and svc.svctype like concat('%',:svctype,'%') and svc.info like concat('%',:info,'%') ")
@@ -35,16 +35,16 @@ public interface SvcCatalogDAO extends JpaRepository<SvcCatalog, Integer> {
 	@Query("select svc from SvcCatalog svc where svc.svctypename like concat('%',:svctypename,'%') and svc.svctype like concat('%',:svctype,'%') and svc.info like concat('%',:info,'%') ")
 	Page<SvcCatalog> findWithConditionAllOrg(@Param("svctypename") String svctypename, @Param("svctype") String svctype, @Param("info") String info, Pageable pageable);
 
-	@Query("select svc from SvcCatalog svc where svc.auditstate=1 and svc.organization.id = :organizationId and svc.svctypename like concat('%',:svctypename,'%') and svc.svctype like concat('%',:svctype,'%') and svc.info like concat('%',:info,'%') ")
+	@Query("select svc from SvcCatalog svc where svc.auditState=1 and svc.organization.id = :organizationId and svc.svctypename like concat('%',:svctypename,'%') and svc.svctype like concat('%',:svctype,'%') and svc.info like concat('%',:info,'%') ")
 	Page<SvcCatalog> findWithConditionAudited(@Param("organizationId") Integer organizationId, @Param("svctypename") String svctypename, @Param("svctype") String svctype, @Param("info") String info, Pageable pageable);
 
-	@Query("select svc from SvcCatalog svc where svc.auditstate=1 and svc.svctypename like concat('%',:svctypename,'%') and svc.svctype like concat('%',:svctype,'%') and svc.info like concat('%',:info,'%') ")
+	@Query("select svc from SvcCatalog svc where svc.auditState=1 and svc.svctypename like concat('%',:svctypename,'%') and svc.svctype like concat('%',:svctype,'%') and svc.info like concat('%',:info,'%') ")
 	Page<SvcCatalog> findWithConditionAllOrgAudited(@Param("svctypename") String svctypename, @Param("svctype") String svctype, @Param("info") String info, Pageable pageable);
 
 //	@Query("select svc from SvcCatalog svc where svc.releasestate = :releasestate and svc.auditstate = 1 and svc.organizationidentity = :organizationidentity")
 //	Page<SvcCatalog> findReleaseByOrg(@Param("releasestate") Integer releasestate,@Param("organizationidentity") String organizationidentity, Pageable pageable);
 
-	@Query("select svc from SvcCatalog svc where svc.svctype = :svctype and svc.releasestate = 1")
+	@Query("select svc from SvcCatalog svc where svc.svctype = :svctype and svc.releaseState = 1")
 	List<SvcCatalog> findByType(@Param("svctype") String svctype);
 
 //	@Query("select svc from SvcCatalog svc where svc.organizationidentity = :organizationidentity and svc.releasestate = 1")

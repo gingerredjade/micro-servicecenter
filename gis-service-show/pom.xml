@@ -191,6 +191,11 @@
 		</dependency>
 		<!-- hibernate end -->
 
+		<!--<dependency>-->
+			<!--<groupId>org.springframework.boot</groupId>-->
+			<!--<artifactId>spring-boot-starter-security</artifactId>-->
+		<!--</dependency>-->
+
 
 		<!-- 加入抽取出来的公共项目 -->
 		<dependency>

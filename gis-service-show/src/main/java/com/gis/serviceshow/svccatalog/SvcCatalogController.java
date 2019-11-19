@@ -4,6 +4,7 @@ import com.gis.serviceshow.organization.Organization;
 import com.gis.serviceshow.organization.OrganizationDAO;
 import com.gis.serviceshow.util.UploadFileUtil;
 import com.nci.constants.ServiceTypes.ServiceTypeDef;
+import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,7 +15,9 @@ import org.springframework.data.domain.PageRequest;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
+import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.text.SimpleDateFormat;
 import java.util.*;
 
 /**
@@ -36,6 +39,10 @@ public class SvcCatalogController {
 	String uploadPath;
 	@Value(value = "${preread.layer-upload-path}")
 	String layerUploadPath;
+	@Value(value = "${preread.report-upload-path}")
+	String testReportPath;
+	@Value(value = "${preread.final-report-upload-path}")
+	String finalReportPath;
 
 //	@GetMapping(value = "findnotaudit")
 //	@ApiOperation("查询未审核服务")
@@ -207,6 +214,8 @@ public class SvcCatalogController {
 		@RequestParam(value = "subjectClassification", required = false) String subjectClassification,
 		@ApiParam(name = "preview", value = "服务预览")
 		@RequestParam(value = "preview", required = false) MultipartFile previewFile,
+		@ApiParam(name = "testReport", value = "测试报告")
+		@RequestParam(value = "testReport", required = false) MultipartFile testReport,
 		//图层相关参数
 		@ApiParam(name = "layerName", value = "图层名称")
 		@RequestParam(value = "layerName", required = false) String layerName,
@@ -231,6 +240,7 @@ public class SvcCatalogController {
 		String svctypename = ServiceTypeDef.getServiceNameCN(svctype);
 		Organization organization = organizationDAO.findById(organizationId).get();
 
+		String dateDir = new SimpleDateFormat("yyyy-MM-dd").format(new Date()) + "/";    //以时间区分文件上传路径
 //		String organizationname = ProviderDef.getProviderNameByIdentify(organizationidentity);
 
 		if (svcname == null) {
@@ -287,11 +297,12 @@ public class SvcCatalogController {
 		svcCatalog.setInfo(info);
 		svcCatalog.setUrl(url);
 		svcCatalog.setVersion(version);
-		svcCatalog.setRegistertime(new Date());
-		svcCatalog.setTestinfo(testinfo);
-		svcCatalog.setReleasestate(0);
-		svcCatalog.setAuditstate(0);
-		svcCatalog.setParaminfo(paraminfo);
+		svcCatalog.setRegisterTime(new Date());
+		svcCatalog.setTestInfo(testinfo);
+		svcCatalog.setReleaseState(0);
+		svcCatalog.setAuditState(0);
+		svcCatalog.setTestState(0);
+		svcCatalog.setParamInfo(paraminfo);
 		svcCatalog.setKeyword(keyword);
 		svcCatalog.setCoverage(coverage);
 		svcCatalog.setServiceArea(serviceArea);
@@ -308,13 +319,29 @@ public class SvcCatalogController {
 			String fileName = previewFile.getOriginalFilename();
 			fileName = UploadFileUtil.createUUID(fileName);
 			try {
-				UploadFileUtil.uploadFile(previewFile.getBytes(), uploadPath, fileName);
+				UploadFileUtil.uploadFile(previewFile.getBytes(), uploadPath + dateDir, fileName);
 			} catch (IOException e) {
 				e.printStackTrace();
 			}
-			preview = "/preview/" + fileName;
+			preview = "/preview/" + dateDir + fileName;
 		}
 		svcCatalog.setPreview(preview);
+
+		//测试报告（来自注册者的）
+		String report;
+		if (testReport == null) {
+			report = "";
+		} else {
+			String fileName = testReport.getOriginalFilename();
+			fileName = UploadFileUtil.createUUID(fileName);
+			try {
+				UploadFileUtil.uploadFile(testReport.getBytes(), testReportPath + dateDir, fileName);
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+			report = "/test-report/" + dateDir + fileName;
+		}
+		svcCatalog.setRegistrantTestReport(report);
 
 
 		// 新增,图层相关,可能没有图层信息
@@ -351,7 +378,7 @@ public class SvcCatalogController {
 		svcCatalog.setLayerProjection(layerProjection);
 		svcCatalog.setLayerUpdateCycle(layerUpdateCycle);
 		svcCatalog.setLayerUpdateTime(new Date());
-		//处理文件上传
+		//处理图层预览文件上传
 		String layerPreview;
 		if (layerPreviewFile == null) {
 			layerPreview = "";
@@ -359,11 +386,11 @@ public class SvcCatalogController {
 			String fileName = layerPreviewFile.getOriginalFilename();
 			fileName = UploadFileUtil.createUUID(fileName);
 			try {
-				UploadFileUtil.uploadFile(layerPreviewFile.getBytes(), layerUploadPath, fileName);
+				UploadFileUtil.uploadFile(layerPreviewFile.getBytes(), layerUploadPath + dateDir, fileName);
 			} catch (IOException e) {
 				e.printStackTrace();
 			}
-			layerPreview = "/layer-preview/" + fileName;
+			layerPreview = "/layer-preview/" + dateDir + fileName;
 		}
 		svcCatalog.setLayerPreview(layerPreview);
 
@@ -376,10 +403,19 @@ public class SvcCatalogController {
 		}
 	}
 
+	/*@RequestMapping(value = "downloadReport")
+	@ApiOperation("下载测试报告")
+	public String downloadReport(HttpServletResponse response, int svcId) {
+		SvcCatalog svcCatalog = svcCatalogDAO.findById(svcId).get();
+		String s=svcCatalog.getRegistrantTestReport();
+
+		return "";
+	}*/
+
 
 	@GetMapping(value = "delete")
 	@ApiOperation("删除")
-	public String delect(Integer id) {
+	public String delete(Integer id) {
 		try {
 			svcCatalogDAO.deleteById(id);
 			return "删除成功";
@@ -391,39 +427,45 @@ public class SvcCatalogController {
 
 	@GetMapping(value = "release")
 	@ApiOperation("发布")
-	public String release(@ApiParam(name = "svcid", value = "服务id")
-						  @RequestParam(value = "svcid") Integer svcid) {
-		try {
-			Optional<SvcCatalog> svcCatalog = svcCatalogDAO.findById(svcid);
-			if (svcCatalog.isPresent()) {
-				SvcCatalog svcCatalog1 = svcCatalog.get();
-				svcCatalog1.setReleasestate(1);
-				svcCatalog1.setReleaseTime(new Date());
-				svcCatalogDAO.save(svcCatalog1);
+	public String release(@ApiParam(name = "svcids", value = "服务id")
+						  @RequestParam(value = "svcids") Integer[] svcids,
+						  @ApiParam(name = "releaseState", value = "发布状态（1:发布通过,0:发布失败）")
+						  @RequestParam(value = "releaseState") Integer releaseState) {
+		List<Integer> result = releaseImpl(svcids, releaseState);
+		if (result.isEmpty()) {
+			if (releaseState == 1) {
+				return "发布成功";
+			} else {
+				return "取消发布成功";
 			}
-			return "发布成功";
-		} catch (Exception e) {
-			e.printStackTrace();
-			return "发布失败";
+		} else {
+			String rs = "失败ID:";
+			for (int failedId : result) {
+				rs += failedId + " ";
+			}
+			return rs;
 		}
 	}
 
 	@GetMapping(value = "audit")
 	@ApiOperation("审核")
-	public String audit(@ApiParam(name = "svcid", value = "服务id")
-						@RequestParam(value = "svcid") Integer svcid) {
-		try {
-			Optional<SvcCatalog> svcCatalog = svcCatalogDAO.findById(svcid);
-			if (svcCatalog.isPresent()) {
-				SvcCatalog svcCatalog1 = svcCatalog.get();
-				svcCatalog1.setAuditstate(1);
-				svcCatalog1.setAudittime(new Date());
-				svcCatalogDAO.save(svcCatalog1);
+	public String audit(@ApiParam(name = "svcids", value = "服务id数组")
+						@RequestParam(value = "svcids") Integer[] svcids,
+						@ApiParam(name = "auditState", value = "审核状态（1:审核通过,0:审核失败）")
+						@RequestParam(value = "auditState") Integer auditState) {
+		List<Integer> result = auditImpl(svcids, auditState);
+		if (result.isEmpty()) {
+			if (auditState == 1) {
+				return "审核成功";
+			} else {
+				return "取消审核成功";
 			}
-			return "审核成功";
-		} catch (Exception e) {
-			e.printStackTrace();
-			return "审核失败";
+		} else {
+			String rs = "失败ID:";
+			for (int failedId : result) {
+				rs += failedId + " ";
+			}
+			return rs;
 		}
 	}
 
@@ -449,7 +491,7 @@ public class SvcCatalogController {
 //		SvcCatalog svcCatalog1 = svcCatalog.get();
 //		List<String> paraminfo = new ArrayList<>();
 //		paraminfo.add(svcCatalog1.getUrl());
-//		paraminfo.add(svcCatalog1.getParaminfo());
+//		paraminfo.add(svcCatalog1.getParamInfo());
 //		return paraminfo;
 //	}
 //
@@ -487,6 +529,38 @@ public class SvcCatalogController {
 //		Pageable pageable = PageRequest.of(page - 1, size);
 //		return svcCatalogDAO.findAuditByOrg(new Integer("0"), organizationId, pageable);
 		return null;
+	}
+
+	private List auditImpl(Integer[] ids, int state) {
+		List failedList = new ArrayList();
+		for (int id : ids) {
+			Optional<SvcCatalog> svcCatalog = svcCatalogDAO.findById(id);
+			if (svcCatalog.isPresent()) {
+				SvcCatalog svcCatalog1 = svcCatalog.get();
+				svcCatalog1.setAuditState(state);
+				svcCatalog1.setAuditTime(new Date());
+				svcCatalogDAO.save(svcCatalog1);
+			} else {
+				failedList.add(id);
+			}
+		}
+		return failedList;
+	}
+
+	private List releaseImpl(Integer[] ids, int state) {
+		List failedList = new ArrayList();
+		for (int id : ids) {
+			Optional<SvcCatalog> svcCatalog = svcCatalogDAO.findById(id);
+			if (svcCatalog.isPresent()) {
+				SvcCatalog svcCatalog1 = svcCatalog.get();
+				svcCatalog1.setReleaseState(state);
+				svcCatalog1.setReleaseTime(new Date());
+				svcCatalogDAO.save(svcCatalog1);
+			} else {
+				failedList.add(id);
+			}
+		}
+		return failedList;
 	}
 
 //	private Page<SvcCatalog> findReleaseFromDao(int pageNumber, int pageSize, String organizationidentity, String state) {

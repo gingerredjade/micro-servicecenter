@@ -40,4 +40,6 @@ eureka:
 # picture configure
 preread:
   upload-path: E:/gis-service-show/preview/
-  layer-upload-path: E:/gis-service-show/layerPreview/
+  layer-upload-path: E:/gis-service-show/layer-preview/
+  report-upload-path: E:/gis-service-show/test-report/
+  final-report-upload-path: E:/gis-service-show/final-report/

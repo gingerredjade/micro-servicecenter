@@ -12,7 +12,7 @@ import java.util.UUID;
 public class UploadFileUtil {
 
 	/**
-	 * 上传图片
+	 * 上传文件（图片等）
 	 *
 	 * @param file
 	 * @param filePath

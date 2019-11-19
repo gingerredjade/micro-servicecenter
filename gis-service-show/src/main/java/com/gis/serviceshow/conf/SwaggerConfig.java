@@ -50,6 +50,10 @@ public class SwaggerConfig extends WebMvcConfigurationSupport {
 	String uploadPath;
 	@Value(value = "${preread.layer-upload-path}")
 	String layerUploadPath;
+	@Value(value = "${preread.report-upload-path}")
+	String testReportPath;
+	@Value(value = "${preread.final-report-upload-path}")
+	String finalReportPath;
 
 	@Bean
 	public Docket docket() {
@@ -126,7 +130,11 @@ public class SwaggerConfig extends WebMvcConfigurationSupport {
 		registry.addResourceHandler("/preview/**")
 			.addResourceLocations("file:///" + uploadPath);
 		registry.addResourceHandler("/layer-preview/**")
-			.addResourceLocations("file:///" + uploadPath);
+			.addResourceLocations("file:///" + layerUploadPath);
+		registry.addResourceHandler("/test-report/**")
+			.addResourceLocations("file:///" + testReportPath);
+		registry.addResourceHandler("/final-report/**")
+			.addResourceLocations("file:///" + finalReportPath);
 		super.addResourceHandlers(registry);
 	}
 

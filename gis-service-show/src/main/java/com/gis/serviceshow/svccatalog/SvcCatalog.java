@@ -20,61 +20,63 @@ import java.util.Date;
 public class SvcCatalog {
 
 	@Id    // 标识该属性为主键
-	@GeneratedValue(strategy = GenerationType.AUTO,generator = "native")
-	@GenericGenerator(name="native",strategy = "native")
-	private Integer svcid;					// 主键
+	@GeneratedValue(strategy = GenerationType.AUTO, generator = "native")
+	@GenericGenerator(name = "native", strategy = "native")
+	private Integer svcid;                    // 主键
 
-	private String svcname;					// [*]服务名称（对外叫服务名称，对内是服务别名）如wordVec，可空
-	private String svctype;					// [*]服务类型，如gsmaptile,gsplacename
-	private String svctypename;				// 服务类型名称，如'地图瓦片服务'，通过getServiceNameCN(gsmaptile)获取
-	private String svctypenode;				// 服务子类型
-	private String version;					// 服务版本
-	private String info;					// 服务描述
-	private String url;						// 服务地址
-//	private String organizationidentity;	// [*]服务机构标识，如cetc15,sm等
-//	private String organizationname;		// 服务机构名称，如15所,超图等,通过getProviderNameByIdentify(cetc15)接口获取
-//	private String address;					// 服务提供机构地址
-//	private String tel;						// 服务提供机构联系方式
-	private String testinfo;				// 服务测试信息
-	private String subjectClassification;	// 主题分类
-	private String updateCycle;				// 更新周期
-	private String usePermission;			// 使用权限 :公开,授权
-	private String preview;					// 服务预览
-	private String coordinateSystem;		// 坐标系
-	private String projection;				// 投影类型
-	private String keyword;					// 关键字
-	private String coverage;				// 覆盖区域
-	private String serviceArea;				// 服务范围
+	private String svcname;                    // [*]服务名称（对外叫服务名称，对内是服务别名）如wordVec，可空
+	private String svctype;                    // [*]服务类型，如gsmaptile,gsplacename
+	private String svctypename;                // 服务类型名称，如'地图瓦片服务'，通过getServiceNameCN(gsmaptile)获取
+	private String svctypenode;                // 服务子类型
+	private String version;                    // 服务版本
+	private String info;                    // 服务描述
+	private String url;                        // 服务地址
+	private String subjectClassification;    // 主题分类
+	private String updateCycle;                // 更新周期
+	private String usePermission;            // 使用权限 :公开,授权
+	private String preview;                    // 服务预览
+	private String coordinateSystem;        // 坐标系
+	private String projection;                // 投影类型
+	private String keyword;                    // 关键字
+	private String coverage;                // 覆盖区域
+	private String serviceArea;                // 服务范围
+
+	// 新增
+	private String registrantTestReport;    // 注册者测试报告
+	private String testerTestReport;        // 测试人员测试报告（检验注册者自己提供的测试报告）
+	private String testInfo;                // 服务测试信息（由测试人员提供）
+	private int testState;                // 是否通过测试 0:不通过,1:通过
 
 	@ManyToOne
 	@JoinColumn(name = "organizationId")
 	Organization organization;
 
 	// 图层相关信息
-	private String layerName;				// 图层名称
-	private String layerDesc;				// 图层简介
-	private String layerKeyword;			// 图层关键字
-	private String layerCoverage;			// 图层覆盖区域
-	private String layerServiceArea;		// 图层服务范围
-	private String layerCoordinateSystem;	// 图层坐标系
-	private String layerProjection;			// 图层投影类型
-	private String layerUpdateCycle;		// 图层更新周期
-	private String layerPreview;			// 图层预览
-	private Date layerUpdateTime;			// 图层修改时间
+	private String layerName;                // 图层名称
+	private String layerDesc;                // 图层简介
+	private String layerKeyword;            // 图层关键字
+	private String layerCoverage;            // 图层覆盖区域
+	private String layerServiceArea;        // 图层服务范围
+	private String layerCoordinateSystem;    // 图层坐标系
+	private String layerProjection;            // 图层投影类型
+	private String layerUpdateCycle;        // 图层更新周期
+	private String layerPreview;            // 图层预览
+	private Date layerUpdateTime;            // 图层修改时间
 
-	private Date updateTime;				// 修改时间
-	private Date registertime;				// 注册时间
+	private Date updateTime;                // 修改时间
+	private Date registerTime;                // 注册时间
 
-	private Date releaseTime;				// 发布时间
-	private Integer releasestate;			// 发布状态 0:未发布,1:已发布
+	private Date releaseTime;                // 发布时间
+	private Integer releaseState;            // 发布状态 0:未发布,1:已发布
 
-	private Date audittime;					// 审核时间
-	private Integer auditstate;				// 审核状态 0:未审核,1:已审核
+	private Date auditTime;                    // 审核时间
+	private Integer auditState;                // 审核状态 0:未审核,1:已审核
 	@Lob
 	@Basic(fetch = FetchType.LAZY)
-	private String paraminfo;
+	private String paramInfo;
 
-	public SvcCatalog(){}
+	public SvcCatalog() {
+	}
 
 	public Integer getSvcid() {
 		return svcid;
@@ -308,20 +310,20 @@ public class SvcCatalog {
 		this.layerPreview = layerPreview;
 	}
 
-	public String getTestinfo() {
-		return testinfo;
+	public String getTestInfo() {
+		return testInfo;
 	}
 
-	public void setTestinfo(String testinfo) {
-		this.testinfo = testinfo;
+	public void setTestInfo(String testInfo) {
+		this.testInfo = testInfo;
 	}
 
-	public Date getRegistertime() {
-		return registertime;
+	public Date getRegisterTime() {
+		return registerTime;
 	}
 
-	public void setRegistertime(Date registertime) {
-		this.registertime = registertime;
+	public void setRegisterTime(Date registerTime) {
+		this.registerTime = registerTime;
 	}
 
 	public Date getReleaseTime() {
@@ -332,35 +334,60 @@ public class SvcCatalog {
 		this.releaseTime = releaseTime;
 	}
 
-	public Integer getReleasestate() {
-		return releasestate;
+	public Integer getReleaseState() {
+		return releaseState;
 	}
 
-	public void setReleasestate(Integer releasestate) {
-		this.releasestate = releasestate;
+	public void setReleaseState(Integer releaseState) {
+		this.releaseState = releaseState;
 	}
 
-	public Date getAudittime() {
-		return audittime;
+	public Date getAuditTime() {
+		return auditTime;
 	}
 
-	public void setAudittime(Date audittime) {
-		this.audittime = audittime;
+	public void setAuditTime(Date auditTime) {
+		this.auditTime = auditTime;
 	}
 
-	public Integer getAuditstate() {
-		return auditstate;
+	public Integer getAuditState() {
+		return auditState;
 	}
 
-	public void setAuditstate(Integer auditstate) {
-		this.auditstate = auditstate;
+	public void setAuditState(Integer auditState) {
+		this.auditState = auditState;
 	}
 
-	public String getParaminfo() {
-		return paraminfo;
+	public String getParamInfo() {
+		return paramInfo;
 	}
 
-	public void setParaminfo(String paraminfo) {
-		this.paraminfo = paraminfo;
+	public void setParamInfo(String paramInfo) {
+		this.paramInfo = paramInfo;
 	}
+
+	public String getRegistrantTestReport() {
+		return registrantTestReport;
+	}
+
+	public void setRegistrantTestReport(String registrantTestReport) {
+		this.registrantTestReport = registrantTestReport;
+	}
+
+	public String getTesterTestReport() {
+		return testerTestReport;
+	}
+
+	public void setTesterTestReport(String testerTestReport) {
+		this.testerTestReport = testerTestReport;
+	}
+
+	public int getTestState() {
+		return testState;
+	}
+
+	public void setTestState(int testState) {
+		this.testState = testState;
+	}
+
 }

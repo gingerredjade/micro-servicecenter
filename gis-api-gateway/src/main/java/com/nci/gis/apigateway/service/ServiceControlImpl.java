@@ -71,7 +71,7 @@ public class ServiceControlImpl {
 			if (str != null && str.length() != 0) {
 				JSONObject jsonObject = JSONObject.parseObject(str);
 				if (!jsonObject.isEmpty()) {
-					int releaseState = jsonObject.getInteger("releasestate");
+					int releaseState = jsonObject.getInteger("releaseState");
 					if (releaseState == Constants.RELEASE_DONE) {
 						response = true;
 					}
