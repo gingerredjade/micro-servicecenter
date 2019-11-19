@@ -144,7 +144,15 @@ gis-api-gateway，含以下文件
     start-gis-api-gateway.sh
 ```
 
-**1）** 启动
+**1）** 配置查看
+ ```
+ [bootstrap.yml]
+    eureka.client.service-url.defaultZone
+    authority.access.enabled
+ ```
+
+
+**2）** 启动
  ```
  java -jar gis-api-gateway-0.0.1-SNAPSHOT.jar
  或者
@@ -155,7 +163,7 @@ gis-api-gateway，含以下文件
  start-gis-api-gateway.sh
  ```
  
-**2）** 检测
+**3）** 检测
  - 访问http://localhost:8761/
  - 检查是否有gis-api-gateway注册实例，且是否为UP状态
  - 点击实例对应的Status后面的链接可查看应用的配置说明，访问的即是http://ip:port/actuator/info。
@@ -171,7 +179,21 @@ gis-service-core，含以下文件
     application-gisapp.yml
     start-gis-service-core.sh
 ```
-**1）** 启动
+
+**1）** 配置查看
+ ```
+ [application.yml]
+    eureka.client.service-url.defaultZone
+    3rd.upload-path（配置成 “<jar包同级目录>/3rslibs” ，并在启动前将已有的三方服务模块放置该目录以备启动时加载）
+ 
+ [application-gisapp.yml]
+ 检查、配置每类服务的
+    - author
+    - server-prefix
+    - server-handler-class
+ ```
+
+**2）** 启动
  ```
  java -jar gis-service-core-1.0-SNAPSHOT.jar
  或者
@@ -182,7 +204,7 @@ gis-service-core，含以下文件
   start-gis-service-core.sh
   ```
  
-**2）** 检测
+**3）** 检测
  - 访问http://IP:8761/
  - 检查是否有gis-service-core注册实例，且是否为UP状态
  - 点击实例对应的Status后面的链接可查看应用的配置说明，访问的即是http://ip:port/actuator/info。
@@ -199,8 +221,23 @@ gis-service-show，含以下文件
     
 其中，所有静态资源即“开发工程中src/main/resources/static目录下的静态文件”。
 可动态修改其中的静态文件，不重启服务即可生效。
-```    
-**1）** 启动
+``` 
+ 
+**1）** 配置查看
+ ```
+ [application.yml]
+    eureka.client.service-url.defaultZone
+    preread.upload-path
+    preread.layer-upload-path
+ 
+ 
+ [application-mysql.yml]
+    spring.datasource.url
+    spring.datasource.username
+    spring.datasource.password
+ ```
+   
+**2）** 启动
  ```
  java -jar gis-service-show-0.0.1-SNAPSHOT.jar
  或者
@@ -211,7 +248,7 @@ gis-service-show，含以下文件
  start-gis-service-show.sh
  ```
  
-**2）** 检测
+**3）** 检测
  - 访问http://eureka1:8761/或者http://eureka2:8762/任一
  - 检查是否有gis-service-show注册实例，且是否为UP状态
  - 点击实例对应的Status后面的链接可查看应用的配置说明，访问的即是http://ip:port/actuator/info。

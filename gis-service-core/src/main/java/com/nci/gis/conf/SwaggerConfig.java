@@ -5,6 +5,7 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.converter.HttpMessageConverter;
 import org.springframework.http.converter.StringHttpMessageConverter;
+import org.springframework.util.ResourceUtils;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurationSupport;
 import springfox.documentation.builders.ApiInfoBuilder;
@@ -28,9 +29,9 @@ import java.util.List;
  * @since 1.0.0 2018年08月18日
  * @author <a href="https://gisnci.com">Hongyu Jiang</a>
  */
-@Configuration      //必须存在
-@EnableSwagger2     //必须存在
-@ComponentScan(basePackages = {"com.nci.gis"}) //必须存在 扫描的API Controller package name 也可以直接扫描class (basePackageClasses)
+@Configuration      // 必须存在
+@EnableSwagger2     // 必须存在
+@ComponentScan(basePackages = {"com.nci.gis"}) // 必须存在 扫描的API Controller package name 也可以直接扫描class (basePackageClasses)
 public class SwaggerConfig extends WebMvcConfigurationSupport {
 
     /**
@@ -88,7 +89,10 @@ public class SwaggerConfig extends WebMvcConfigurationSupport {
      */
     @Override
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
-        registry.addResourceHandler("/**").addResourceLocations("classpath:/static/");
+        registry.addResourceHandler("/**")
+			.addResourceLocations(ResourceUtils.CLASSPATH_URL_PREFIX + "/static/")
+			.addResourceLocations(ResourceUtils.CLASSPATH_URL_PREFIX + "/public/")
+			.addResourceLocations(ResourceUtils.CLASSPATH_URL_PREFIX + "/resources/");
         registry.addResourceHandler("swagger-ui.html")
                 .addResourceLocations("classpath:/META-INF/resources/");
         registry.addResourceHandler("/webjars/**")

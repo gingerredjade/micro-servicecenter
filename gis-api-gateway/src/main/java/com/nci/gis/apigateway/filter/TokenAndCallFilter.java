@@ -49,8 +49,12 @@ public class TokenAndCallFilter extends ZuulFilter {
 		this.serviceControl = serviceControl;
 	}
 
+	// 是否开启网关校验功能
+	@Value("${authority.enabled}")
+	private Boolean AUTHORITY_ENABLED;
+
 	// 是否启用访问权限校验
-	@Value("${access.enabled}")
+	@Value("${authority.access.enabled}")
 	private Boolean ACCESS_ENABLED;
 
 
@@ -85,7 +89,7 @@ public class TokenAndCallFilter extends ZuulFilter {
 	 */
 	@Override
     public boolean shouldFilter() {
-		return ACCESS_ENABLED;
+		return AUTHORITY_ENABLED;
 	}
 
 	/**
@@ -117,7 +121,7 @@ public class TokenAndCallFilter extends ZuulFilter {
 			String[] reqUriArr = reqUri.split("/");
 			List<String> uriArr = Arrays.asList(reqUriArr);
 
-			// 检测服务发布状态
+			// 检测服务发布状态(同时存储访问记录)
 			boolean status;
 			if (uriArr.contains(MAP_SERVICE.value)) {
 				status = getMapSvcStatus(request, null);
@@ -147,18 +151,22 @@ public class TokenAndCallFilter extends ZuulFilter {
 				requestContext.getResponse().setContentType("application/json;charset=UTF-8");*/
 			}
 
-			if (!status) {
-				//这里从url参数里获取, 也可以从cookie, header里获取
-				String token = request.getParameter("token");
-				if (StringUtils.isEmpty(token)) {
-					RespondMessage rm = new RespondMessage();
-					rm.setStatus("[" + HttpStatus.UNAUTHORIZED.value() + "]  " + HttpStatus.UNAUTHORIZED.getReasonPhrase());
-					rm.setMessage("无权访问该服务。【访问权限说明】1：登录用户；2：该服务已成功发布。");
 
-					requestContext.setSendZuulResponse(false);
-					requestContext.setResponseStatusCode(HttpStatus.UNAUTHORIZED.value());
-					requestContext.setResponseBody(JSONObject.toJSONString(rm));
-					requestContext.getResponse().setContentType("application/json;charset=UTF-8");
+			// 开启访问权限校验情况下,验证服务状态
+			if (ACCESS_ENABLED) {
+				if (!status) {
+					//这里从url参数里获取, 也可以从cookie, header里获取
+					String token = request.getParameter("token");
+					if (StringUtils.isEmpty(token)) {
+						RespondMessage rm = new RespondMessage();
+						rm.setStatus("[" + HttpStatus.UNAUTHORIZED.value() + "]  " + HttpStatus.UNAUTHORIZED.getReasonPhrase());
+						rm.setMessage("无权访问该服务。【访问权限说明】1：登录用户；2：该服务已成功发布。");
+
+						requestContext.setSendZuulResponse(false);
+						requestContext.setResponseStatusCode(HttpStatus.UNAUTHORIZED.value());
+						requestContext.setResponseBody(JSONObject.toJSONString(rm));
+						requestContext.getResponse().setContentType("application/json;charset=UTF-8");
+					}
 				}
 			}
 		} catch (Exception e) {

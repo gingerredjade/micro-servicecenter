@@ -123,12 +123,12 @@ public class MapTileController {
 		HttpServletResponse response) throws MalformedURLException {
 
 
-		/**
+		/*
 		 * 0-- 监测gis web server配置
 		 */
 		if (GIS_WEBSERVER_PREFIX.isEmpty()) {
 			String errMsg = "GIS Web服务器服务请求串前缀为空，请检查";
-			String errStr = MessageUtils.buildErrorInfo(RespondMessage.STATUS_FAILED, errMsg);
+			String errStr = MessageUtils.buildInfo(RespondMessage.STATUS_FAILED, errMsg);
 			_logger.error(errStr);
 			//return errMsg;
 		} else {
@@ -139,14 +139,14 @@ public class MapTileController {
 		}
 
 
-		/**
+		/*
 		 * 1-- 获取所有请求参数,构造请求URI
 		 */
 		String URLStr = buildRequestURL(GIS_WEBSERVER_PREFIX, SERVICE_MAPPING_MAPTILE, request);
 		_logger.info("【地图瓦片服务】Current Request URL = [{}].", URLStr);
 
 
-		/**
+		/*
 		 * 2-- 执行REST请求
 		 */
 		byte[] resultData = null;
@@ -161,7 +161,7 @@ public class MapTileController {
 		}
 
 
-		/**
+		/*
 		 * 3-- 封装应答
 		 */
 		MapTileOutputData result = new MapTileOutputData(resultData);
@@ -171,11 +171,12 @@ public class MapTileController {
 
 	/**
 	 * 构建请求URL--GIS WEB服务器的REST URL
+	 *
 	 * @param gisServerUrl	GIS WEB服务器服务地址
 	 *                         形如“http://192.168.56.157:8999/mswss/maps/standardsvcs/”
 	 * @param svcMapping	约定的服务资源标识
 	 * @param request		前端请求信息
-	 * @return
+	 * @return 返回值
 	 */
 	private static String buildRequestURL(String gisServerUrl, String svcMapping, HttpServletRequest request) {
 		StringBuilder sb = new StringBuilder();
@@ -200,6 +201,7 @@ public class MapTileController {
 
 	/**
 	 * 将通过REST获取到的地图瓦片数据流写入文件进行准确性测试
+	 *
 	 * @param bytes
 	 * @param alias
 	 * @param version

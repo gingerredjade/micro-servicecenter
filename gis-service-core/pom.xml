@@ -187,27 +187,27 @@
 
 
 		<!-- Third Party Package start-->
-		<dependency>
+		<!--<dependency>
 			<groupId>com.supermap</groupId>
 			<artifactId>third-party-supermap</artifactId>
 			<version>1.0-SNAPSHOT</version>
 			<scope>system</scope>
-			<systemPath>${project.basedir}/libs/third-party-supermap-1.0-SNAPSHOT.jar</systemPath>
+			<systemPath>${project.basedir}/3rd-libs/third-party-supermap-1.0-SNAPSHOT.jar</systemPath>
 		</dependency>
 		<dependency>
 			<groupId>com.mc</groupId>
 			<artifactId>third-party-mc</artifactId>
 			<version>1.0-SNAPSHOT</version>
 			<scope>system</scope>
-			<systemPath>${project.basedir}/libs/third-party-mc-1.0-SNAPSHOT.jar</systemPath>
+			<systemPath>${project.basedir}/3rd-libs/third-party-mc-1.0-SNAPSHOT.jar</systemPath>
 		</dependency>
 		<dependency>
 			<groupId>com.cetc15</groupId>
 			<artifactId>third-party-cetc15</artifactId>
 			<version>1.0-SNAPSHOT</version>
 			<scope>system</scope>
-			<systemPath>${project.basedir}/libs/third-party-cetc15-1.0-SNAPSHOT.jar</systemPath>
-		</dependency>
+			<systemPath>${project.basedir}/3rd-libs/third-party-cetc15-1.0-SNAPSHOT.jar</systemPath>
+		</dependency>-->
 		<dependency>
 			<groupId>com.gis</groupId>
 			<artifactId>service-commonly-used</artifactId>

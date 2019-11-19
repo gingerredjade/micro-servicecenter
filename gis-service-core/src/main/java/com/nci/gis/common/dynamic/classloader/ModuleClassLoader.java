@@ -20,7 +20,7 @@ import java.util.jar.JarEntry;
 import java.util.jar.JarFile;
 
 /**
- * 自定义类加载器
+ * 自定义类装载器，动态JAR加载器（加载外部jar包）
  *
  * @since 1.0.0 2019年11月12日
  * @author <a href="https://gisnci.com">Hongyu Jiang</a>
@@ -66,6 +66,7 @@ public class ModuleClassLoader extends URLClassLoader {
 
 	/**
 	 * 重写loadClass方法，改写loadClass方式
+	 *
 	 * @param name	类名
 	 * @return      返回值
 	 * @throws ClassNotFoundException	异常信息
@@ -82,6 +83,7 @@ public class ModuleClassLoader extends URLClassLoader {
 
 	/**
 	 * 初始化类加载器，保存字节码
+	 * 		不支持加载jar中jar
 	 */
 	private void init() {
 
@@ -96,7 +98,7 @@ public class ModuleClassLoader extends URLClassLoader {
 				JarEntry jarEntry = entryEnumeration.nextElement();
 				String name = jarEntry.getName();
 
-				// 这里添加了路径扫描限制
+				// 此处添加了路径扫描限制
 				if (name.endsWith(".class")) {
 					String className = name.replace(".class", "").replaceAll("/", ".");
 					inputStream = jarFile.getInputStream(jarEntry);
@@ -152,7 +154,7 @@ public class ModuleClassLoader extends URLClassLoader {
 			BeanDefinition beanDefinition = beanDefinitionBuilder.getRawBeanDefinition();
 
 			// 设置当前Bean定义对象是单例的
-			beanDefinition.setScope("singleton");
+			beanDefinition.setScope(BeanDefinition.SCOPE_SINGLETON);
 
 			// 将变量首字母置小写(取消此设置)
 			String beanName = StringUtils.uncapitalize(className);
@@ -206,6 +208,5 @@ public class ModuleClassLoader extends URLClassLoader {
 		}
 		return false;
 	}
-
 
 }

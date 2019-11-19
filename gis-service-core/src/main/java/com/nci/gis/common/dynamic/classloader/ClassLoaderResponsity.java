@@ -44,6 +44,7 @@ public class ClassLoaderResponsity {
 				SpringContextUtil.getBeanFactory().removeBeanDefinition(beanName);
 			}
 
+			// 使用URLClassLoader提供的close()关闭已经打开的jar文件，释放相关资源
 			moduleClassLoader.close();
 			responsityMap.remove(moduleName);
 		} catch (IOException e) {
@@ -58,7 +59,6 @@ public class ClassLoaderResponsity {
 	public static ClassLoaderResponsity getInstance() {
 		return ClassloaderResponsityHolder.instance;
 	}
-
 
 
 }

@@ -8,7 +8,7 @@
 ````
 - 编译器：IDEA 2019.1
 - Maven：3.6.0
-- JDK：1.8.0_191
+- JDK：1.8.0_191（JDK需1.8+）
 - 系统：Win 10
 - 工具：Postman 7.5.0（Windows & Linux）
 - 数据库：MySQL 8.0.17（Windows & Linux）
@@ -56,7 +56,12 @@ GIS空间信息微服务管理平台模块
 ```
 用来存放配置文件(适用配置中心，配置中心上线用对应配置需用绝对路径)
 ```
-- third-party-supermap  
+- third-party-cetc15
+
+```
+第三方电科15所服务适配模块
+```
+- third-party-supermap
 
 ```
 第三方超图服务适配模块

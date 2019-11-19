@@ -27,8 +27,9 @@ public class YamlUtil {
 
 	/**
 	 * 根据Key从系统属性文件中获取相应的值
-	 * @param key
-	 * @return
+	 *
+	 * @param key key
+	 * @return 返回值
 	 */
 	public final static String key(String key) {
 		return System.getProperty(key);
@@ -38,7 +39,7 @@ public class YamlUtil {
 	 * 根据文件名获取yml的文件内容
 	 * 		支持一个yaml文件包含多个yaml配置片段。
 	 *
-	 * @param filename
+	 * @param filename 文件名
 	 * @return	返回所有的属性
 	 */
 	public static List<LinkedHashMap<String, String>> getYmlByFileNamePerfect(String filename)
@@ -84,7 +85,7 @@ public class YamlUtil {
 	 * 根据文件名获取yml的文件内容
 	 * 		要求yaml文件中只有一个yaml文件内容配置片段。不支持使用‘---’代表文档的开始，加入多个yaml配置片段的文件的yaml文件。
 	 *
-	 * @param filename
+	 * @param filename 文件名
 	 * @return	返回所有的属性
 	 */
 	public static LinkedHashMap<String, String> getYmlByFileName(String filename)
@@ -125,9 +126,10 @@ public class YamlUtil {
 
 	/**
 	 * 遍历yml文件，获取map集合
-	 * @param key_str
-	 * @param obj
-	 * @return
+	 *
+	 * @param key_str 关键词字符串
+	 * @param obj map对象
+	 * @return 返回值
 	 */
 	public static Map<String, String> forEachYaml(String key_str, Map<String, Object> obj) {
 		for (Map.Entry<String, Object> entry:obj.entrySet()) {
@@ -166,7 +168,7 @@ public class YamlUtil {
 	 *
 	 * @param filename	yaml配置文件名称
 	 * @param key		需要读取的属性
-	 * @return
+	 * @return 返回值
 	 */
 	public static String getValue(String filename, String key) throws FileNotFoundException {
 		Map<String, String> ymlMap = getYmlByFileName(filename);
@@ -178,8 +180,9 @@ public class YamlUtil {
 
 	/**
 	 * 输出一个对象到StringWriter
-	 * @param obj
-	 * @return
+	 *
+	 * @param obj 对象
+	 * @return 返回值
 	 */
 	public static StringWriter dump(Object obj) {
 		Yaml yaml = new Yaml();
@@ -190,8 +193,9 @@ public class YamlUtil {
 
 	/**
 	 * 输出一组对象到StringWriter
-	 * @param list
-	 * @return
+	 *
+	 * @param list 列表
+	 * @return 返回值
 	 */
 	public static StringWriter dumpAll(List list) {
 		Yaml yaml = new Yaml();
@@ -202,7 +206,7 @@ public class YamlUtil {
 
 
 
-	/**
+	/*
 	 * ###知识点记录###
 	 *
 	 * SpringBoot使用的SnakeYaml。
