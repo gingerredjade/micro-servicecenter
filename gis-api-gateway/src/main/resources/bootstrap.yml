@@ -18,6 +18,16 @@ spring:
         enabled: false
         service-id: CONFIG
       profile: dev
+  servlet:
+    multipart:
+      # 配置文件传输
+      enabled: true
+      file-size-threshold: 0
+      # 单个文件数据大小
+      max-file-size: 100Mb
+      # 单个请求的文件数据总上传大小
+      max-request-size: 100Mb
+      resolve-lazily: false
 
 
 

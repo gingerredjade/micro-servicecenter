@@ -1716,14 +1716,11 @@
 									"raw": ""
 								},
 								"url": {
-									"raw": "http://localhost:9000/gis-service-core/gsplacename/cetc15?format=json&searchInfo=工商&featureNum=100",
-									"protocol": "http",
+									"raw": "{{local_gateway_domain}}/gsplacename/cetc15?format=json&searchInfo=工商&featureNum=100",
 									"host": [
-										"localhost"
+										"{{local_gateway_domain}}"
 									],
-									"port": "9000",
 									"path": [
-										"gis-service-core",
 										"gsplacename",
 										"cetc15"
 									],
@@ -1767,14 +1764,11 @@
 									"raw": ""
 								},
 								"url": {
-									"raw": "http://localhost:9000/gis-service-core/gsnetworkanalyze/cetc15?format=json&alias=navi_china&version=1000&points=418920970_143951000,418924520_143661860&srs=MGIS:4490&naviMode=1",
-									"protocol": "http",
+									"raw": "{{local_gateway_domain}}/gsnetworkanalyze/cetc15?format=json&alias=navi_china&version=1000&points=418920970_143951000,418924520_143661860&srs=MGIS:4490&naviMode=1",
 									"host": [
-										"localhost"
+										"{{local_gateway_domain}}"
 									],
-									"port": "9000",
 									"path": [
-										"gis-service-core",
 										"gsnetworkanalyze",
 										"cetc15"
 									],
@@ -1830,14 +1824,11 @@
 									"raw": ""
 								},
 								"url": {
-									"raw": "http://localhost:9000/gis-service-core/gsgeometry/length/cetc15?format=json&points=400000000,110000000,410000000,110000000,410000000,90000000&srs=MGIS:4490",
-									"protocol": "http",
+									"raw": "{{local_gateway_domain}}/gsgeometry/length/cetc15?format=json&points=400000000,110000000,410000000,110000000,410000000,90000000&srs=MGIS:4490",
 									"host": [
-										"localhost"
+										"{{local_gateway_domain}}"
 									],
-									"port": "9000",
 									"path": [
-										"gis-service-core",
 										"gsgeometry",
 										"length",
 										"cetc15"
@@ -1875,14 +1866,11 @@
 									"raw": ""
 								},
 								"url": {
-									"raw": "http://localhost:9000/gis-service-core/gsgeometry/area/cetc15?format=json&geo=4&points=400000000,90000000,420000000,90000000,400000000,120000000,420000000,120000000&srs=MGIS:4490",
-									"protocol": "http",
+									"raw": "{{local_gateway_domain}}/gsgeometry/area/cetc15?format=json&geo=4&points=400000000,90000000,420000000,90000000,400000000,120000000,420000000,120000000&srs=MGIS:4490",
 									"host": [
-										"localhost"
+										"{{local_gateway_domain}}"
 									],
-									"port": "9000",
 									"path": [
-										"gis-service-core",
 										"gsgeometry",
 										"area",
 										"cetc15"
@@ -1924,14 +1912,11 @@
 									"raw": ""
 								},
 								"url": {
-									"raw": "http://localhost:9000/gis-service-core/gsgeometry/azimuth/cetc15?format=json&pointBegin=400000000,110000000&pointEnd=420000000,90000000&srs=MGIS:4490",
-									"protocol": "http",
+									"raw": "{{local_gateway_domain}}/gsgeometry/azimuth/cetc15?format=json&pointBegin=400000000,110000000&pointEnd=420000000,90000000&srs=MGIS:4490",
 									"host": [
-										"localhost"
+										"{{local_gateway_domain}}"
 									],
-									"port": "9000",
 									"path": [
-										"gis-service-core",
 										"gsgeometry",
 										"azimuth",
 										"cetc15"
@@ -1973,14 +1958,11 @@
 									"raw": ""
 								},
 								"url": {
-									"raw": "http://localhost:9000/gis-service-core/gsgeometry/buffer/cetc15?format=json&distances=2000&smooth=12&geo=1&points=420000000,90000000&srs=MGIS:4490",
-									"protocol": "http",
+									"raw": "{{local_gateway_domain}}/gsgeometry/buffer/cetc15?format=json&distances=2000&smooth=12&geo=1&points=420000000,90000000&srs=MGIS:4490",
 									"host": [
-										"localhost"
+										"{{local_gateway_domain}}"
 									],
-									"port": "9000",
 									"path": [
-										"gis-service-core",
 										"gsgeometry",
 										"buffer",
 										"cetc15"
@@ -2030,14 +2012,11 @@
 									"raw": ""
 								},
 								"url": {
-									"raw": "http://localhost:9000/gis-service-core/gsgeometry/buffer/cetc15?format=json&distances=2000&smooth=12&geo=2&points=420000000,90000000,400000000,120000000&srs=MGIS:4490",
-									"protocol": "http",
+									"raw": "{{local_gateway_domain}}/gsgeometry/buffer/cetc15?format=json&distances=2000&smooth=12&geo=2&points=420000000,90000000,400000000,120000000&srs=MGIS:4490",
 									"host": [
-										"localhost"
+										"{{local_gateway_domain}}"
 									],
-									"port": "9000",
 									"path": [
-										"gis-service-core",
 										"gsgeometry",
 										"buffer",
 										"cetc15"
@@ -2087,14 +2066,11 @@
 									"raw": ""
 								},
 								"url": {
-									"raw": "http://localhost:9000/gis-service-core/gsgeometry/buffer/cetc15?format=json&distances=2000&smooth=12&geo=4&points=400000000,90000000,420000000,90000000,400000000,120000000,420000000,120000000&srs=MGIS:4490",
-									"protocol": "http",
+									"raw": "{{local_gateway_domain}}/gsgeometry/buffer/cetc15?format=json&distances=2000&smooth=12&geo=4&points=400000000,90000000,420000000,90000000,400000000,120000000,420000000,120000000&srs=MGIS:4490",
 									"host": [
-										"localhost"
+										"{{local_gateway_domain}}"
 									],
-									"port": "9000",
 									"path": [
-										"gis-service-core",
 										"gsgeometry",
 										"buffer",
 										"cetc15"
@@ -2144,14 +2120,11 @@
 									"raw": ""
 								},
 								"url": {
-									"raw": "http://localhost:9000/gis-service-core/gsgeometry/srsConversion/cetc15?format=json&geo=1&points=400000000,90000000,420000000,90000000,400000000,120000000,420000000,120000000&srs=MGIS:4490&toSrs=MGIS:4214",
-									"protocol": "http",
+									"raw": "{{local_gateway_domain}}/gsgeometry/srsConversion/cetc15?format=json&geo=1&points=400000000,90000000,420000000,90000000,400000000,120000000,420000000,120000000&srs=MGIS:4490&toSrs=MGIS:4214",
 									"host": [
-										"localhost"
+										"{{local_gateway_domain}}"
 									],
-									"port": "9000",
 									"path": [
-										"gis-service-core",
 										"gsgeometry",
 										"srsConversion",
 										"cetc15"
@@ -2205,14 +2178,11 @@
 									"raw": ""
 								},
 								"url": {
-									"raw": "http://localhost:9000/gis-service-core/gstopanalyze/distance/cetc15?format=json&alias=DEMAnalys&version=1000&geo=2&points=400000000_90000000,420000000_120000000&srs=MGIS:4490",
-									"protocol": "http",
+									"raw": "{{local_gateway_domain}}/gstopanalyze/distance/cetc15?format=json&alias=DEMAnalys&version=1000&geo=2&points=400000000_90000000,420000000_120000000&srs=MGIS:4490",
 									"host": [
-										"localhost"
+										"{{local_gateway_domain}}"
 									],
-									"port": "9000",
 									"path": [
-										"gis-service-core",
 										"gstopanalyze",
 										"distance",
 										"cetc15"
@@ -2262,14 +2232,11 @@
 									"raw": ""
 								},
 								"url": {
-									"raw": "http://localhost:9000/gis-service-core/gstopanalyze/area/cetc15?format=json&alias=DEMAnalys&version=1000&geo=4&points=400000000_90000000,420000000_90000000,400000000_120000000,420000000_120000000&srs=MGIS:4490",
-									"protocol": "http",
+									"raw": "{{local_gateway_domain}}/gstopanalyze/area/cetc15?format=json&alias=DEMAnalys&version=1000&geo=4&points=400000000_90000000,420000000_90000000,400000000_120000000,420000000_120000000&srs=MGIS:4490",
 									"host": [
-										"localhost"
+										"{{local_gateway_domain}}"
 									],
-									"port": "9000",
 									"path": [
-										"gis-service-core",
 										"gstopanalyze",
 										"area",
 										"cetc15"
@@ -2319,14 +2286,11 @@
 									"raw": ""
 								},
 								"url": {
-									"raw": "http://localhost:9000/gis-service-core/gstopanalyze/areaofring/cetc15?format=json&alias=DEMAnalys&version=1000&radius=200000.0&points=400000000_90000000&srs=MGIS:4490",
-									"protocol": "http",
+									"raw": "{{local_gateway_domain}}/gstopanalyze/areaofring/cetc15?format=json&alias=DEMAnalys&version=1000&radius=200000.0&points=400000000_90000000&srs=MGIS:4490",
 									"host": [
-										"localhost"
+										"{{local_gateway_domain}}"
 									],
-									"port": "9000",
 									"path": [
-										"gis-service-core",
 										"gstopanalyze",
 										"areaofring",
 										"cetc15"
@@ -2376,14 +2340,11 @@
 									"raw": ""
 								},
 								"url": {
-									"raw": "http://localhost:9000/gis-service-core/gstopanalyze/pointelevation/cetc15?format=json&alias=DEMAnalys&version=1000&points=400000000_90000000&srs=MGIS:4490",
-									"protocol": "http",
+									"raw": "{{local_gateway_domain}}/gstopanalyze/pointelevation/cetc15?format=json&alias=DEMAnalys&version=1000&points=400000000_90000000&srs=MGIS:4490",
 									"host": [
-										"localhost"
+										"{{local_gateway_domain}}"
 									],
-									"port": "9000",
 									"path": [
-										"gis-service-core",
 										"gstopanalyze",
 										"pointelevation",
 										"cetc15"
@@ -2429,14 +2390,11 @@
 									"raw": ""
 								},
 								"url": {
-									"raw": "http://localhost:9000/gis-service-core/gstopanalyze/elevation/cetc15?format=json&alias=DEMAnalys&version=1000&geo=4&points=411932075.69237_150796439.93263,439459419.44237_150796439.93263,439459419.44237_131179252.43263,411932075.69237_131179252.43263&srs=MGIS:4490&dResolutionH=4891.9691&dResolutionW=4891.9691\n",
-									"protocol": "http",
+									"raw": "{{local_gateway_domain}}/gstopanalyze/elevation/cetc15?format=json&alias=DEMAnalys&version=1000&geo=4&points=411932075.69237_150796439.93263,439459419.44237_150796439.93263,439459419.44237_131179252.43263,411932075.69237_131179252.43263&srs=MGIS:4490&dResolutionH=4891.9691&dResolutionW=4891.9691\n",
 									"host": [
-										"localhost"
+										"{{local_gateway_domain}}"
 									],
-									"port": "9000",
 									"path": [
-										"gis-service-core",
 										"gstopanalyze",
 										"elevation",
 										"cetc15"
@@ -2494,14 +2452,11 @@
 									"raw": ""
 								},
 								"url": {
-									"raw": "http://localhost:9000/gis-service-core/gstopanalyze/volume/cetc15?format=json&alias=DEMAnalys&version=1000&geo=4&points=400000000_90000000,420000000_90000000,400000000_120000000,420000000_120000000&srs=MGIS:4490&dResolutionH=4891.9691&dResolutionW=4891.9691&refHeight=1000",
-									"protocol": "http",
+									"raw": "{{local_gateway_domain}}/gstopanalyze/volume/cetc15?format=json&alias=DEMAnalys&version=1000&geo=4&points=400000000_90000000,420000000_90000000,400000000_120000000,420000000_120000000&srs=MGIS:4490&dResolutionH=4891.9691&dResolutionW=4891.9691&refHeight=1000",
 									"host": [
-										"localhost"
+										"{{local_gateway_domain}}"
 									],
-									"port": "9000",
 									"path": [
-										"gis-service-core",
 										"gstopanalyze",
 										"volume",
 										"cetc15"
@@ -2563,14 +2518,11 @@
 									"raw": ""
 								},
 								"url": {
-									"raw": "http://localhost:9000/gis-service-core/gstopanalyze/p2pSight/cetc15?format=json&alias=DEMAnalys&version=1000&geo=2&points=400000000_90000000,420000000_90000000&srs=MGIS:4490&dResolutionH=4891.9691&dResolutionW=4891.9691&drawPic=true&observheight=1000&targetHeight=1000&picWidth=256&picHeight=256",
-									"protocol": "http",
+									"raw": "{{local_gateway_domain}}/gstopanalyze/p2pSight/cetc15?format=json&alias=DEMAnalys&version=1000&geo=2&points=400000000_90000000,420000000_90000000&srs=MGIS:4490&dResolutionH=4891.9691&dResolutionW=4891.9691&drawPic=true&observheight=1000&targetHeight=1000&picWidth=256&picHeight=256",
 									"host": [
-										"localhost"
+										"{{local_gateway_domain}}"
 									],
-									"port": "9000",
 									"path": [
-										"gis-service-core",
 										"gstopanalyze",
 										"p2pSight",
 										"cetc15"
@@ -2648,14 +2600,11 @@
 									"raw": ""
 								},
 								"url": {
-									"raw": "http://localhost:9000/gis-service-core/gstopanalyze/viewsight/cetc15?format=json&alias=DEMAnalys&version=1000&points=400000000_90000000&radius=200000.0&srs=MGIS:4490&dResolutionH=4891.9691&dResolutionW=4891.9691&drawPic=true&observheight=1000&picWidth=256&picHeight=256",
-									"protocol": "http",
+									"raw": "{{local_gateway_domain}}/gstopanalyze/viewsight/cetc15?format=json&alias=DEMAnalys&version=1000&points=400000000_90000000&radius=200000.0&srs=MGIS:4490&dResolutionH=4891.9691&dResolutionW=4891.9691&drawPic=true&observheight=1000&picWidth=256&picHeight=256",
 									"host": [
-										"localhost"
+										"{{local_gateway_domain}}"
 									],
-									"port": "9000",
 									"path": [
-										"gis-service-core",
 										"gstopanalyze",
 										"viewsight",
 										"cetc15"
@@ -2729,14 +2678,11 @@
 									"raw": ""
 								},
 								"url": {
-									"raw": "http://localhost:9000/gis-service-core/gstopanalyze/slope/cetc15?format=json&alias=DEMAnalys&version=1000&geo=4&points=400000000_110000000,410000000_110000000,410000000_90000000&srs=MGIS:4490&drawPic=true&picWidth=256&picHeight=256&dResolutionH=4891.9691&dResolutionW=4891.9691&slopeLevel=12",
-									"protocol": "http",
+									"raw": "{{local_gateway_domain}}/gstopanalyze/slope/cetc15?format=json&alias=DEMAnalys&version=1000&geo=4&points=400000000_110000000,410000000_110000000,410000000_90000000&srs=MGIS:4490&drawPic=true&picWidth=256&picHeight=256&dResolutionH=4891.9691&dResolutionW=4891.9691&slopeLevel=12",
 									"host": [
-										"localhost"
+										"{{local_gateway_domain}}"
 									],
-									"port": "9000",
 									"path": [
-										"gis-service-core",
 										"gstopanalyze",
 										"slope",
 										"cetc15"
@@ -2810,14 +2756,11 @@
 									"raw": ""
 								},
 								"url": {
-									"raw": "http://localhost:9000/gis-service-core/gstopanalyze/aspect/cetc15?format=json&alias=DEMAnalys&version=1000&geo=4&points=400000000_110000000,410000000_110000000,410000000_90000000&srs=MGIS:4490&drawPic=true&picWidth=256&picHeight=256&dResolutionH=4891.9691&dResolutionW=4891.9691",
-									"protocol": "http",
+									"raw": "{{local_gateway_domain}}/gstopanalyze/aspect/cetc15?format=json&alias=DEMAnalys&version=1000&geo=4&points=400000000_110000000,410000000_110000000,410000000_90000000&srs=MGIS:4490&drawPic=true&picWidth=256&picHeight=256&dResolutionH=4891.9691&dResolutionW=4891.9691",
 									"host": [
-										"localhost"
+										"{{local_gateway_domain}}"
 									],
-									"port": "9000",
 									"path": [
-										"gis-service-core",
 										"gstopanalyze",
 										"aspect",
 										"cetc15"
@@ -2887,14 +2830,11 @@
 									"raw": ""
 								},
 								"url": {
-									"raw": "http://localhost:9000/gis-service-core/gstopanalyze/profile/cetc15?format=json&alias=DEMAnalys&version=1000&geo=2&points=400000000_120000000,420000000_120000000&srs=MGIS:4490&drawPic=true&picWidth=256&picHeight=256&dResolutionH=4891.9691&dResolutionW=4891.9691",
-									"protocol": "http",
+									"raw": "{{local_gateway_domain}}/gstopanalyze/profile/cetc15?format=json&alias=DEMAnalys&version=1000&geo=2&points=400000000_120000000,420000000_120000000&srs=MGIS:4490&drawPic=true&picWidth=256&picHeight=256&dResolutionH=4891.9691&dResolutionW=4891.9691",
 									"host": [
-										"localhost"
+										"{{local_gateway_domain}}"
 									],
-									"port": "9000",
 									"path": [
-										"gis-service-core",
 										"gstopanalyze",
 										"profile",
 										"cetc15"
@@ -3223,14 +3163,11 @@
 													"raw": ""
 												},
 												"url": {
-													"raw": "http://localhost:9000/gis-service-core/wmts/cetc15/maps/wmts?service=wmts&request=GetCapabilities&version=1.0.0",
-													"protocol": "http",
+													"raw": "{{local_gateway_domain}}/wmts/cetc15/maps/wmts?service=wmts&request=GetCapabilities&version=1.0.0",
 													"host": [
-														"localhost"
+														"{{local_gateway_domain}}"
 													],
-													"port": "9000",
 													"path": [
-														"gis-service-core",
 														"wmts",
 														"cetc15",
 														"maps",
@@ -3269,14 +3206,11 @@
 													"raw": ""
 												},
 												"url": {
-													"raw": "http://localhost:9000/gis-service-core/wmts/cetc15/maps/wmts?service=wmts&request=GetTile&version=1.0.0&format=image/png&layer=vec__1000__vec_1000__top-all&style=default&tilematrixset=4490&tilematrix=6&tilerow=82&tilecol=105",
-													"protocol": "http",
+													"raw": "{{local_gateway_domain}}/wmts/cetc15/maps/wmts?service=wmts&request=GetTile&version=1.0.0&format=image/png&layer=vec__1000__vec_1000__top-all&style=default&tilematrixset=4490&tilematrix=6&tilerow=82&tilecol=105",
 													"host": [
-														"localhost"
+														"{{local_gateway_domain}}"
 													],
-													"port": "9000",
 													"path": [
-														"gis-service-core",
 														"wmts",
 														"cetc15",
 														"maps",
@@ -3350,14 +3284,11 @@
 													"raw": ""
 												},
 												"url": {
-													"raw": "http://localhost:9000/gis-service-core/wmts/sm/services/map-world/wmts100?service=wmts&request=GetCapabilities&version=1.0.0",
-													"protocol": "http",
+													"raw": "{{local_gateway_domain}}/wmts/sm/services/map-world/wmts100?service=wmts&request=GetCapabilities&version=1.0.0",
 													"host": [
-														"localhost"
+														"{{local_gateway_domain}}"
 													],
-													"port": "9000",
 													"path": [
-														"gis-service-core",
 														"wmts",
 														"sm",
 														"services",
@@ -3397,14 +3328,11 @@
 													"raw": ""
 												},
 												"url": {
-													"raw": "http://localhost:9000/gis-service-core/wmts/sm/services/map-world/wmts100?service=wmts&request=GetTile&version=1.0.0&format=image/png&layer=World&style=default&tilematrixset=GlobalCRS84Scale_World&tilematrix=2&tilerow=0&tilecol=3",
-													"protocol": "http",
+													"raw": "{{local_gateway_domain}}/wmts/sm/services/map-world/wmts100?service=wmts&request=GetTile&version=1.0.0&format=image/png&layer=World&style=default&tilematrixset=GlobalCRS84Scale_World&tilematrix=2&tilerow=0&tilecol=3",
 													"host": [
-														"localhost"
+														"{{local_gateway_domain}}"
 													],
-													"port": "9000",
 													"path": [
-														"gis-service-core",
 														"wmts",
 														"sm",
 														"services",
@@ -3478,14 +3406,11 @@
 									"raw": ""
 								},
 								"url": {
-									"raw": "http://localhost:9000/gis-service-core/gsmaptile/cetc15?format=image&alias=vec&version=1000&namespace=vec_1000&layerAlias=top-all&level=6&row=45&col=105&imageType=png&dataType=3&dataFormat=1&appType=1&dataVersion=new",
-									"protocol": "http",
+									"raw": "{{local_gateway_domain}}/gsmaptile/cetc15?format=image&alias=vec&version=1000&namespace=vec_1000&layerAlias=top-all&level=6&row=45&col=105&imageType=png&dataType=3&dataFormat=1&appType=1&dataVersion=new",
 									"host": [
-										"localhost"
+										"{{local_gateway_domain}}"
 									],
-									"port": "9000",
 									"path": [
-										"gis-service-core",
 										"gsmaptile",
 										"cetc15"
 									],
@@ -3562,14 +3487,11 @@
 									"raw": ""
 								},
 								"url": {
-									"raw": "http://localhost:9000/gis-service-core/gsmaptile/mc?format=image&alias=gm&version=1000&namespace=vec_1000&layerAlias=top-all&level=6&row=51&col=24&imageType=png&dataType=3&dataFormat=1&appType=1",
-									"protocol": "http",
+									"raw": "{{local_gateway_domain}}/gsmaptile/mc?format=image&alias=gm&version=1000&namespace=vec_1000&layerAlias=top-all&level=6&row=51&col=24&imageType=png&dataType=3&dataFormat=1&appType=1",
 									"host": [
-										"localhost"
+										"{{local_gateway_domain}}"
 									],
-									"port": "9000",
 									"path": [
-										"gis-service-core",
 										"gsmaptile",
 										"mc"
 									],
@@ -3925,14 +3847,11 @@
 													"raw": ""
 												},
 												"url": {
-													"raw": "http://localhost:9000/gis-service-core/wms/sm/services/map-china400/wms130/China?service=wms&request=GetMap&version=1.3.0&layers=China&bbox=10018754.17,9.3132257461548e-10,15028131.255,5009377.085&crs=EPSG:3857&styles=population&format=image/png&width=512&height=512",
-													"protocol": "http",
+													"raw": "{{local_gateway_domain}}/wms/sm/services/map-china400/wms130/China?service=wms&request=GetMap&version=1.3.0&layers=China&bbox=10018754.17,9.3132257461548e-10,15028131.255,5009377.085&crs=EPSG:3857&styles=population&format=image/png&width=512&height=512",
 													"host": [
-														"localhost"
+														"{{local_gateway_domain}}"
 													],
-													"port": "9000",
 													"path": [
-														"gis-service-core",
 														"wms",
 														"sm",
 														"services",
@@ -4001,14 +3920,11 @@
 													"raw": ""
 												},
 												"url": {
-													"raw": "http://localhost:9000/gis-service-core/wms/sm/services/map-china400/wms130/China?service=wms&request=GetCapabilities&version=1.3.0",
-													"protocol": "http",
+													"raw": "{{local_gateway_domain}}/wms/sm/services/map-china400/wms130/China?service=wms&request=GetCapabilities&version=1.3.0",
 													"host": [
-														"localhost"
+														"{{local_gateway_domain}}"
 													],
-													"port": "9000",
 													"path": [
-														"gis-service-core",
 														"wms",
 														"sm",
 														"services",
@@ -4051,14 +3967,11 @@
 													"raw": ""
 												},
 												"url": {
-													"raw": "http://localhost:9000/gis-service-core/wms/cetc15/maps/wms?service=wms&request=GetCapabilities&version=1.3.0",
-													"protocol": "http",
+													"raw": "{{local_gateway_domain}}/wms/cetc15/maps/wms?service=wms&request=GetCapabilities&version=1.3.0",
 													"host": [
-														"localhost"
+														"{{local_gateway_domain}}"
 													],
-													"port": "9000",
 													"path": [
-														"gis-service-core",
 														"wms",
 														"cetc15",
 														"maps",
@@ -4097,14 +4010,11 @@
 													"raw": ""
 												},
 												"url": {
-													"raw": "http://localhost:9000/gis-service-core/wms/cetc15/maps/wms?service=wms&request=GetMap&version=1.3.0&layers=vec_1000:top-all&bbox=115,36,120,40&crs=MGIS:4490&styles=population&format=image/png&width=512&height=512",
-													"protocol": "http",
+													"raw": "{{local_gateway_domain}}/wms/cetc15/maps/wms?service=wms&request=GetMap&version=1.3.0&layers=vec_1000:top-all&bbox=115,36,120,40&crs=MGIS:4490&styles=population&format=image/png&width=512&height=512",
 													"host": [
-														"localhost"
+														"{{local_gateway_domain}}"
 													],
-													"port": "9000",
 													"path": [
-														"gis-service-core",
 														"wms",
 														"cetc15",
 														"maps",
@@ -4177,14 +4087,11 @@
 									"raw": ""
 								},
 								"url": {
-									"raw": "http://localhost:9000/gis-service-core/gsmap/cetc15?format=image&alias=vec&version=1000&bound=144001000,410400000,129600000,432000000,MGIS:4490&layers=top-all&width=256&height=256&imageType=1&transparent=false&bgcolor=16777215",
-									"protocol": "http",
+									"raw": "{{local_gateway_domain}}/gsmap/cetc15?format=image&alias=vec&version=1000&bound=144001000,410400000,129600000,432000000,MGIS:4490&layers=top-all&width=256&height=256&imageType=1&transparent=false&bgcolor=16777215",
 									"host": [
-										"localhost"
+										"{{local_gateway_domain}}"
 									],
-									"port": "9000",
 									"path": [
-										"gis-service-core",
 										"gsmap",
 										"cetc15"
 									],

@@ -35,9 +35,7 @@ server:
     max-threads: 500
     accept-count: 500
     min-spare-threads: 20
-    max-http-post-size: 314572800
-    max-http-header-size: 314572800
-  max-http-header-size: 314572800
+
 
 
 eureka:
