@@ -34,7 +34,8 @@
 #### 使用步骤
     配置application.yml中的3rd.upload-path为3rdlibs所在目录;
     
-
+## 其他
+- libs/springfox-swagger-ui-2.7.0.jar中的swagger-ui.html源码已修改，增加了汉化脚本。
 
 
 
