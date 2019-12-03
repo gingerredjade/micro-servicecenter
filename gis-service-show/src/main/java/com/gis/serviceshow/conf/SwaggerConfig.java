@@ -65,7 +65,7 @@ public class SwaggerConfig extends WebMvcConfigurationSupport {
 	@Bean
 	public Docket accessToken() {
 		return new Docket(DocumentationType.SWAGGER_2)
-			.groupName("战场环境保障信息统一管理系统 Service APIs")   // 定义组
+			.groupName("战场环境保障信息统一Service APIs")   // 定义组
 			.select()                               // 选择哪些路径和api会生成document
 			//.apis(RequestHandlerSelectors.any())  // 对所有api进行监控
 			.apis(RequestHandlerSelectors.basePackage(basePackage))

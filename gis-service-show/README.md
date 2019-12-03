@@ -33,3 +33,5 @@ Deprecated！
 一般把页面放在templates中，静态资源放在static中。页面引用这些静态资源时,注意相对路径，因为//*，所以不需要引用到static那级。
 
 
+## 4. 其他
+- libs/springfox-swagger-ui-2.7.0.jar中的swagger-ui.html源码已修改，增加了汉化脚本。
