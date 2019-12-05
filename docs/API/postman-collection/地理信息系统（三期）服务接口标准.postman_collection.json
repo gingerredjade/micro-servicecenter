@@ -1290,6 +1290,71 @@
 			"name": "空间查询服务",
 			"item": [
 				{
+					"name": "空间查询-点选取",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://192.168.56.104:8080/gis3wss/maps/services/gsquery/zhengqu/1000?format=json&search=1>0&geo=1&points=421916610.71777344,140857635.49804688&srs=MGIS:4490&tolarence=0&relation=1&feature=524287&number=5",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"56",
+								"104"
+							],
+							"port": "8080",
+							"path": [
+								"gis3wss",
+								"maps",
+								"services",
+								"gsquery",
+								"zhengqu",
+								"1000"
+							],
+							"query": [
+								{
+									"key": "format",
+									"value": "json"
+								},
+								{
+									"key": "search",
+									"value": "1>0"
+								},
+								{
+									"key": "geo",
+									"value": "1"
+								},
+								{
+									"key": "points",
+									"value": "421916610.71777344,140857635.49804688"
+								},
+								{
+									"key": "srs",
+									"value": "MGIS:4490"
+								},
+								{
+									"key": "tolarence",
+									"value": "0"
+								},
+								{
+									"key": "relation",
+									"value": "1"
+								},
+								{
+									"key": "feature",
+									"value": "524287"
+								},
+								{
+									"key": "number",
+									"value": "5"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
 					"name": "空间查询-矩形选取rectsel",
 					"request": {
 						"method": "GET",
