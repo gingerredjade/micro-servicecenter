@@ -64,7 +64,7 @@ public class CatalogController {
 		@RequestParam(value = "alias", defaultValue = "") String alias,
 
 		@ApiParam(name = "version",
-			value = "服务版本。<br />整型，例如1000，,1001。")
+			value = "服务版本。<br />整型，例如1000,1001。")
 		@RequestParam(value = "version", defaultValue = "") String version,
 
 		@ApiParam(name = "number",

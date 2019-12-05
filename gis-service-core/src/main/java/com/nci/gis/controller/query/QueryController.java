@@ -63,8 +63,20 @@ public class QueryController {
 
 
 		// 空间查询
-		@ApiParam(name = "geo", required = true, allowableValues = "1,4",
-			value = "几何类型。<br />整型，1:点选，4：矩形。")
+		@ApiParam(name = "geo", required = true,
+			value = "几何类型。整型，建议使用1或4<br />" +
+				"1:点；<br />" +
+				"2:折线；<br />" +
+				"4：多边形；<br />" +
+				"8：椭圆边界线；<br />" +
+				"16：椭圆；<br />" +
+				"32：任意边界面；<br />" +
+				"64：多点；<br />" +
+				"128：多线；<br />" +
+				"256：多面；<br />" +
+				"512：复合目标；<br />" +
+				"1024：矩形；<br />" +
+				"524287：所有几何类型；")
 		@RequestParam(value = "geo", defaultValue = "4") String geo,
 
 		@ApiParam(name = "points", required = true,

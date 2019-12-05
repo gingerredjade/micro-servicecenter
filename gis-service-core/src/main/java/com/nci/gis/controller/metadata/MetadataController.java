@@ -19,7 +19,7 @@ import javax.servlet.http.HttpServletRequest;
  * @author <a href="https://gisnci.com">Hongyu Jiang</a>
  */
 @Api(tags = "元数据服务",
-	value = "MetadataController", description = "获取元数据信息")
+	value = "MetadataController", description = "获取服务的元数据信息")
 @RestController
 @EnableAutoConfiguration
 @CrossOrigin
@@ -60,7 +60,7 @@ public class MetadataController {
 		@RequestParam(value = "alias", defaultValue = "") String alias,
 
 		@ApiParam(name = "version",
-			value = "服务版本。<br />整型，例如1000，1001。")
+			value = "服务版本。<br />整型，例如1000,1001。")
 		@RequestParam(value = "version", defaultValue = "") String version,
 
 		@ApiParam(name = "type",

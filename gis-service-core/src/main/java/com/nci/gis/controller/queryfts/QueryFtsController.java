@@ -78,8 +78,8 @@ public class QueryFtsController {
 		@ApiParam(name = "attr",
 			value = "匹配查询条件信息。<br />" +
 				"字符串型，当attrSearchType=match时，该值表示匹配查询的查询字段值，" +
-				"格式为'属性`值'对，<br />" +
-				"多个属性查询条件以'key1<blockquote>`</blockquote>value1,key2`value2,key3`value3'形式传递")
+				"格式为'<b>属性\\`值</b>'对，<br />" +
+				"多个属性查询条件以'<b>key1\\`value1,key2\\`value2,key3\\`value3</b>'形式传递")
 		@RequestParam(value = "attr", defaultValue = "") String attr,
 
 		@ApiParam(name = "inkey",
