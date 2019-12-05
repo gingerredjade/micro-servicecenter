@@ -35,6 +35,10 @@ public class GisAppServiceConfig {
 	private List<Map<String, String>> gstopanalyze;
 	private List<Map<String, String>> gsmap;
 	private List<Map<String, String>> gsmaptile;
+	private List<Map<String, String>> gscatalog;
+	private List<Map<String, String>> gsmd;
+	private List<Map<String, String>> gsquery;
+	private List<Map<String, String>> gsqueryfts;
 
 	// 通用适配服务配置项
 	private Map<String, String> cus;
@@ -110,5 +114,37 @@ public class GisAppServiceConfig {
 
 	public void setCus(Map<String, String> cus) {
 		this.cus = cus;
+	}
+
+	public List<Map<String, String>> getGscatalog() {
+		return gscatalog;
+	}
+
+	public void setGscatalog(List<Map<String, String>> gscatalog) {
+		this.gscatalog = gscatalog;
+	}
+
+	public List<Map<String, String>> getGsmd() {
+		return gsmd;
+	}
+
+	public void setGsmd(List<Map<String, String>> gsmd) {
+		this.gsmd = gsmd;
+	}
+
+	public List<Map<String, String>> getGsquery() {
+		return gsquery;
+	}
+
+	public void setGsquery(List<Map<String, String>> gsquery) {
+		this.gsquery = gsquery;
+	}
+
+	public List<Map<String, String>> getGsqueryfts() {
+		return gsqueryfts;
+	}
+
+	public void setGsqueryfts(List<Map<String, String>> gsqueryfts) {
+		this.gsqueryfts = gsqueryfts;
 	}
 }

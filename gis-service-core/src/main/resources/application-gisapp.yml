@@ -73,6 +73,31 @@ gisapp-services:
       server-prefix: http://192.168.56.253:15000
       server-handler-class: com.mc.MapTileHandler
 
+  # 目录服务
+  gscatalog:
+    - author: cetc15
+      server-prefix: http://192.168.56.113:8999/gis3wss/
+      server-handler-class: com.nci.gis.controller.catalog.Catalog3QHandler
+
+  # 资源信息元数据服务
+  gsmd:
+    - author: cetc15
+      server-prefix: http://192.168.56.113:8999/gis3wss/
+      server-handler-class: com.nci.gis.controller.metadata.Metadata3QHandler
+
+  # 空间查询服务(3期)
+  gsquery:
+    - author: cetc15
+      server-prefix: http://192.168.56.113:8999/gis3wss/
+      server-handler-class: com.nci.gis.controller.query.QueryHandler
+
+  # 空间查询服务(XF full-text search)
+  gsqueryfts:
+    - author: cetc15
+      server-prefix: http://192.168.56.157:8999/mswss/
+      server-handler-class: com.nci.gis.controller.queryfts.QueryFtsHandler
+
+
   # 通用适配服务-commonly_used_svc
   cus:
     server-handler-class: com.gis.CommonlyUsedSvcHandler

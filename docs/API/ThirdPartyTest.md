@@ -20,9 +20,34 @@
     - 将引号“转成%22
     - 将{转成%7b
     - 将}转成%7d 
+    
+    - 将大于号转成%3E
+    - 将英文逗号转成%2C
 2. 使用专业的REST API测试工具发送请求进行测试。
     - Postman（推荐）
 
+# 浏览器中的参数值含有SQL语句，请求发送格式若不对后台收不到
+## 分析
+
+
+## 解决办法
+1. 前端Ajax发送请求时对整个URL进行编码，如
+```
+function getData() {
+        /*var formData = new FormData();
+        formData.append("file",$('#file')[0].files[0]);
+        console.log(formData)*/
+        $.ajax({
+            url: encodeURI('http://192.168.56.104:8080/gis3wss/maps/services/gsquery/zhengqu/1000?format=json&search=NAME like \'%北京%\'&geo=4&points=288000000,216000000,288000000,72000000,432000000,72000000,432000000,216000000&srs=MGIS:4490&tolarence=0&relation=1&feature=524287&number=5'),       
+            type:'get',
+            success:function (res) {
+                console.log(res.data)
+            }
+        })
+    }
+```
+2. 使用专用的REST API测试工具发送请求进行测试。
+    - Postman（推荐）
 
 
 # 封装后服务的访问地址

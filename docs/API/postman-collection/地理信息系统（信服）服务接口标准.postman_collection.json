@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "1ee4880e-1f08-4bba-965e-9c3c50ef26b3",
+		"_postman_id": "5cf56892-948b-4c82-a4b2-9b0252228663",
 		"name": "地理信息系统（信服）服务接口标准",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -93,6 +93,632 @@
 								{
 									"key": "featureNum",
 									"value": "100"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "空间查询服务",
+			"item": [
+				{
+					"name": "最简形式",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://192.168.56.157:8999/mswss/maps/standardsvcs/gsquery?format=json&layerId=1004&featureNum=100",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"56",
+								"157"
+							],
+							"port": "8999",
+							"path": [
+								"mswss",
+								"maps",
+								"standardsvcs",
+								"gsquery"
+							],
+							"query": [
+								{
+									"key": "format",
+									"value": "json"
+								},
+								{
+									"key": "layerId",
+									"value": "1004"
+								},
+								{
+									"key": "featureNum",
+									"value": "100"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "只指定定制结果names",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://192.168.56.157:8999/mswss/maps/standardsvcs/gsquery?format=json&layerId=1004&names=F_WIDTH,F_DIRECTION,F_PATHNAME",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"56",
+								"157"
+							],
+							"port": "8999",
+							"path": [
+								"mswss",
+								"maps",
+								"standardsvcs",
+								"gsquery"
+							],
+							"query": [
+								{
+									"key": "format",
+									"value": "json"
+								},
+								{
+									"key": "layerId",
+									"value": "1004"
+								},
+								{
+									"key": "names",
+									"value": "F_WIDTH,F_DIRECTION,F_PATHNAME"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "属性查询-1",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://192.168.56.157:8999/mswss/maps/standardsvcs/gsquery?format=json&layerId=1004&attrSearchType=match&attr=GRAFEATURE`AA,LEVELCODE`16040100",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"56",
+								"157"
+							],
+							"port": "8999",
+							"path": [
+								"mswss",
+								"maps",
+								"standardsvcs",
+								"gsquery"
+							],
+							"query": [
+								{
+									"key": "format",
+									"value": "json"
+								},
+								{
+									"key": "layerId",
+									"value": "1004"
+								},
+								{
+									"key": "attrSearchType",
+									"value": "match"
+								},
+								{
+									"key": "attr",
+									"value": "GRAFEATURE`AA,LEVELCODE`16040100"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "属性查询-2",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://192.168.56.157:8999/mswss/maps/standardsvcs/gsquery?format=json&layerId=1004&attrSearchMatchType=must&attrSearchType=in&inkey=GIS__F_ID&inval=920735187430,920735187440",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"56",
+								"157"
+							],
+							"port": "8999",
+							"path": [
+								"mswss",
+								"maps",
+								"standardsvcs",
+								"gsquery"
+							],
+							"query": [
+								{
+									"key": "format",
+									"value": "json"
+								},
+								{
+									"key": "layerId",
+									"value": "1004"
+								},
+								{
+									"key": "attrSearchMatchType",
+									"value": "must"
+								},
+								{
+									"key": "attrSearchType",
+									"value": "in"
+								},
+								{
+									"key": "inkey",
+									"value": "GIS__F_ID"
+								},
+								{
+									"key": "inval",
+									"value": "920735187430,920735187440"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "属性查询-3",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://192.168.56.157:8999/mswss/maps/standardsvcs/gsquery?format=json&layerId=1004&attrSearchType=range&rangekey=GIS__F_ID&gteVal=920735187440&lteVal=920735187463",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"56",
+								"157"
+							],
+							"port": "8999",
+							"path": [
+								"mswss",
+								"maps",
+								"standardsvcs",
+								"gsquery"
+							],
+							"query": [
+								{
+									"key": "format",
+									"value": "json"
+								},
+								{
+									"key": "layerId",
+									"value": "1004"
+								},
+								{
+									"key": "attrSearchType",
+									"value": "range"
+								},
+								{
+									"key": "rangekey",
+									"value": "GIS__F_ID"
+								},
+								{
+									"key": "gteVal",
+									"value": "920735187440"
+								},
+								{
+									"key": "lteVal",
+									"value": "920735187463"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "空间查询-1",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://192.168.56.157:8999/mswss/maps/standardsvcs/gsquery?format=json&layerId=1004&geoSearchType=circle&distance=500000&points=116.42664_40.07894&spatialRel=1&featureNum=2",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"56",
+								"157"
+							],
+							"port": "8999",
+							"path": [
+								"mswss",
+								"maps",
+								"standardsvcs",
+								"gsquery"
+							],
+							"query": [
+								{
+									"key": "format",
+									"value": "json"
+								},
+								{
+									"key": "layerId",
+									"value": "1004"
+								},
+								{
+									"key": "geoSearchType",
+									"value": "circle"
+								},
+								{
+									"key": "distance",
+									"value": "500000"
+								},
+								{
+									"key": "points",
+									"value": "116.42664_40.07894"
+								},
+								{
+									"key": "spatialRel",
+									"value": "1"
+								},
+								{
+									"key": "featureNum",
+									"value": "2\n"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "空间查询-2",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://192.168.56.157:8999/mswss/maps/standardsvcs/gsquery?format=json&layerId=1004&geoSearchType=rect&points=116.42664_40.07894,116.267248_39.94072",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"56",
+								"157"
+							],
+							"port": "8999",
+							"path": [
+								"mswss",
+								"maps",
+								"standardsvcs",
+								"gsquery"
+							],
+							"query": [
+								{
+									"key": "format",
+									"value": "json"
+								},
+								{
+									"key": "layerId",
+									"value": "1004"
+								},
+								{
+									"key": "geoSearchType",
+									"value": "rect"
+								},
+								{
+									"key": "points",
+									"value": "116.42664_40.07894,116.267248_39.94072"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "空间查询-3",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://192.168.56.157:8999/mswss/maps/standardsvcs/gsquery?format=json&layerId=1004&geoSearchType=polygon&points=116.42664_40.07894,116.267248_39.94072,116.514608_39.81872,116.403152_39.909092,116.42664_40.07894",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"56",
+								"157"
+							],
+							"port": "8999",
+							"path": [
+								"mswss",
+								"maps",
+								"standardsvcs",
+								"gsquery"
+							],
+							"query": [
+								{
+									"key": "format",
+									"value": "json"
+								},
+								{
+									"key": "layerId",
+									"value": "1004"
+								},
+								{
+									"key": "geoSearchType",
+									"value": "polygon"
+								},
+								{
+									"key": "points",
+									"value": "116.42664_40.07894,116.267248_39.94072,116.514608_39.81872,116.403152_39.909092,116.42664_40.07894"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "目录服务",
+			"item": [
+				{
+					"name": "目录服务-1",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://192.168.56.157:8999/mswss/maps/standardsvcs/gscatalog?number=5",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"56",
+								"157"
+							],
+							"port": "8999",
+							"path": [
+								"mswss",
+								"maps",
+								"standardsvcs",
+								"gscatalog"
+							],
+							"query": [
+								{
+									"key": "number",
+									"value": "5"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "目录服务-2",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://192.168.56.157:8999/mswss/maps/standardsvcs/gscatalog/service?format=json&type=demchina_MGIS102089&alias=global_dem&version=1000",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"56",
+								"157"
+							],
+							"port": "8999",
+							"path": [
+								"mswss",
+								"maps",
+								"standardsvcs",
+								"gscatalog",
+								"service"
+							],
+							"query": [
+								{
+									"key": "format",
+									"value": "json"
+								},
+								{
+									"key": "type",
+									"value": "demchina_MGIS102089"
+								},
+								{
+									"key": "alias",
+									"value": "global_dem"
+								},
+								{
+									"key": "version",
+									"value": "1000"
+								},
+								{
+									"key": null,
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "元数据服务",
+			"item": [
+				{
+					"name": "地图瓦片服务服务元数据",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://192.168.56.157:8999/mswss/maps/standardsvcs/gsmaptile/capabilities?format=json&alias=demchina_MGIS102089&version=1000",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"56",
+								"157"
+							],
+							"port": "8999",
+							"path": [
+								"mswss",
+								"maps",
+								"standardsvcs",
+								"gsmaptile",
+								"capabilities"
+							],
+							"query": [
+								{
+									"key": "format",
+									"value": "json"
+								},
+								{
+									"key": "alias",
+									"value": "demchina_MGIS102089"
+								},
+								{
+									"key": "version",
+									"value": "1000"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "网络分析服务元数据-Not!",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://192.168.56.157:8999/mswss/maps/standardsvcs/gsnetworkanalyze/capabilities?format=json&alias=navi_china&version=1000",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"56",
+								"157"
+							],
+							"port": "8999",
+							"path": [
+								"mswss",
+								"maps",
+								"standardsvcs",
+								"gsnetworkanalyze",
+								"capabilities"
+							],
+							"query": [
+								{
+									"key": "format",
+									"value": "json"
+								},
+								{
+									"key": "alias",
+									"value": "navi_china"
+								},
+								{
+									"key": "version",
+									"value": "1000"
+								},
+								{
+									"key": "srs",
+									"value": "MGIS:4490",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "实景服务元数据-Not!",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://192.168.56.157:8999/mswss/maps/standardsvcs/gsdmi?request=capabilities&format=json&alias=outsceneRes1125&version=1000",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"56",
+								"157"
+							],
+							"port": "8999",
+							"path": [
+								"mswss",
+								"maps",
+								"standardsvcs",
+								"gsdmi"
+							],
+							"query": [
+								{
+									"key": "request",
+									"value": "capabilities"
+								},
+								{
+									"key": "format",
+									"value": "json"
+								},
+								{
+									"key": "alias",
+									"value": "outsceneRes1125"
+								},
+								{
+									"key": "version",
+									"value": "1000"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "地形分析服务元数据",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://192.168.56.157:8999/mswss/maps/standardsvcs/gstopanalyze/capabilities?format=json&alias=demchina&version=1000",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"56",
+								"157"
+							],
+							"port": "8999",
+							"path": [
+								"mswss",
+								"maps",
+								"standardsvcs",
+								"gstopanalyze",
+								"capabilities"
+							],
+							"query": [
+								{
+									"key": "format",
+									"value": "json"
+								},
+								{
+									"key": "alias",
+									"value": "demchina"
+								},
+								{
+									"key": "version",
+									"value": "1000"
 								}
 							]
 						}
