@@ -19,6 +19,7 @@ out
 gen
 target
 META-INF
+logs
 
 ### NetBeans ###
 nbproject/private/
