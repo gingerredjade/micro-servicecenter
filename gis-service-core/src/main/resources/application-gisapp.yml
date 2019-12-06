@@ -23,7 +23,8 @@ gisapp-services:
   wmts:
     - author: cetc15
       server-prefix: http://192.168.56.113:8999/gis3wss/
-      server-handler-class: com.nci.gis.controller.ogc.ows.wmts.WMTSHandler
+      server-handler-class: com.cetc15.wmts.WMTSHandler
+      #server-handler-class: com.nci.gis.controller.ogc.ows.wmts.WMTSHandler
     - author: sm
       server-prefix: http://192.168.56.179:8090/iserver/
       server-handler-class: com.supermap.WMTSHandler

@@ -14,7 +14,7 @@
 <configuration>
     <!--定义日志文件的根目录 勿在 LogBack 的配置中使用相对路径-->
     <!-- (改) 单环境设置 -->
-    <property name="LOG_HOME" value="/var/log/gis-api-gateway_log" />
+    <property name="LOG_HOME" value="./logs/gis-api-gateway_log" />
     <!-- 定义日志文件名称 -->
     <property name="appName" value="gis-api-gateway"></property>
 

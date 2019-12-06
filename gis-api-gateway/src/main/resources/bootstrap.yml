@@ -96,7 +96,7 @@ ribbon:
 # 是否启用权限校验、访问权限校验：true/false。若authority.enabled=false则不进行任何网关校验,一般默认true
 # authority.access.enabled表示是否开启访问权限校验
 authority:
-  enabled: true
+  enabled: false
   access:
     enabled: false
 

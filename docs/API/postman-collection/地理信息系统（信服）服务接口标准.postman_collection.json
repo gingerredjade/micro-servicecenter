@@ -598,6 +598,46 @@
 					"response": []
 				},
 				{
+					"name": "地形分析服务元数据",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://192.168.56.157:8999/mswss/maps/standardsvcs/gstopanalyze/capabilities?format=json&alias=demchina&version=1000",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"56",
+								"157"
+							],
+							"port": "8999",
+							"path": [
+								"mswss",
+								"maps",
+								"standardsvcs",
+								"gstopanalyze",
+								"capabilities"
+							],
+							"query": [
+								{
+									"key": "format",
+									"value": "json"
+								},
+								{
+									"key": "alias",
+									"value": "demchina"
+								},
+								{
+									"key": "version",
+									"value": "1000"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
 					"name": "网络分析服务元数据-Not!",
 					"request": {
 						"method": "GET",
@@ -675,46 +715,6 @@
 								{
 									"key": "alias",
 									"value": "outsceneRes1125"
-								},
-								{
-									"key": "version",
-									"value": "1000"
-								}
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "地形分析服务元数据",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "http://192.168.56.157:8999/mswss/maps/standardsvcs/gstopanalyze/capabilities?format=json&alias=demchina&version=1000",
-							"protocol": "http",
-							"host": [
-								"192",
-								"168",
-								"56",
-								"157"
-							],
-							"port": "8999",
-							"path": [
-								"mswss",
-								"maps",
-								"standardsvcs",
-								"gstopanalyze",
-								"capabilities"
-							],
-							"query": [
-								{
-									"key": "format",
-									"value": "json"
-								},
-								{
-									"key": "alias",
-									"value": "demchina"
 								},
 								{
 									"key": "version",

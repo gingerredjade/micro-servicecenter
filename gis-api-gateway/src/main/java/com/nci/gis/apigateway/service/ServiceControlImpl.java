@@ -81,7 +81,7 @@ public class ServiceControlImpl {
 			e.printStackTrace();
 		}
 
-		_logger.info("response={}",response);
+		_logger.info("service status response={}",response);
 		return response;
 	}
 

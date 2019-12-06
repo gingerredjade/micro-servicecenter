@@ -55,7 +55,7 @@
 										"method": "GET",
 										"header": [],
 										"url": {
-											"raw": "{{local_gateway_domain}}/cus/wmts/cetc15/maps/wmts?service=WMTS&request=GetTile&version=1.0.0&layer=vec__1000__vec_1000__top-all&style=default&format=image/png&tilematrixset=4490&tilematrix=6&tilerow=82&tilecol=105",
+											"raw": "{{local_gateway_domain}}/cus/wmts/cetc15/maps/wmts?service=WMTS&request=GetTile&version=1.0.0&layer=vec__1000__vec_1000__top-all&style=default&format=image/png&tilematrixset=4490&tilematrix=9&tilerow=671&tilecol=816",
 											"host": [
 												"{{local_gateway_domain}}"
 											],
@@ -97,15 +97,15 @@
 												},
 												{
 													"key": "tilematrix",
-													"value": "6"
+													"value": "9"
 												},
 												{
 													"key": "tilerow",
-													"value": "82"
+													"value": "671"
 												},
 												{
 													"key": "tilecol",
-													"value": "105"
+													"value": "816"
 												}
 											]
 										}
@@ -258,7 +258,7 @@
 										"method": "GET",
 										"header": [],
 										"url": {
-											"raw": "{{local_gateway_domain}}/cus/wms/cetc15/maps/wms?service=wms&request=getmap&version=1.3.0&layers=vec_1000:top-all&bbox=115,36,120,40&srs=MGIS:4490&format=image/png&width=1024&height=512",
+											"raw": "{{local_gateway_domain}}/cus/wms/cetc15/maps/wms?service=wms&request=getmap&version=1.3.0&layers=vec_1000:top-all&bbox=106,33,107,34&srs=MGIS:4490&format=image/png&width=1024&height=512",
 											"host": [
 												"{{local_gateway_domain}}"
 											],
@@ -288,7 +288,7 @@
 												},
 												{
 													"key": "bbox",
-													"value": "115,36,120,40"
+													"value": "106,33,107,34"
 												},
 												{
 													"key": "srs",
@@ -1416,7 +1416,7 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{local_gateway_domain}}/cus/gsmaptile/cetc15/maps/services/gsmaptile/vec/1000/vec_1000/top-all?format=image/png&imageType=jpg&level=6&row=45&col=105",
+									"raw": "{{local_gateway_domain}}/cus/gsmaptile/cetc15/maps/services/gsmaptile/vec/1000/vec_1000/top-all?format=image/png&imageType=jpg&level=9&row=352&col=816",
 									"host": [
 										"{{local_gateway_domain}}"
 									],
@@ -1443,15 +1443,15 @@
 										},
 										{
 											"key": "level",
-											"value": "6"
+											"value": "9"
 										},
 										{
 											"key": "row",
-											"value": "45"
+											"value": "352"
 										},
 										{
 											"key": "col",
-											"value": "105"
+											"value": "816"
 										}
 									]
 								}
@@ -1504,7 +1504,7 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{local_gateway_domain}}/cus/gsmap/cetc15/maps/services/gsmap/vec/1000?format=image/png&bound=144001000,410400000,129600000,432000000,MGIS:4490&layers=top-all&width=256&height=256&imageType=1&transparent=false&bgcolor=16777215",
+									"raw": "{{local_gateway_domain}}/cus/gsmap/cetc15/maps/services/gsmap/vec/1000?format=image/png&bound=122328094,385021911,121062469,385096860,MGIS:4490&layers=top-all&width=256&height=256&imageType=1&transparent=false&bgcolor=16777215",
 									"host": [
 										"{{local_gateway_domain}}"
 									],
@@ -1525,7 +1525,7 @@
 										},
 										{
 											"key": "bound",
-											"value": "144001000,410400000,129600000,432000000,MGIS:4490"
+											"value": "122328094,385021911,121062469,385096860,MGIS:4490"
 										},
 										{
 											"key": "layers",
@@ -2955,7 +2955,7 @@
 												"method": "GET",
 												"header": [],
 												"url": {
-													"raw": "{{local_gateway_domain}}/wmts/cetc15/maps/wmts?service=wmts&request=GetTile&version=1.0.0&format=image/png&layer=vec__1000__vec_1000__top-all&style=default&tilematrixset=4490&tilematrix=6&tilerow=82&tilecol=105",
+													"raw": "{{local_gateway_domain}}/wmts/cetc15/maps/wmts?service=wmts&request=GetTile&version=1.0.0&format=image/png&layer=vec__1000__vec_1000__top-all&style=default&tilematrixset=4490&tilematrix=9&tilerow=671&tilecol=816",
 													"host": [
 														"{{local_gateway_domain}}"
 													],
@@ -2996,15 +2996,15 @@
 														},
 														{
 															"key": "tilematrix",
-															"value": "6"
+															"value": "9"
 														},
 														{
 															"key": "tilerow",
-															"value": "82"
+															"value": "671"
 														},
 														{
 															"key": "tilecol",
-															"value": "105"
+															"value": "816"
 														},
 														{
 															"key": "auxParams",
@@ -3142,7 +3142,7 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{local_gateway_domain}}/gsmaptile/cetc15?format=image&alias=vec&version=1000&namespace=vec_1000&layerAlias=top-all&level=6&row=45&col=105&imageType=png&dataType=3&dataFormat=1&appType=1&dataVersion=new",
+									"raw": "{{local_gateway_domain}}/gsmaptile/cetc15?format=image&alias=vec&version=1000&namespace=vec_1000&layerAlias=top-all&level=9&row=352&col=816&imageType=png&dataType=3&dataFormat=1&appType=1&dataVersion=new",
 									"host": [
 										"{{local_gateway_domain}}"
 									],
@@ -3173,15 +3173,15 @@
 										},
 										{
 											"key": "level",
-											"value": "6"
+											"value": "9"
 										},
 										{
 											"key": "row",
-											"value": "45"
+											"value": "352"
 										},
 										{
 											"key": "col",
-											"value": "105"
+											"value": "816"
 										},
 										{
 											"key": "imageType",
@@ -3704,7 +3704,7 @@
 												"method": "GET",
 												"header": [],
 												"url": {
-													"raw": "{{local_gateway_domain}}/wms/cetc15/maps/wms?service=wms&request=GetMap&version=1.3.0&layers=vec_1000:top-all&bbox=115,36,120,40&crs=MGIS:4490&styles=population&format=image/png&width=512&height=512",
+													"raw": "{{local_gateway_domain}}/wms/cetc15/maps/wms?service=wms&request=GetMap&version=1.3.0&layers=vec_1000:top-all&bbox=106,33,107,34&crs=MGIS:4490&styles=population&format=image/png&width=512&height=512",
 													"host": [
 														"{{local_gateway_domain}}"
 													],
@@ -3733,7 +3733,7 @@
 														},
 														{
 															"key": "bbox",
-															"value": "115,36,120,40"
+															"value": "106,33,107,34"
 														},
 														{
 															"key": "crs",
@@ -3777,7 +3777,7 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{local_gateway_domain}}/gsmap/cetc15?format=image&alias=vec&version=1000&bound=144001000,410400000,129600000,432000000,MGIS:4490&layers=top-all&width=256&height=256&imageType=1&transparent=false&bgcolor=16777215",
+									"raw": "{{local_gateway_domain}}/gsmap/cetc15?format=image&alias=vec&version=1000&bound=122328094,385021911,121062469,385096860,MGIS:4490&layers=top-all&width=256&height=256&imageType=1&transparent=false&bgcolor=16777215",
 									"host": [
 										"{{local_gateway_domain}}"
 									],
@@ -3800,7 +3800,7 @@
 										},
 										{
 											"key": "bound",
-											"value": "144001000,410400000,129600000,432000000,MGIS:4490"
+											"value": "122328094,385021911,121062469,385096860,MGIS:4490"
 										},
 										{
 											"key": "layers",
@@ -4512,7 +4512,7 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{local_gateway_domain}}/gscatalog/service/cetc15?format=json&type=gstopanalyze&alias=demAnalyse&version=1000",
+									"raw": "{{local_gateway_domain}}/gscatalog/service/cetc15?format=json&type=gstopanalyze&alias=DEMAnalys&version=1000",
 									"host": [
 										"{{local_gateway_domain}}"
 									],
@@ -4532,7 +4532,7 @@
 										},
 										{
 											"key": "alias",
-											"value": "demAnalyse"
+											"value": "DEMAnalys"
 										},
 										{
 											"key": "version",
@@ -4627,7 +4627,7 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{local_gateway_domain}}/gsmd/cetc15?format=json&alias=demAnalyse&version=1000&type=gsmaptile",
+									"raw": "{{local_gateway_domain}}/gsmd/cetc15?format=json&alias=DEMAnalys&version=1000&type=gsmaptile",
 									"host": [
 										"{{local_gateway_domain}}"
 									],
@@ -4642,7 +4642,7 @@
 										},
 										{
 											"key": "alias",
-											"value": "demAnalyse"
+											"value": "DEMAnalys"
 										},
 										{
 											"key": "version",

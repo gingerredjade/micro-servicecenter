@@ -14,12 +14,12 @@
 <configuration>
     <!--定义日志文件的根目录 勿在 LogBack 的配置中使用相对路径-->
     <!-- (改) 单环境设置 -->
-    <property name="LOG_HOME" value="./logs/configcenter_log" />
+    <property name="LOG_HOME" value="./logs/gis-service-show_log" />
     <!-- 定义日志文件名称 -->
-    <property name="appName" value="gis-config-center"></property>
+    <property name="appName" value="gis-service-show"></property>
 
     <!-- 多环境设置 （如果你需要设置区分 生产环境，测试环境...）-->
-    <!-- 如果需要设置多环境的配置，只设置以下注释内容是不够的，还需要给每个环境设置对应的配置文件如（application-dev.properties）-->
+    <!-- 如果需要设置多环境的配置，只设置以 下注释内容是不够的，还需要给每个环境设置对应的配置文件如（application-dev.properties）-->
     <!--
     <springProfile name="linux">
         <property name="LOG_HOME" value="/home/logger/application_log" />
@@ -139,6 +139,7 @@
 			<staticField>os_version:${os.version}</staticField>
 		</encoder>
 	</appender>
+
 
     <!--
     日志输出级别
