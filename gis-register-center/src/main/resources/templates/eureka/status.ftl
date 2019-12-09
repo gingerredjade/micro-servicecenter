@@ -8,7 +8,7 @@
     <base href="<@spring.url basePath/>">
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Eureka - Register Center</title>
+    <title>注册中心 - Register Center</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
 
@@ -20,7 +20,7 @@
     <#include "header.ftl">
     <div class="container-fluid xd-container">
       <#include "navbar.ftl">
-      <h1>当前已经注册到Eureka的服务实例</h1>
+      <h1>当前已经注册的服务实例</h1>
       <table id='instances' class="table table-striped table-hover">
         <thead>
           <tr><th>应用</th><th>AMIs</th><th>可用区</th><th>状态</th></tr>
