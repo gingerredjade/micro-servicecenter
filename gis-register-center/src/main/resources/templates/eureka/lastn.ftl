@@ -6,7 +6,7 @@
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
   <head>
     <base href="<@spring.url basePath/>">
-    <title>Eureka - Last N events</title>
+    <title>注册中心 - Last N events</title>
     <link rel="stylesheet" type="text/css" href="eureka/css/wro.css">
   </head>
   <body id="three">
