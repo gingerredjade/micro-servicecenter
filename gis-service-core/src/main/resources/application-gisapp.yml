@@ -34,42 +34,42 @@ gisapp-services:
   gsplacename:
     - author: cetc15
       server-prefix: http://192.168.56.113:8888/mswss/
-      server-handler-class: com.nci.gis.controller.placename.PlacenameHandler
+      server-handler-class: com.nci.gis.controller.data.placename.PlacenameHandler
 
 
   # 网络分析服务
   gsnetworkanalyze:
     - author: cetc15
       server-prefix: http://192.168.56.113:8888/mswss/
-      server-handler-class: com.nci.gis.controller.networkanalyze.NetworkAnalyzeHandler
+      server-handler-class: com.nci.gis.controller.data.networkanalyze.NetworkAnalyzeHandler
 
 
   # 几何计算服务
   gsgeometry:
     - author: cetc15
       server-prefix: http://192.168.56.113:8888/mswss/
-      server-handler-class: com.nci.gis.controller.geometry.GeometryHandler
+      server-handler-class: com.nci.gis.controller.data.geometry.GeometryHandler
 
 
   # 地形分析服务
   gstopanalyze:
     - author: cetc15
       server-prefix: http://192.168.56.113:8999/gis3wss/
-      server-handler-class: com.nci.gis.controller.topoganalyze.Topanalyze3QHandler
+      server-handler-class: com.nci.gis.controller.data.topoganalyze.Topanalyze3QHandler
 
 
   # 地图显示服务-Map资源
   gsmap:
     - author: cetc15
       server-prefix: http://192.168.56.113:8999/gis3wss/
-      server-handler-class: com.nci.gis.controller.map.MapHandler
+      server-handler-class: com.nci.gis.controller.function.map.MapHandler
 
 
   # 地图瓦片服务-MapTile资源
   gsmaptile:
     - author: cetc15
       server-prefix: http://192.168.56.113:8999/gis3wss/
-      server-handler-class: com.nci.gis.controller.maptile.MapTileHandler
+      server-handler-class: com.nci.gis.controller.function.maptile.MapTileHandler
     - author: mc
       server-prefix: http://192.168.56.253:15000
       server-handler-class: com.mc.MapTileHandler
@@ -78,25 +78,25 @@ gisapp-services:
   gscatalog:
     - author: cetc15
       server-prefix: http://192.168.56.113:8999/gis3wss/
-      server-handler-class: com.nci.gis.controller.catalog.Catalog3QHandler
+      server-handler-class: com.nci.gis.controller.data.catalog.Catalog3QHandler
 
   # 资源信息元数据服务
   gsmd:
     - author: cetc15
       server-prefix: http://192.168.56.113:8999/gis3wss/
-      server-handler-class: com.nci.gis.controller.metadata.Metadata3QHandler
+      server-handler-class: com.nci.gis.controller.data.metadata.Metadata3QHandler
 
   # 空间查询服务(3期)
   gsquery:
     - author: cetc15
       server-prefix: http://192.168.56.113:8999/gis3wss/
-      server-handler-class: com.nci.gis.controller.query.QueryHandler
+      server-handler-class: com.nci.gis.controller.data.query.QueryHandler
 
   # 空间查询服务(XF full-text search)
   gsqueryfts:
     - author: cetc15
       server-prefix: http://192.168.56.157:8999/mswss/
-      server-handler-class: com.nci.gis.controller.queryfts.QueryFtsHandler
+      server-handler-class: com.nci.gis.controller.data.queryfts.QueryFtsHandler
 
 
   # 通用适配服务-commonly_used_svc

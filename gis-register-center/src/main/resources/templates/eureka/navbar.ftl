@@ -59,7 +59,7 @@
         <h4 id="uptime"><font size="+1" color="red"><b>注意! EUREKA可能错误地对未启动的实例声称为启动状态. 续约低于阈值并且因此为了安全，实例不会过期.</b></font></h4>
     </#if>
 <#elseif !registry.selfPreservationModeEnabled>
-    <h4 id="uptime"><font size="+1" color="red"><b>自我保护模式关闭.对于网络/其它问题，这可能取法保护实例过期.</b></font></h4>
+    <h4 id="uptime"><font size="+1" color="red"><b>自我保护模式关闭.对于网络/其它问题，这可能无法保护实例过期.</b></font></h4>
 </#if>
 
 <h1>DS 副本</h1>

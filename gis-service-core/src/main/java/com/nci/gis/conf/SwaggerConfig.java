@@ -29,16 +29,16 @@ import java.util.List;
  * @since 1.0.0 2018年08月18日
  * @author <a href="https://gisnci.com">Hongyu Jiang</a>
  */
-@Configuration      // 必须存在
-@EnableSwagger2     // 必须存在
-@ComponentScan(basePackages = {"com.nci.gis"}) // 必须存在 扫描的API Controller package name 也可以直接扫描class (basePackageClasses)
+//@Configuration      // 必须存在
+//@EnableSwagger2     // 必须存在
+//@ComponentScan(basePackages = {"com.nci.gis"}) // 必须存在 扫描的API Controller package name 也可以直接扫描class (basePackageClasses)
 public class SwaggerConfig extends WebMvcConfigurationSupport {
 
     /**
      * UI页面显示信息
      */
-    private static String apiTitle = "GIS Service Center";
-    private static String apiDesc = "GIS在线服务中心，提供各种地理信息服务的使用。";
+    private static String apiTitle = "军事测绘导航信息服务平台";
+    private static String apiDesc = "军事测绘导航信息服务平台，提供各种地理信息服务的使用。";
     private static String apiVersion = "1.0.0";
     private static String basePackage = "com.nci.gis";
 
