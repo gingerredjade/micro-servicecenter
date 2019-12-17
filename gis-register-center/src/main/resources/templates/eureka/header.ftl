@@ -3,7 +3,7 @@
   <div class="container">
     <div class="navbar-header">
       <a class="navbar-brand" href="<@spring.url dashboardPath/>">
-        注册中心<span></span>
+        军事测绘导航信息服务平台集成技术研究注册中心<span></span>
       </a>
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
         <span class="sr-only">Toggle navigation</span>

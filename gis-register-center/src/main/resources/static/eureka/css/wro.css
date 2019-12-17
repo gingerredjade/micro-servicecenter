@@ -6228,16 +6228,16 @@ strong {
 .navbar a.navbar-brand {
   /*background: url("../images/spring-logo-eureka.png") -1px -1px no-repeat;*/
   /*margin: 12px 0 6px;*/
-  width: 300px;
-  height: 46px;
+  width: 420px;
+  height: 50px;
   display: inline-block;
   text-decoration: none;
   /*padding: 0;*/
-  font-size: 24px;
+  font-size: 17px;/*24px*/
   font-weight: bold;
   /*text-transform: uppercase;*/
   font-family: "Open Sans", Arial, sans-serif;
-  line-height: 46px;
+  line-height: 50px;
 }
 .navbar a.navbar-brand span {
   display: block;
@@ -6295,8 +6295,8 @@ strong {
   .navbar a.navbar-brand {
     display: block;
     margin: 0 auto 0 auto;
-    width: 210px;/*200px*/
-    height: 50px;
+    width: 220px;/*200px*/
+    height: 68px;/*50px*/
     float: none;
     /*background: url("../images/spring-logo-eureka-mobile.png") 0 center no-repeat;*/
     line-height: 19px;

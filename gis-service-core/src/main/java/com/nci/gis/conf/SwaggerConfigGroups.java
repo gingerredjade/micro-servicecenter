@@ -37,8 +37,8 @@ public class SwaggerConfigGroups extends WebMvcConfigurationSupport {
     /**
      * UI页面显示信息
      */
-    private static String apiTitle = "军事测绘导航信息服务平台";
-    private static String apiDesc = "军事测绘导航信息服务平台，提供各种地理信息服务的使用。";
+    private static String apiTitle = "军事测绘导航信息服务平台集成技术研究";
+    private static String apiDesc = "军事测绘导航信息服务平台集成技术研究，提供各种地理信息服务的使用。";
     private static String apiVersion = "1.0.0";
     private static String basePackage = "com.nci.gis";
 
@@ -76,7 +76,7 @@ public class SwaggerConfigGroups extends WebMvcConfigurationSupport {
 	private static ApiInfo apiInfo() {
 		//Contact contact = new Contact("gis", "http://www.gis.com/configcenter/", "gis@126.com");
 		return new ApiInfoBuilder()
-			.title(apiTitle + "-API")                            // 标题
+			.title(apiTitle + "-服务API")                            // 标题
 			.description(apiDesc) // 描述
 			.termsOfServiceUrl("https://spring.io/")             //
 			//.contact(contact)                                  // 联系
@@ -99,7 +99,7 @@ public class SwaggerConfigGroups extends WebMvcConfigurationSupport {
 
 	private static ApiInfo functionInfo() {
 		return new ApiInfoBuilder()
-			.title(apiTitle + "-API")                            // 标题
+			.title(apiTitle + "-服务API")                            // 标题
 			.description(apiDesc) 								 // 描述
 			.termsOfServiceUrl("https://spring.io/")
 			.version(apiVersion)                                 // 版本
@@ -119,7 +119,7 @@ public class SwaggerConfigGroups extends WebMvcConfigurationSupport {
 
 	private static ApiInfo dataInfo() {
 		return new ApiInfoBuilder()
-			.title(apiTitle + "-API")                            // 标题
+			.title(apiTitle + "-服务API")                            // 标题
 			.description(apiDesc) 								 // 描述
 			.termsOfServiceUrl("https://spring.io/")
 			.version(apiVersion)                                 // 版本
@@ -139,7 +139,7 @@ public class SwaggerConfigGroups extends WebMvcConfigurationSupport {
 
 	private static ApiInfo ogcInfo() {
 		return new ApiInfoBuilder()
-			.title(apiTitle + "-API")                            // 标题
+			.title(apiTitle + "-服务API")                            // 标题
 			.description(apiDesc) 								 // 描述
 			.termsOfServiceUrl("https://spring.io/")
 			.version(apiVersion)                                 // 版本
@@ -159,7 +159,7 @@ public class SwaggerConfigGroups extends WebMvcConfigurationSupport {
 
 	private static ApiInfo otherInfo() {
 		return new ApiInfoBuilder()
-			.title(apiTitle + "-API")                            // 标题
+			.title(apiTitle + "-服务API")                            // 标题
 			.description(apiDesc) 								 // 描述
 			.termsOfServiceUrl("https://spring.io/")
 			.version(apiVersion)                                 // 版本
