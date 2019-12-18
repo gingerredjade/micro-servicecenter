@@ -30,6 +30,7 @@ public class GisAppServiceConfig {
 	private List<Map<String, String>> wms;
 	private List<Map<String, String>> wmts;
 	private List<Map<String, String>> gsplacename;
+	private List<Map<String, String>> gsplacenamefts;
 	private List<Map<String, String>> gsnetworkanalyze;
 	private List<Map<String, String>> gsgeometry;
 	private List<Map<String, String>> gstopanalyze;
@@ -146,5 +147,13 @@ public class GisAppServiceConfig {
 
 	public void setGsqueryfts(List<Map<String, String>> gsqueryfts) {
 		this.gsqueryfts = gsqueryfts;
+	}
+
+	public List<Map<String, String>> getGsplacenamefts() {
+		return gsplacenamefts;
+	}
+
+	public void setGsplacenamefts(List<Map<String, String>> gsplacenamefts) {
+		this.gsplacenamefts = gsplacenamefts;
 	}
 }

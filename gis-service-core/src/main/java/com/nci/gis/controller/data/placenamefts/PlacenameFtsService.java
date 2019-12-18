@@ -1,4 +1,4 @@
-package com.nci.gis.controller.data.placename;
+package com.nci.gis.controller.data.placenamefts;
 
 import com.nci.common.AppParams;
 import com.nci.constants.*;
@@ -20,15 +20,15 @@ import java.util.Map;
 import static com.nci.gis.common.ClassUtils.getParameterClass;
 
 /**
- * 服务类-地名检索服务
+ * 服务类-地名检索服务（信服模式）
  *
  * @since 1.0.0 2019年10月23日
  * @author <a href="https://gisnci.com">Hongyu Jiang</a>
  */
 @Service
-public class PlacenameService {
+public class PlacenameFtsService {
 
-	private static final Logger _logger = LoggerFactory.getLogger(PlacenameService.class);
+	private static final Logger _logger = LoggerFactory.getLogger(PlacenameFtsService.class);
 
 	// 约定的数据处理方法
 	private static final String PROCESS_METHOD = DATA_PROCESS_METHOD.value;
@@ -37,14 +37,15 @@ public class PlacenameService {
 	private final GisAppServiceConfig gisAppServiceConfig;
 
 	@Autowired
-	public PlacenameService(GisAppServiceConfig gisAppServiceConfig) {
+	public PlacenameFtsService(GisAppServiceConfig gisAppServiceConfig) {
 		this.gisAppServiceConfig = gisAppServiceConfig;
 	}
 
 
-	public PlacenameOutputData execPlacename(
+	public PlacenameFtsOutputData execPlacename(
 		String org,
-		String format, String alias, String version, String search, String auxParams,
+		String format, String searchInfo, String featureNum,
+		String featureType, String names, String auxParams,
 		HttpServletRequest request) {
 
 		long start = System.currentTimeMillis();
@@ -53,7 +54,7 @@ public class PlacenameService {
 		 * 0-- 预备参数准备
 		 */
 		// 遍历配置获取服务供应商对应的GIS服务器信息
-		List<Map<String, String>> placenameConfigArr = gisAppServiceConfig.getGsplacename();
+		List<Map<String, String>> placenameConfigArr = gisAppServiceConfig.getGsplacenamefts();
 		String[] confArr = getServerConf(placenameConfigArr, org);
 
 		String SERVER_PREFIX = confArr[0];
@@ -136,8 +137,8 @@ public class PlacenameService {
 			IllegalAccessException|
 			InvocationTargetException|
 			InstantiationException e) {
-			_logger.error("【地名检索服务】URL Request failed,org=[{}],format=[{}],alias=[{}],version=[{}],search=[{}],auxParams=[{}]." + e.getMessage(),
-				org, format, alias, version, search, auxParams);
+			_logger.error("【地名检索服务】URL Request failed,org=[{}],format=[{}],searchInfo=[{}],featureNum=[{}],featureType=[{}],names=[{}],auxParams=[{}]." + e.getMessage(),
+				org, format, searchInfo, featureNum, featureType, names, auxParams);
 			String errStr = "【地名检索服务】URL Request failed." + e.getMessage();
 			return buildPlacenameOutputData(StateCodes.STATE_CODE_FAILED, errStr);
 		}
@@ -160,8 +161,8 @@ public class PlacenameService {
 	 * @param msg	消息内容
 	 * @return		返回值
 	 */
-	private static PlacenameOutputData buildPlacenameOutputData(int code, String msg) {
-		PlacenameOutputData placenameOutputData = new PlacenameOutputData();
+	private static PlacenameFtsOutputData buildPlacenameOutputData(int code, String msg) {
+		PlacenameFtsOutputData placenameOutputData = new PlacenameFtsOutputData();
 		placenameOutputData.setCode(code);
 		placenameOutputData.setMsg(msg);
 		return placenameOutputData;
@@ -176,8 +177,8 @@ public class PlacenameService {
 	 * @param data	数据内容
 	 * @return		返回值
 	 */
-	private static PlacenameOutputData buildPlacenameOutputData(int code, String msg, String data) {
-		PlacenameOutputData placenameOutputData = new PlacenameOutputData();
+	private static PlacenameFtsOutputData buildPlacenameOutputData(int code, String msg, String data) {
+		PlacenameFtsOutputData placenameOutputData = new PlacenameFtsOutputData();
 		placenameOutputData.setCode(code);
 		placenameOutputData.setMsg(msg);
 		placenameOutputData.setResultBody(data);

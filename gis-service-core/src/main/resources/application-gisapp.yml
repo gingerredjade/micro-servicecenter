@@ -30,12 +30,17 @@ gisapp-services:
       server-handler-class: com.supermap.WMTSHandler
 
 
-  # 地名检索服务
+  # 地名检索服务（三期）
   gsplacename:
     - author: cetc15
-      server-prefix: http://192.168.56.113:8888/mswss/
+      server-prefix: http://192.168.56.114:8080/gis3wss/
       server-handler-class: com.nci.gis.controller.data.placename.PlacenameHandler
 
+  # 地名检索服务（信服）
+  gsplacenamefts:
+    - author: cetc15
+      server-prefix: http://192.168.56.113:8888/mswss/
+      server-handler-class: com.nci.gis.controller.data.placenamefts.PlacenameFtsHandler
 
   # 网络分析服务
   gsnetworkanalyze:

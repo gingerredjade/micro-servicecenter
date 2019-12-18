@@ -1,4 +1,4 @@
-package com.nci.gis.controller.data.placename;
+package com.nci.gis.controller.data.placenamefts;
 
 
 import com.nci.common.AppParams;
@@ -11,16 +11,17 @@ import org.slf4j.LoggerFactory;
 import org.springframework.web.client.RestTemplate;
 
 import javax.servlet.http.HttpServletRequest;
+import java.util.Map;
 
 /**
- * 地名检索服务处理类-三期模式
+ * 地名检索服务处理类-信服模式
  *
  * @since 1.0.0 2019年09月12日
  * @author <a href="https://gisnci.com">Hongyu Jiang</a>
  */
-public class PlacenameHandler implements DataProcFunction<String> {
+public class PlacenameFtsHandler implements DataProcFunction<String> {
 
-	private static final Logger _logger = LoggerFactory.getLogger(PlacenameHandler.class);
+	private static final Logger _logger = LoggerFactory.getLogger(PlacenameFtsHandler.class);
 
 	/**
 	 * 获取经过处理的请求数据
@@ -69,24 +70,24 @@ public class PlacenameHandler implements DataProcFunction<String> {
 	 * @return				返回值
 	 */
 	private static String buildRequestURL(String gisServerUrl, String svcMapping, HttpServletRequest request) {
-		/*
-		 * 1-- 根据请求参数,构造后端服务请求URI
-		 */
-		String alias = request.getParameter("alias");
-		String version = request.getParameter("version");
-		String search = request.getParameter("search");
-
 		StringBuilder sb = new StringBuilder();
 		sb.append(gisServerUrl);
-		sb.append("/maps/services/gsplacename/");
-		sb.append(alias);
-		sb.append("/");
-		sb.append(version);
+		sb.append("/maps/standardsvcs/");
+		sb.append(svcMapping);
 		sb.append("?");
 
-		sb.append("search=");
-		sb.append(search);
+		Map<String, String[]> params = request.getParameterMap();
 
+		for (Map.Entry<String, String[]> entry:params.entrySet()) {
+			String key = entry.getKey();
+			String[] val = entry.getValue();
+			_logger.info("[{}]=[{}].", key, val[0]);
+			sb.append(key);
+			sb.append("=");
+			sb.append(val[0]);
+			sb.append("&");
+		}
+		sb.deleteCharAt(sb.lastIndexOf("&"));
 		return sb.toString();
 	}
 
