@@ -1568,17 +1568,17 @@
 					"name": "地名检索服务",
 					"item": [
 						{
-							"name": "地名检索服务",
+							"name": "地名检索服务-信服模式",
 							"request": {
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{local_gateway_domain}}/gsplacename/cetc15?format=json&searchInfo=工商&featureNum=100",
+									"raw": "{{local_gateway_domain}}/gsplacenamefts/cetc15?format=json&searchInfo=工商&featureNum=100",
 									"host": [
 										"{{local_gateway_domain}}"
 									],
 									"path": [
-										"gsplacename",
+										"gsplacenamefts",
 										"cetc15"
 									],
 									"query": [
@@ -1598,6 +1598,42 @@
 											"key": "auxParams",
 											"value": "",
 											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "地名检索服务-三期模式",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{local_gateway_domain}}/gsplacename/cetc15?format=json&alias=guangdong&version=1000&search=田",
+									"host": [
+										"{{local_gateway_domain}}"
+									],
+									"path": [
+										"gsplacename",
+										"cetc15"
+									],
+									"query": [
+										{
+											"key": "format",
+											"value": "json"
+										},
+										{
+											"key": "alias",
+											"value": "guangdong"
+										},
+										{
+											"key": "version",
+											"value": "1000"
+										},
+										{
+											"key": "search",
+											"value": "田"
 										}
 									]
 								}

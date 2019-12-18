@@ -1833,6 +1833,44 @@
 					"response": []
 				}
 			]
+		},
+		{
+			"name": "地名检索服务",
+			"item": [
+				{
+					"name": "地名检索服务-三期",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://192.168.56.114:8080/gis3wss/maps/services/gsplacename/guangdong/1000?search=田",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"56",
+								"114"
+							],
+							"port": "8080",
+							"path": [
+								"gis3wss",
+								"maps",
+								"services",
+								"gsplacename",
+								"guangdong",
+								"1000"
+							],
+							"query": [
+								{
+									"key": "search",
+									"value": "田"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
 		}
 	]
 }

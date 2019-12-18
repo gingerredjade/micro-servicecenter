@@ -1661,12 +1661,12 @@
 					"name": "地名检索服务",
 					"item": [
 						{
-							"name": "地名检索服务",
+							"name": "地名检索服务-信服模式",
 							"request": {
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "http://localhost:9000/gis-service-core/gsplacename/cetc15?format=json&searchInfo=工商&featureNum=100",
+									"raw": "http://localhost:9000/gis-service-core/gsplacenamefts/cetc15?format=json&searchInfo=工商&featureNum=100",
 									"protocol": "http",
 									"host": [
 										"localhost"
@@ -1674,7 +1674,7 @@
 									"port": "9000",
 									"path": [
 										"gis-service-core",
-										"gsplacename",
+										"gsplacenamefts",
 										"cetc15"
 									],
 									"query": [
@@ -1694,6 +1694,45 @@
 											"key": "auxParams",
 											"value": "",
 											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "地名检索服务-三期模式",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:9000/gis-service-core/gsplacename/cetc15?format=json&alias=guangdong&version=1000&search=田",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9000",
+									"path": [
+										"gis-service-core",
+										"gsplacename",
+										"cetc15"
+									],
+									"query": [
+										{
+											"key": "format",
+											"value": "json"
+										},
+										{
+											"key": "alias",
+											"value": "guangdong"
+										},
+										{
+											"key": "version",
+											"value": "1000"
+										},
+										{
+											"key": "search",
+											"value": "田"
 										}
 									]
 								}
