@@ -1,12 +1,12 @@
 package com.supermap;
 
-import com.nci.common.AppParams;
-import com.nci.common.AuxParams;
-import com.nci.common.DataProcFunction;
-import com.nci.constants.SERVICE_FUNCTION_IDENTITY;
-import com.nci.constants.SERVICE_MAPPING_IDENTITY;
-import com.nci.constants.SERVICE_WEBSERVER_PREFIX;
-import com.nci.constants.ServiceTypes.OGC_SERVICE_WMTS;
+import com.micro.common.AppParams;
+import com.micro.common.AuxParams;
+import com.micro.common.DataProcFunction;
+import com.micro.constants.SERVICE_FUNCTION_IDENTITY;
+import com.micro.constants.SERVICE_MAPPING_IDENTITY;
+import com.micro.constants.SERVICE_WEBSERVER_PREFIX;
+import com.micro.constants.ServiceTypes.OGC_SERVICE_WMTS;
 import org.apache.http.HttpEntity;
 import org.apache.http.client.methods.CloseableHttpResponse;
 import org.apache.http.client.methods.HttpGet;
@@ -23,7 +23,7 @@ import java.io.IOException;
  * OGC规范-网络地图瓦片服务（WMTS-Web Map Tile Service）处理类-超图SuperMap
  *
  * @since 1.0.0 2019年10月31日
- * @author <a href="https://gisnci.com">Hongyu Jiang</a>
+ * @author <a href="https://126.com">Hongyu Jiang</a>
  */
 public class WMTSHandler implements DataProcFunction<Object> {
 
@@ -106,7 +106,7 @@ public class WMTSHandler implements DataProcFunction<Object> {
 
 	/**
 	 * 构建超图的OGC-WMTS服务后端实际服务的请求URL
-	 * 		形如：http://192.168.56.179:8090/iserver/services/map-world/wmts100?SERVICE=WMTS&REQUEST=GetTile&VERSION=1.0.0&LAYER=World&STYLE=default&TILEMATRIXSET=GlobalCRS84Scale_World&TILEMATRIX=2&TILEROW=0&TILECOL=3&FORMAT=image/png
+	 * 		形如：http://192.168.1.120:8090/iserver/services/map-world/wmts100?SERVICE=WMTS&REQUEST=GetTile&VERSION=1.0.0&LAYER=World&STYLE=default&TILEMATRIXSET=GlobalCRS84Scale_World&TILEMATRIX=2&TILEROW=0&TILECOL=3&FORMAT=image/png
 	 *
 	 * @param gisServerUrl	超图GIS服务器基础URL
 	 * @param svcMapping	服务标识

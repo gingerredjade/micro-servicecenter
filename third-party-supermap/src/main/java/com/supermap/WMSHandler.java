@@ -1,12 +1,12 @@
 package com.supermap;
 
-import com.nci.common.AppParams;
-import com.nci.common.AuxParams;
-import com.nci.common.DataProcFunction;
-import com.nci.constants.SERVICE_FUNCTION_IDENTITY;
-import com.nci.constants.SERVICE_MAPPING_IDENTITY;
-import com.nci.constants.SERVICE_WEBSERVER_PREFIX;
-import com.nci.constants.ServiceTypes.OGC_SERVICE_WMS;
+import com.micro.common.AppParams;
+import com.micro.common.AuxParams;
+import com.micro.common.DataProcFunction;
+import com.micro.constants.SERVICE_FUNCTION_IDENTITY;
+import com.micro.constants.SERVICE_MAPPING_IDENTITY;
+import com.micro.constants.SERVICE_WEBSERVER_PREFIX;
+import com.micro.constants.ServiceTypes.OGC_SERVICE_WMS;
 import org.apache.http.HttpEntity;
 import org.apache.http.client.methods.CloseableHttpResponse;
 import org.apache.http.client.methods.HttpGet;
@@ -23,7 +23,7 @@ import java.io.IOException;
  * OGC规范-网络地图服务（WMS-Web Map Service）处理类-超图SuperMap
  *
  * @since 1.0.0 2019年10月31日
- * @author <a href="https://gisnci.com">Hongyu Jiang</a>
+ * @author <a href="https://126.com">Hongyu Jiang</a>
  */
 public class WMSHandler implements DataProcFunction<Object> {
 
@@ -113,7 +113,7 @@ public class WMSHandler implements DataProcFunction<Object> {
 
 	/**
 	 * 构建超图的OGC-WMS服务后端实际服务的请求URL
-	 * 		形如：http://192.168.56.179:8090/iserver/services/map-china400/wms130/China?LAYERS=China&VERSION=1.3.0&EXCEPTIONS=INIMAGE&SERVICE=WMS&REQUEST=GetMap&STYLES=&FORMAT=image%2Fpng&CRS=EPSG%3A3857&BBOX=10018754.17,9.3132257461548e-10,15028131.255,5009377.085&WIDTH=256&HEIGHT=256
+	 * 		形如：http://192.168.1.120:8090/iserver/services/map-china400/wms130/China?LAYERS=China&VERSION=1.3.0&EXCEPTIONS=INIMAGE&SERVICE=WMS&REQUEST=GetMap&STYLES=&FORMAT=image%2Fpng&CRS=EPSG%3A3857&BBOX=10018754.17,9.3132257461548e-10,15028131.255,5009377.085&WIDTH=256&HEIGHT=256
 	 *
 	 * @param gisServerUrl	超图GIS服务器基础URL
 	 * @param svcMapping	服务标识

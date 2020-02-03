@@ -1,0 +1,49 @@
+#超图:sm
+#国遥新天地:ev
+#北京星球时空科技有限公司:mc
+#四维图新:nav
+
+---
+
+gisapp-services:
+  # 网络地图瓦片服务
+  wmts:
+    - author: cetc15
+      server-prefix: http://192.168.1.110:8999/gis/
+      server-handler-class: com.cetc15.wmts.WMTSHandler
+    - author: sm
+      server-prefix: http://192.168.1.120:8090/iserver/
+      server-handler-class: com.supermap.WMTSHandler
+
+
+  # 几何计算服务
+  gsgeometry:
+    - author: cetc15
+      server-prefix: http://192.168.1.110:8888/mswss/
+      server-handler-class: com.micro.controller.geometry.GeometryHandler
+
+
+  # 通用适配服务-commonly_used_svc
+  cus:
+    server-handler-class: com.micro.controller.commonlyused.CommonlyUsedSvcHandler
+
+---
+
+# 测试用
+config-attributes:
+  value: 345
+  valueArray: 1,2,3,4,5,6,7,8,9
+  valueList:
+    - 13579
+    - 24680
+  valueMap:
+    name: LuckyJiang
+    age: 20
+    sex: female
+  valueMapList:
+    - name: bob
+      age: 21
+    - name: caven
+      age: 30
+
+---

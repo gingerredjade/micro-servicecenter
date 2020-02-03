@@ -92,8 +92,8 @@
 
 		<!-- 加入抽取出来的公共项目 -->
 		<dependency>
-			<groupId>com.nci</groupId>
-			<artifactId>gis-service-common</artifactId>
+			<groupId>com.micro</groupId>
+			<artifactId>sc-service-common</artifactId>
 			<version>1.0-SNAPSHOT</version>
 		</dependency>
 		<!-- 加入抽取出来的公共项目 End -->

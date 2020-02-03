@@ -1,9 +1,8 @@
 # 软件相关文件
-- ftp://192.168.56.6:10000/mmss/Web-Cluster/ServiceCenter/
-- Maven依赖从Maven私有仓库拉取，使用方法参见http://192.168.56.31/lixiao/web-dev-env
+- Maven依赖从Maven中央仓库/私有仓库拉取
 - 项目文档说明参见gis-servicecenter/docs目录下各说明文档
 
-# GIS Service Center
+# Service Center
 # 框架搭建环境
 ````
 - 编译器：IDEA 2019.1
@@ -21,68 +20,49 @@
 - Spring Cloud Zuul
 
 # gis-servicecenter组件结构及[端口]
-- gis-service-common   [无]
+- sc-service-common   [无]
 
 ```
 提取的公共模块，纯Java模块，非Web服务
 ```
-- gis-register-center   [默认8761]
+- sc-register-center   [默认8761]
 
 ```
-GIS服务注册中心模块
+服务注册中心模块
 ```
-- gis-api-gateway       [默认9000]
+- sc-api-gateway       [默认9000]
 
 ```
-GIS服务网关模块
+G服务网关模块
 ```
-- gis-service-core      [默认8997]
+- sc-service-core      [默认8997]
 
 ```
-GIS服务中心模块
+中心模块
 ```
-- gis-service-show      [默认8998]
+- sc-service-show      [默认8998]
 
 ```
 GIS空间信息微服务管理平台模块
 ```
-- docs      
+- docs
 
 ```
 各种文档
 ```
-- config-repo  
+- config-repo
 
 ```
 用来存放配置文件(适用配置中心，配置中心上线用对应配置需用绝对路径)
 ```
-- third-party-cetc15
 
-```
-第三方电科15所服务适配模块
-```
 - third-party-supermap
 
 ```
 第三方超图服务适配模块
 ```
-- third-party-mc
-
-```
-第三方星球时空服务适配模块
-```
-- third-party-nav
-
-```
-第三方四维图新服务适配模块
-```
-- third-party-ev
-
-```
-第三方国遥新天地服务适配模块
-```
 
 
 # 注意事项
 1. 部署、访问、测试等内容参见docs里内容。
-2. 各模块中的Dockerfile、build.sh不能用不使用。
+2. 各模块中的Dockerfile、build.sh暂不支持直接使用。

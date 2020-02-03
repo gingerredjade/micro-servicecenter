@@ -1,13 +1,13 @@
 # 常见问题汇总
 
 
-## 1.gis-servicecenter项目的gis-service-core模块不能正常引入该项目中的gis-service-common模块
+## 1.micro-servicecenter项目的sc-service-core模块不能正常引入该项目中的sc-service-common模块
 出现原因
-+ 可能是因为gis-service-common模块还没有打包成功，gis-service-core模块不能找不到该依赖
++ 可能是因为sc-service-common模块还没有打包成功，sc-service-core模块不能找不到该依赖
 
 
 解决办法
-+ 1.先对gis-service-common模块打包,在该模块下进行maven打包
++ 1.先对sc-service-common模块打包,在该模块下进行maven打包
 ```
 mvn clean install -Dmaven.test.skip=true
 或者
