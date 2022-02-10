@@ -25,7 +25,7 @@
 		<java.version>1.8</java.version>
 		<spring-cloud.version>Finchley.RELEASE</spring-cloud.version>
 		<logback-gelf.version>2.0.0</logback-gelf.version>
-		<hibernate.version>5.4.3.Final</hibernate.version>
+		<hibernate.version>5.4.24.Final</hibernate.version>
 	</properties>
 
 	<dependencies>
